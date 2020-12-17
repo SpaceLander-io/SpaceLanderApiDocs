@@ -4,13 +4,13 @@ import { MDBIcon} from 'mdbreact';
 
 function Footer() {
   return (
-    <MDBFooter color="deep-purple darken-1" className="font-small pt-4">
+    <MDBFooter color="black darken-1" className="font-small pt-4">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6">
             <h5 className="title">Footer Content</h5>
             <p>
-              For specific questions contact out team: 
+              For specific questions contact out team @support@spacelanders.io: 
             </p>
           </MDBCol>
           <MDBCol md="6">
@@ -24,7 +24,6 @@ function Footer() {
                     
                     
                     
-                      
 
 
                                       

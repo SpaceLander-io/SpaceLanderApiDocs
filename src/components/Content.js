@@ -15,14 +15,14 @@ function Content() {
     <MDBContainer fluid>
         <MDBRow>
             {/* SideBar */}
-            <MDBCol className=" aqua-gradient p-0" md="2">
+            <MDBCol className=" p-0" md="2">
                     
                 <ul className="list-group flex-column w-100 h-100 font-weight-bold position-fixed" >
                     <li className="">
-                        <a className="deep-purple-text darken-1" href="#end1">Endpoint 1</a>
+                        <a className="black-text darken-1" href="#end1">Endpoint 1</a>
                     </li>
                     <li>
-                        <a className="deep-purple-text darken-1" href="#irs">Endpoint 2</a>
+                        <a className="black-text darken-1" href="#irs">Endpoint 2</a>
                     </li>
                 </ul>
                     
@@ -50,7 +50,7 @@ function Content() {
                     {/* Code Example */}
                     <MDBCol xs="12" md="5" lg="5">
                         
-                        <h5 className="py-3">Copy code below</h5>
+                        <h5 className="py-3">Request</h5>
                         <CopyBlock
                             langiage="js"
                             text={`v := Vertex{X: 1, Y: 2}`}
@@ -58,6 +58,8 @@ function Content() {
                             theme={dracula}
                             showLineNumbers={true}
                         />
+
+                            <p className="py-3">Response</p>
                     </MDBCol>
                 </MDBRow>
 
@@ -75,14 +77,16 @@ function Content() {
                     
                     {/* Code Example */}
                     <MDBCol sm="12" md="5">
-                        <h5 className="py-3">Copy code below</h5>
+                        <h5 className="py-3">Request</h5>
                         <CopyBlock
                             langiage="js"
                             text={`v := Vertex{X: 1, Y: 2}`}
                             codeBlock
                             theme={dracula}
                             showLineNumbers={true}
-                        />
+                            />
+                            
+                            <p className="py-3">Response</p>
                     </MDBCol>
                 </MDBRow>
 
@@ -99,14 +103,16 @@ function Content() {
                     
                     {/* Code Example */}
                     <MDBCol sm="12" md="5">
-                        <h5 className="py-3">Copy code below</h5>
+                        <h5 className="py-3">Request</h5>
                         <CopyBlock
                             langiage="js"
                             text={`v := Vertex{X: 1, Y: 2}`}
                             codeBlock
                             theme={dracula}
                             showLineNumbers={true}
-                        />
+                            />
+                            
+                            <p className="py-3">Response</p>
                     </MDBCol>
                 </MDBRow>
 
@@ -123,14 +129,16 @@ function Content() {
                     
                     {/* Code Example */}
                     <MDBCol sm="12" md="5">
-                        <h5 className="py-3">Copy code below</h5>
+                        <h5 className="py-3">Request</h5>
                         <CopyBlock
                             langiage="js"
                             text={`v := Vertex{X: 1, Y: 2}`}
                             codeBlock
                             theme={dracula}
                             showLineNumbers={true}
-                        />
+                            />
+                            
+                        <p className="py-3">Response</p>
                     </MDBCol>
                 </MDBRow>
 
@@ -146,7 +154,7 @@ function Content() {
                     
                     {/* Code Example */}
                     <MDBCol sm="12" md="5">
-                        <h5 className="py-3">Copy code below</h5>
+                        <h5 className="py-3">Request</h5>
                         <CopyBlock
                             langiage="js"
                             text={`v := Vertex{X: 1, Y: 2}`}
@@ -154,6 +162,8 @@ function Content() {
                             theme={dracula}
                             showLineNumbers={true}
                         />
+
+                            <p className="py-3">Response</p>
                     </MDBCol>
                 </MDBRow>
 
