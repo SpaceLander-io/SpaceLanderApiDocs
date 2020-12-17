@@ -4,7 +4,7 @@ import { MDBIcon} from 'mdbreact';
 
 function Footer() {
   return (
-    <MDBFooter color="deep-purple darken-1" className="font-small pt-4">
+    <MDBFooter color="black darken-1" className="font-small pt-4">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6">

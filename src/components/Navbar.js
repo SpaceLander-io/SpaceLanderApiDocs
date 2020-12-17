@@ -23,7 +23,7 @@ class Navbar extends React.Component {
       <div>
         <Router>
           <header>
-            <MDBNavbar color="deep-purple darken-1" dark expand="md">
+            <MDBNavbar color="grey darken-1" dark expand="md">
               <MDBNavbarBrand href="#irs">
                 <strong>SpaceLander API</strong>
               </MDBNavbarBrand>
