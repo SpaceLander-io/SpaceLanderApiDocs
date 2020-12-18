@@ -1,0 +1,31 @@
+code {
+    color: white;
+}
+
+.logo {
+    max-height: 70px;
+    max-width: 70px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+ul.list-group {
+    width: inherit !important;
+}
+
+
+
+.sidebarUI li a:hover {
+    color: #757575 !important;
+}
+
+.sidebarUI li {
+    list-style: none;
+}
+
+.sidebarUI li a:active {
+    /* background-color: green !important; */
+}

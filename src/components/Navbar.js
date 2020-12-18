@@ -1,6 +1,8 @@
 import React from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
+import logo from './../assets/img/logo-invert.png'
+
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -24,11 +26,16 @@ class Navbar extends React.Component {
         <Router>
           <header>
             <MDBNavbar color="grey darken-1" dark expand="md">
-              <MDBNavbarBrand href="#irs">
-                <strong>SpaceLander API</strong>
+              <MDBNavbarBrand className="pl-xs-0 pl-md-5" href="#irs">
+                <img className="logo" src={logo}  alt="Logo"/>
               </MDBNavbarBrand>
+
+
               <MDBNavbarToggler onClick={this.onClick} />
-              <MDBCollapse isOpen={this.state.collapse} navbar>
+
+
+
+              <MDBCollapse className="text-center" isOpen={this.state.collapse} navbar>
                 <MDBNavbarNav left>
                   <MDBNavItem active>
                     <MDBNavLink to="#">Main</MDBNavLink>
@@ -54,6 +61,8 @@ class Navbar extends React.Component {
                 </MDBNavbarNav>
                 
               </MDBCollapse>
+
+
             </MDBNavbar>
           </header>
         </Router>

@@ -1,12 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact";
 import { MDBTypography, MDBBox } from 'mdbreact';
 import { CopyBlock, dracula } from "react-code-blocks";
 
 
 
 function Content() {
+
+    // const searchFunc {
+    //     console.log('searching');
+    // }
+
 
 
 
@@ -15,13 +20,20 @@ function Content() {
     <MDBContainer fluid>
         <MDBRow>
             {/* SideBar */}
-            <MDBCol className=" p-0" md="2">
+            <MDBCol className="" md="2">
+
+                <MDBCol md="12 text-center">
+                <form className="form-inline mt-4 mb-4">
+                    <MDBIcon icon="search" id="myInput" />
+                    <input className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search" />
+                </form>
+                </MDBCol>
                     
-                <ul className="list-group flex-column w-100 h-100 font-weight-bold position-fixed" >
-                    <li className="">
+                <ul className="sidebarUI list-group flex-column w-100 h-100 font-weight-bold" >
+                    <li className="text-center py-2">
                         <a className="black-text darken-1" href="#end1">Endpoint 1</a>
                     </li>
-                    <li>
+                    <li className="text-center py-2">
                         <a className="black-text darken-1" href="#irs">Endpoint 2</a>
                     </li>
                 </ul>
