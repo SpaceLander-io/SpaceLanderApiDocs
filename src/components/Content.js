@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact";
 import { MDBTypography, MDBBox } from 'mdbreact';
 import { CopyBlock, dracula } from "react-code-blocks";
@@ -190,7 +189,10 @@ function Content() {
                         <h5 className="py-3">Request</h5>
                         <CopyBlock
                             langiage="js"
-                            text={`v := Vertex{X: 1, Y: 2}`}
+                                text={`v := Vertex{X: 1, Y: 2}
+v := Vertex{X: 1, Y: 2}v := Vertex{X: 1, Y: 2}v := Vertex
+{X: 1, Y: 2}v := Vertex
+{X: 1, Y: 2}v := Vertex{X: 1, Y: 2}`}
                             codeBlock
                             theme={dracula}
                             showLineNumbers={true}

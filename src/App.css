@@ -58,7 +58,7 @@ ul.list-group {
     /* background-color: green !important; */
 }
 
-.footer {
-    background-color: #121212;
+.footer, .footer-copyright {
+    background-color: #121212 !important;
 }
 

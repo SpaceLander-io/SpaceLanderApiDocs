@@ -1,8 +1,6 @@
 import React from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
-import logo from './../assets/img/logo.svg'
-
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -26,19 +24,14 @@ class Navbar extends React.Component {
         <Router>
           <header>
             <MDBNavbar color="grey darken-1" dark expand="md">
-              <MDBNavbarBrand className="pl-xs-0 pl-md-5" href="#irs">
-                <img className="logo" src={logo}  alt="Logo"/>
+              <MDBNavbarBrand>
+                <strong>SpaceLander API</strong>
               </MDBNavbarBrand>
-
-
               <MDBNavbarToggler onClick={this.onClick} />
-
-
-
-              <MDBCollapse className="text-center" isOpen={this.state.collapse} navbar>
+              <MDBCollapse isOpen={this.state.collapse} navbar>
                 <MDBNavbarNav left>
                   <MDBNavItem>
-                    <MDBNavLink to="#">Main</MDBNavLink>
+                    <MDBNavLink target="_blank" to="https://www.facebook.com/SpaceLander.io">Main</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
                     <MDBNavLink to="#">Amazon</MDBNavLink>
@@ -61,8 +54,6 @@ class Navbar extends React.Component {
                 </MDBNavbarNav>
                 
               </MDBCollapse>
-
-
             </MDBNavbar>
           </header>
         </Router>
