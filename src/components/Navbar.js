@@ -1,7 +1,7 @@
 import React from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
-import logo from './../assets/img/logo-invert.png'
+import logo from './../assets/img/logo.svg'
 
 
 class Navbar extends React.Component {
@@ -37,7 +37,7 @@ class Navbar extends React.Component {
 
               <MDBCollapse className="text-center" isOpen={this.state.collapse} navbar>
                 <MDBNavbarNav left>
-                  <MDBNavItem active>
+                  <MDBNavItem>
                     <MDBNavLink to="#">Main</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
