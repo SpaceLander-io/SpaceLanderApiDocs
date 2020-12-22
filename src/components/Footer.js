@@ -6,8 +6,19 @@ function Footer() {
   return (
     <MDBFooter color="footer" className="font-small pt-4">
       <MDBContainer fluid className="text-center text-md-left">
-        <MDBRow className="text-center">
-          <MDBCol md="12 border-bottom py-4 mb-4">
+// <<<<<<< dev
+//         <MDBRow className="text-center">
+//           <MDBCol md="12 border-bottom py-4 mb-4">
+// =======
+        <MDBRow>
+          <MDBCol md="6">
+            <h5 className="title">Footer Content</h5>
+            <p>
+              For specific questions contact out team @support@spacelanders.io: 
+            </p>
+          </MDBCol>
+          <MDBCol md="6">
+// >>>>>>> master
             <h5 className="title">SUPPORT US</h5>
             <a href="https://www.facebook.com/SpaceLander.io"><MDBIcon className="p-2" fab icon="facebook-f" /></a>
             <a href="https://www.instagram.com/spacelander.io/"><MDBIcon className="p-2"  fab icon="instagram" /></a>
