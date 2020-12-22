@@ -1,6 +1,6 @@
 import React from 'react';
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBIcon } from 'mdbreact';
+import logoImage from '../assets/img/logo.svg'
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -21,42 +21,44 @@ class Navbar extends React.Component {
     // const container = { height: 1300 }
     return (
       <div>
-        <Router>
+        
           <header>
-            <MDBNavbar color="grey darken-1" dark expand="md">
+            <MDBNavbar color="" dark expand="md">
               <MDBNavbarBrand>
-                <strong>SpaceLander API</strong>
+              
+              <img src={logoImage} alt="spacelander logo"></img>
+              
               </MDBNavbarBrand>
               <MDBNavbarToggler onClick={this.onClick} />
               <MDBCollapse isOpen={this.state.collapse} navbar>
                 <MDBNavbarNav left>
                   <MDBNavItem>
-                    <MDBNavLink target="_blank" to="https://www.facebook.com/SpaceLander.io">Main</MDBNavLink>
+                    {/* <a target="_blank" href="https://www.facebook.com/SpaceLander.io">Main</a> */}
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="#">Amazon</MDBNavLink>
+                    {/* <a href="#">Amazon</a> */}
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="#">Ebay</MDBNavLink>
+                    {/* <a href="#">Ebay</a> */}
                   </MDBNavItem>
                 </MDBNavbarNav>
                             
                 <MDBNavbarNav right>
                   <MDBNavItem>
-                    <MDBNavLink to="#"><MDBIcon fab icon="facebook-f" /></MDBNavLink>
+                    <a href="https://www.facebook.com/SpaceLander.io"><MDBIcon fab icon="facebook-f" /></a>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="#"><MDBIcon fab icon="twitter" /></MDBNavLink>
+                    <a href="https://twitter.com/spacelander_io"><MDBIcon fab icon="twitter" /></a>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="#"><MDBIcon fab icon="instagram" /></MDBNavLink>
+                    <a href="https://www.instagram.com/spacelander.io/"><MDBIcon fab icon="instagram" /></a>
                   </MDBNavItem>
                 </MDBNavbarNav>
                 
               </MDBCollapse>
             </MDBNavbar>
           </header>
-        </Router>
+        
         {/* <MDBContainer style={container} className="text-center mt-5">
           <h2>This Navbar isn't fixed</h2>
           <h5>When you scroll down it will disappear</h5>

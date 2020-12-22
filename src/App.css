@@ -43,6 +43,15 @@ ul.list-group {
     width: inherit !important;
 }
 
+a {
+    color: white;
+    padding: 20px;
+    
+}
+
+a:hover {
+    color: white;
+}
 
 
 .sidebarUI li a:hover {
@@ -58,7 +67,7 @@ ul.list-group {
     /* background-color: green !important; */
 }
 
-.footer, .footer-copyright {
+.footer, .footer-copyright, header {
     background-color: #121212 !important;
 }
 
