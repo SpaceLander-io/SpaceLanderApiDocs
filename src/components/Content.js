@@ -1,6 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact";
 import { MDBTypography, MDBBox } from 'mdbreact';
 import { CopyBlock, dracula } from "react-code-blocks";
 
@@ -9,20 +8,53 @@ import { CopyBlock, dracula } from "react-code-blocks";
 function Content() {
 
 
+    function searchEndpoint() {
+        console.log('search')
+        let input = document.getElementById('searchbar').value
+        input = input.toLowerCase();
+        let x = document.getElementsByClassName('endpoint')
+
+
+        for (var i = 0; i < x.length; i++) {
+            if (!x[i].innerHTML.toLocaleLowerCase().includes(input)) {
+                x[i].style.display="none"
+            }
+            else {
+                x[i].style.display = "block";
+            }
+
+        }
+    }
+
+
+
 
     return (
     
     <MDBContainer fluid>
         <MDBRow>
             {/* SideBar */}
-            <MDBCol className=" p-0" md="2">
+            <MDBCol className="" md="2">
+
+                <MDBCol md="p-0 12 text-center">
+                <form className="form-inline mt-4 mb-4">
+                    <MDBIcon icon="search" id="myInput" />
+                    <input id="searchbar" className="form-control form-control-sm ml-3 w-75" onKeyUp={searchEndpoint} type="text" placeholder="Search" aria-label="Search" />
+                </form>
+                </MDBCol>
                     
-                <ul className="list-group flex-column w-100 h-100 font-weight-bold position-fixed" >
-                    <li className="">
-                        <a className="black-text darken-1" href="#end1">Endpoint 1</a>
+                <ul className="sidebarUI list-group flex-column w-100 h-100 font-weight-bold" >
+                    <li className="endpoint text-center py-2">
+                        <a className="black-text darken-1" href="#end1">TestOne</a>
                     </li>
-                    <li>
-                        <a className="black-text darken-1" href="#irs">Endpoint 2</a>
+                    <li className="endpoint text-center py-2">
+                        <a className="black-text darken-1" href="#irs">TestTwo</a>
+                    </li>
+                    <li className="endpoint text-center py-2">
+                        <a className="black-text darken-1" href="#irs">TestThree</a>
+                    </li>
+                    <li className="endpoint text-center py-2">
+                        <a className="black-text darken-1" href="#irs">TestFour</a>
                     </li>
                 </ul>
                     
@@ -157,7 +189,10 @@ function Content() {
                         <h5 className="py-3">Request</h5>
                         <CopyBlock
                             langiage="js"
-                            text={`v := Vertex{X: 1, Y: 2}`}
+                                text={`v := Vertex{X: 1, Y: 2}
+v := Vertex{X: 1, Y: 2}v := Vertex{X: 1, Y: 2}v := Vertex
+{X: 1, Y: 2}v := Vertex
+{X: 1, Y: 2}v := Vertex{X: 1, Y: 2}`}
                             codeBlock
                             theme={dracula}
                             showLineNumbers={true}
