@@ -57,10 +57,17 @@ function Content() {
                                 <a className="black-text darken-1" href="#authentication">Authentication</a>
                             </li>
                             <li className="endpoint text-center py-2">
-                                <a className="black-text darken-1" href="#irs">TestThree</a>
+                                <a className="black-text darken-1" href="#errors">Errors</a>
                             </li>
                             <li className="endpoint text-center py-2">
-                                <a className="black-text darken-1" href="#irs">TestFour</a>
+                                <a className="black-text darken-1" href="#introduction">Brainstorm </a>
+
+                                <ul className="sidebarUI list-group flex-column w-100 h-100 font-weight-bold" >
+                                    <li className="endpoint text-center py-2">
+                                        <a className="black-text darken-1" href="#introduction">History</a>
+                                    </li>
+                                </ul>
+
                             </li>
                         </ul>
                     </div>
@@ -98,9 +105,14 @@ function Content() {
                         </MDBCol>
                     </MDBRow>
 
+                    <MDBCol sm="12" className="border-left border-light" >
+                        <hr></hr>
+                    </MDBCol>
+
                     <MDBRow className="py-5">
                         {/* Endpoint Description */}
                         <MDBCol sm="12" md="7"  >
+
                             <h3 className="py-3" id="authentication">Authentication</h3>
                             <MDBTypography>
                                 To auth into the SpaceLander API you must start by making a post request to the login route.
@@ -113,7 +125,7 @@ function Content() {
                             <h5 className="pt-3"><span className="badge badge-secondary">POST</span> | Route: </h5>
                             <CopyBlock
                                 langiage="js"
-                                text={`https://spacelander.io/api/login`}
+                                text={`https://spacelander.io/api/login/`}
                                 codeBlock
                                 theme={dracula}
                                 showLineNumbers={false}
@@ -151,89 +163,128 @@ function Content() {
                         </MDBCol>
                     </MDBRow>
 
-
-
-                    <MDBRow className="">
-                        {/* Endpoint Description */}
-                        <MDBCol sm="12" md="7"  >
-                            <h3 className="py-3">Idempotent Requests</h3>
-                            <MDBTypography>All POST requests accept idempotency keys. Sending idempotency keys in GET and
-                                DELETE requests has no effect and should be avoided, as these requests are idempotent by definition.
-                            </MDBTypography>
-                        </MDBCol>
-
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="py-3">Request</h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`v := Vertex{X: 1, Y: 2}`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={true}
-                            />
-
-                            <p className="py-3">Response</p>
-                        </MDBCol>
-                    </MDBRow>
-
-
+                    <MDBCol sm="12" className="border-left border-light" >
+                        <hr></hr>
+                    </MDBCol>
 
                     <MDBRow className="py-5">
                         {/* Endpoint Description */}
                         <MDBCol sm="12" md="7"  >
-                            <h3 className="py-3">Idempotent Requests</h3>
-                            <MDBTypography>All POST requests accept idempotency keys. Sending idempotency keys in GET and
-                                DELETE requests has no effect and should be avoided, as these requests are idempotent by definition.
+                            <h3 className="py-3" id="errors">Errors</h3>
+                            <MDBTypography>
+                                SpaceLander uses conventional HTTP response codes to indicate the success or failure of an API
+                                request. In general: Codes in the 2xx range indicate success. Codes in the 4xx range indicate
+                                an error that failed given the information provided (e.g., a required parameter was omitted,
+                                a charge failed, etc.). Codes in the 5xx range indicate an error with SpaceLander's servers
+                                (these are rare). Some 4xx errors that could be handled programmatically include an error code
+                                that briefly explains the error reported.
                             </MDBTypography>
                         </MDBCol>
 
                         {/* Code Example */}
                         <MDBCol sm="12" md="5">
-                            <h5 className="py-3">Request</h5>
+                            <h5 className="pt-3">HTTP Status Codes</h5>
                             <CopyBlock
                                 langiage="js"
-                                text={`v := Vertex{X: 1, Y: 2}`}
+
+                                title="test"
+                                text=
+{`200 - OK:\tEverything worked as expected.
+400 - Bad Request:\tThe request was unacceptable, often due to missing a required parameter.
+401 - Unauthorized:\tNo valid API key provided.
+402 - Request Failed:\tThe parameters were valid but the request failed.
+403 - Forbidden:\tThe API key doesn't have permissions to perform the request.
+404 - Not Found:\tThe requested resource doesn't exist.
+409 - Conflict:\tThe request conflicts with another request (perhaps due to using the same idempotent key).
+429 - Too Many Requests:\tToo many requests hit the API too quickly. We recommend an exponential backoff of your requests.
+500, 502, 503, 504 - Server Errors:\tSomething went wrong on Stripe's end. (These are rare.)
+`}
                                 codeBlock
                                 theme={dracula}
-                                showLineNumbers={true}
+                                showLineNumbers={false}
                             />
-
-                            <p className="py-3">Response</p>
                         </MDBCol>
                     </MDBRow>
 
+                    <MDBCol sm="12" className="border-left border-light" >
+                        <hr></hr>
+                    </MDBCol>
 
-                    <MDBRow className="py-5" id="irs">
+                    <MDBRow className="py-5">
                         {/* Endpoint Description */}
                         <MDBCol sm="12" md="7"  >
-                            <h3 className="py-3" id="irs">Idempotent Requests</h3>
-                            <MDBTypography>All POST requests accept idempotency keys. Sending idempotency keys in GET and
-                                DELETE requests has no effect and should be avoided, as these requests are idempotent by definition.
+                            <h3 className="py-3">BrainStorm</h3>
+                            <MDBTypography>
+                                All BrainStorm related requests use this route as the base for all requests. All requests
+                                must be authorized before being made to make request.
                             </MDBTypography>
                         </MDBCol>
 
                         {/* Code Example */}
                         <MDBCol sm="12" md="5">
-                            <h5 className="py-3">Request</h5>
+                            <h5 className="pt-3">Base URL:</h5>
                             <CopyBlock
                                 langiage="js"
-                                text={`v := Vertex{X: 1, Y: 2}
-v := Vertex{X: 1, Y: 2}v := Vertex{X: 1, Y: 2}v := Vertex
-{X: 1, Y: 2}v := Vertex
-{X: 1, Y: 2}v := Vertex{X: 1, Y: 2}`}
+                                text={`https://spacelander.io/api/brainstorm/`}
                                 codeBlock
                                 theme={dracula}
-                                showLineNumbers={true}
+                                showLineNumbers={false}
+                            />
+                        </MDBCol>
+
+                        {/* Endpoint Description */}
+                        <MDBCol sm="12" md="7"  >
+                            <hr></hr>
+                            <h3 className="py-3" id="irs">Get Product/Price History</h3>
+                            <MDBTypography>
+
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/brainstorm/history/`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
                             />
 
-                            <p className="py-3">Response</p>
+                            <p className="mt-3">Request: </p>
+                            <CopyBlock
+                                langiage="js"
+                                text=
+                                    {`{
+    email: "ACCOUNT-EMAIL",
+    password: "ACCOUNT-PASSWORD",
+}`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text=
+                                        {`{
+    "access_token": "YOUR-AUTH-TOKEN",
+    "token_type": "bearer",
+    "expires_in": 14400
+}`}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
                         </MDBCol>
                     </MDBRow>
 
                 </MDBCol>
-
-
 
             </MDBRow>
         </MDBContainer>
