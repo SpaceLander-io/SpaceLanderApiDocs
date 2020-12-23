@@ -5,7 +5,6 @@ import { CopyBlock, dracula, atomOneLight } from "react-code-blocks";
 import logoImage from "../assets/img/logo.svg";
 
 
-
 function Content() {
 
     function searchEndpoint() {
@@ -14,7 +13,6 @@ function Content() {
         input = input.toLowerCase();
         let x = document.getElementsByClassName('endpoint')
 
-
         for (var i = 0; i < x.length; i++) {
             if (!x[i].innerHTML.toLocaleLowerCase().includes(input)) {
                 x[i].style.display="none"
@@ -22,7 +20,6 @@ function Content() {
             else {
                 x[i].style.display = "block";
             }
-
         }
     }
 
@@ -32,16 +29,16 @@ function Content() {
                 {/* SideBar */}
                 <MDBCol className="" md="2">
                     <div class="fixed">
-                        <div class="h-75px">
+                        <div class="h-75">
                             <div className="inline hidden-sm">
                                 <img src={logoImage} className="inverted" alt="SpaceLander logo"></img>
-                                <h1 className="my-5 ml-2">DEV</h1>
+                                <h1 className="my-4 ml-2">DEV</h1>
 
                             </div>
                         </div>
 
 
-                        <MDBCol md="p-0 12 text-center mt-5">
+                        <MDBCol className="p-0 12 text-center mt-5" md="">
                             <p>SL-API | V1.0.0</p>
                             <form className="form-inline mt-4 mb-4">
                                 {/*<MDBIcon icon="search" id="myInput" />*/}
@@ -61,13 +58,10 @@ function Content() {
                             </li>
                             <li className="endpoint text-center py-2">
                                 <a className="black-text darken-1" href="#introduction">Brainstorm </a>
+                            </li>
 
-                                <ul className="sidebarUI list-group flex-column w-100 h-100 font-weight-bold" >
-                                    <li className="endpoint text-center py-2">
-                                        <a className="black-text darken-1" href="#introduction">History</a>
-                                    </li>
-                                </ul>
-
+                            <li className="endpoint text-center py-2">
+                                <a className="black-text darken-1" href="#introduction">History</a>
                             </li>
                         </ul>
                     </div>
