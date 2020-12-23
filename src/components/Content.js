@@ -27,7 +27,7 @@ function Content() {
         <MDBContainer fluid>
             <MDBRow>
                 {/* SideBar */}
-                <MDBCol className="" md="2">
+                <MDBCol className="hidden-md" xl="2" lg="2" md="12" sm="12">
                     <div class="fixed">
                         <div class="h-75">
                             <div className="inline hidden-sm">
@@ -37,8 +37,7 @@ function Content() {
                             </div>
                         </div>
 
-
-                        <MDBCol className="p-0 12 text-center mt-5" md="">
+                        <MDBCol className="p-0 12 text-center mt-1" md="">
                             <p>SL-API | V1.0.0</p>
                             <form className="form-inline mt-4 mb-4">
                                 {/*<MDBIcon icon="search" id="myInput" />*/}
@@ -59,7 +58,6 @@ function Content() {
                             <li className="endpoint text-center py-2">
                                 <a className="black-text darken-1" href="#introduction">Brainstorm </a>
                             </li>
-
                             <li className="endpoint text-center py-2">
                                 <a className="black-text darken-1" href="#introduction">History</a>
                             </li>
@@ -68,7 +66,7 @@ function Content() {
                 </MDBCol>
 
                 {/* Content */}
-                <MDBCol sm="10" className="border-left border-light" >
+                <MDBCol lg="10" md="12" sm="12" className="border-left border-light" >
                     <MDBRow className="py-5">
                         {/* Endpoint Description */}
                         <MDBCol xs="12" md="7" lg="7" >
