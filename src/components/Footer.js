@@ -4,21 +4,18 @@ import { MDBIcon} from 'mdbreact';
 
 function Footer() {
   return (
-    <MDBFooter color="footer" className="font-small pt-4">
+    <MDBFooter color="footer" className=" font-small pt-4">
       <MDBContainer fluid className="text-center text-md-left">
-// <<<<<<< dev
-//         <MDBRow className="text-center">
-//           <MDBCol md="12 border-bottom py-4 mb-4">
-// =======
-        <MDBRow>
-          <MDBCol md="6">
-            <h5 className="title">Footer Content</h5>
+{/*//         <MDBRow className="text-center">*/}
+{/*//           <MDBCol md="12 border-bottom py-4 mb-4">*/}
+        <MDBRow className="text-center">
+          <MDBCol md="12">
+            <h5 className="title">Dev Support:</h5>
             <p>
-              For specific questions contact out team @support@spacelanders.io: 
+              For specific questions contact out team <a href="support@spacelanders.io">support@spacelanders.io</a>
             </p>
           </MDBCol>
-          <MDBCol md="6">
-// >>>>>>> master
+          <MDBCol md="12 py-4">
             <h5 className="title">SUPPORT US</h5>
             <a href="https://www.facebook.com/SpaceLander.io"><MDBIcon className="p-2" fab icon="facebook-f" /></a>
             <a href="https://www.instagram.com/spacelander.io/"><MDBIcon className="p-2"  fab icon="instagram" /></a>
