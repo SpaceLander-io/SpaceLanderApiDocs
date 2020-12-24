@@ -101,7 +101,7 @@ h2, h3, h4, h5
     .fixed {
         position: fixed;
         top: 0px;
-        z-index: -1;
+        z-index: 0;
     }
     .navbar {
         font-weight: 300;
@@ -116,7 +116,7 @@ h2, h3, h4, h5
     .fixed {
         position: static;
         top: 0;
-        z-index: -1;
+        z-index: 0;
     }
 
     .hidden-sm
@@ -132,6 +132,7 @@ h2, h3, h4, h5
 }
 code {
     color: #f1f1f1;
+    max-height: 180px;
 }
 
 .light code

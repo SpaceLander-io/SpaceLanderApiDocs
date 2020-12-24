@@ -67,6 +67,8 @@ function Content() {
 
                 {/* Content */}
                 <MDBCol lg="10" md="12" sm="12" className="border-left border-light" >
+
+                    {/* Intro */}
                     <MDBRow className="py-5">
                         {/* Endpoint Description */}
                         <MDBCol xs="12" md="7" lg="7" >
@@ -101,14 +103,17 @@ function Content() {
                         <hr></hr>
                     </MDBCol>
 
+                    {/* Auth */}
                     <MDBRow className="py-5">
                         {/* Endpoint Description */}
                         <MDBCol sm="12" md="7"  >
 
                             <h3 className="py-3" id="authentication">Authentication</h3>
                             <MDBTypography>
-                                To auth into the SpaceLander API you must start by making a post request to the login route.
-                                This will an bear token
+                                To auth into the SpaceLander API you must start by request a bearer token. Start by making
+                                a post request to the login route. This will return a bearer token that is required for all
+                                authorized requests to SpaceLander.
+                                {/*<hr></hr>*/}
                             </MDBTypography>
                         </MDBCol>
 
@@ -159,6 +164,7 @@ function Content() {
                         <hr></hr>
                     </MDBCol>
 
+                    {/* Errors */}
                     <MDBRow className="py-5">
                         {/* Endpoint Description */}
                         <MDBCol sm="12" md="7"  >
@@ -198,10 +204,11 @@ function Content() {
                         </MDBCol>
                     </MDBRow>
 
-                    <MDBCol sm="12" className="border-left border-light" >
+                    <MDBCol sm="12" className="border-left border-light">
                         <hr></hr>
                     </MDBCol>
 
+                    {/* BrainStorm */}
                     <MDBRow className="py-5">
                         {/* Endpoint Description */}
                         <MDBCol sm="12" md="7"  >
@@ -224,12 +231,12 @@ function Content() {
                             />
                         </MDBCol>
 
-                        {/* Endpoint Description */}
+                        {/* Get Product/Price History */}
                         <MDBCol sm="12" md="7"  >
                             <hr></hr>
-                            <h3 className="py-3" id="irs">Get Product/Price History</h3>
+                            <h3 className="py-3" id="">Get Product/Price History</h3>
                             <MDBTypography>
-
+                                Returns array of price history for product by <a href="https://www.amazon.com/gp/seller/asin-upc-isbn-info.html" target="_blank">ASIN</a> provided.
                             </MDBTypography>
                         </MDBCol>
 
@@ -238,20 +245,118 @@ function Content() {
                             <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
                             <CopyBlock
                                 langiage="js"
-                                text={`https://spacelander.io/api/brainstorm/history/`}
+                                text={`https://spacelander.io/api/brainstorm/history/{asin}`}
                                 codeBlock
                                 theme={dracula}
                                 showLineNumbers={false}
                             />
 
-                            <p className="mt-3">Request: </p>
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text=
+                                        {``}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                        {/* Get Product Ranking History */}
+                        <MDBCol sm="12" md="7"  >
+                            <hr></hr>
+                            <h3 className="py-3" id="">Get Product Ranking History</h3>
+                            <MDBTypography>
+                                Returns array of price history for product ranking history by <a href="https://www.amazon.com/gp/seller/asin-upc-isbn-info.html" target="_blank">ASIN</a> provided.
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
                             <CopyBlock
                                 langiage="js"
-                                text=
-                                    {`{
-    email: "ACCOUNT-EMAIL",
-    password: "ACCOUNT-PASSWORD",
-}`}
+                                text={`https://spacelander.io/api/brainstorm/ranking/{asin}`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text=
+                                        {``}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                        {/* More */}
+                        <MDBCol sm="12" md="7"  >
+                            <hr></hr>
+                            <h3 className="py-3" id="">More</h3>
+                            <MDBTypography>
+                                Returns array of price history for product by <a href="https://www.amazon.com/gp/seller/asin-upc-isbn-info.html" target="_blank">ASIN</a> provided.
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/brainstorm/history/{asin}`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text=
+                                        {``}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                    </MDBRow>
+
+                    <MDBCol sm="12" className="border-left border-light">
+                        <hr></hr>
+                    </MDBCol>
+
+                    {/* Amazon */}
+                    <MDBRow className="py-5">
+
+                        {/* Endpoint Description */}
+                        <MDBCol sm="12" md="7"  >
+                            <h3 className="py-3" id="">Amazon</h3>
+                            <MDBTypography>
+                                All Amazon related requests use this route as the base for all requests. All requests
+                                must be authorized before being made to make request..
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3">Base URL: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/amazon/`}
                                 codeBlock
                                 theme={dracula}
                                 showLineNumbers={false}
@@ -274,8 +379,86 @@ function Content() {
                                 />
                             </div>
                         </MDBCol>
-                    </MDBRow>
 
+                        {/* Endpoint Description */}
+                        <MDBCol className="my-2" sm="12" md="7" >
+                            <hr class=""></hr>
+                            <h3 className="py-3" id="">Get Categories by ASIN</h3>
+                            <MDBTypography>
+                                Returns the hierarchy of all parent and leaf categories for the ASIN provided
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/amazon/get-categories-by-asin/{asin}`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text=
+                                        {`{
+    "GetProductCategoriesForASINResult": {
+        "Self": [
+            {
+                "ProductCategoryId": "10980711",
+                "ProductCategoryName": "Dual-Channel Speakers",
+                "Parent": {
+                    "ProductCategoryId": "898116",
+                    "ProductCategoryName": "Amplifiers",
+                    "Parent": {
+                        "ProductCategoryId": "226184",
+                        "ProductCategoryName": "Car Audio",
+                        "Parent": {
+                            "ProductCategoryId": "1077068",
+                            "ProductCategoryName": "Car Electronics",
+                            "Parent": {
+                                "ProductCategoryId": "3248684011",
+                                "ProductCategoryName": "Car & Vehicle Electronics",
+                                "Parent": {
+                                    "ProductCategoryId": "493964",
+                                    "ProductCategoryName": "Categories",
+                                    "Parent": {
+                                        "ProductCategoryId": "172282",
+                                        "ProductCategoryName": "Electronics"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "ProductCategoryId": "13900851",
+                "ProductCategoryName": "Electronics Features",
+                "Parent": {
+                    "ProductCategoryId": "172282",
+                    "ProductCategoryName": "Electronics"
+                }
+            }
+        ]
+    },
+    "ResponseMetadata": {
+        "RequestId": "5f8759d4-8629-4c07-9e6d-04d7d4f508a3"
+    }
+}`}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                    </MDBRow>
                 </MDBCol>
 
             </MDBRow>

@@ -12,7 +12,7 @@ function Footer() {
           <MDBCol md="12">
             <h5 className="title">Dev Support:</h5>
             <p>
-              For specific questions contact out team <a href="support@spacelanders.io">support@spacelanders.io</a>
+              For specific questions contact our team @ <a href="support@spacelanders.io">support@spacelanders.io</a>
             </p>
           </MDBCol>
           <MDBCol md="12 py-4">
@@ -42,6 +42,11 @@ function Footer() {
           </MDBCol>
 
           <MDBCol sm="12" md="4">
+
+            <div>
+              <a href="https://dev.spacelander.io/">DEV</a>
+            </div>
+
             <div>
               <a href="https://spacelander.io/article/contact">Contact</a>
             </div>
@@ -69,7 +74,7 @@ function Footer() {
       </MDBContainer>
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright: <a href="https://www.spacelander.io/"> SpaceLander </a>
+          Copyright  &copy; {new Date().getFullYear()}  <a href="https://www.spacelander.io/"> SpaceLander </a>, LLC. All rights reserved.
         </MDBContainer>
       </div>
     </MDBFooter>
