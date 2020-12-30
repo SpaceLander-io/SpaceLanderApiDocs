@@ -46,13 +46,13 @@ class Navbar extends React.Component {
 
                 <MDBNavbarNav right >
                   <MDBNavItem>
-                    <a href="https://www.facebook.com/SpaceLander.io" target="_blank" class="px-3"><MDBIcon fab icon="facebook-f" /></a>
+                    <a href="https://www.facebook.com/SpaceLander.io" target="_blank" rel="noopener noreferrer" class="px-3"><MDBIcon fab icon="facebook-f" /></a>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <a href="https://twitter.com/spacelander_io" target="_blank" class="px-3"><MDBIcon fab icon="twitter" /></a>
+                    <a href="https://twitter.com/spacelander_io" target="_blank" rel="noopener noreferrer" class="px-3"><MDBIcon fab icon="twitter" /></a>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <a href="https://www.instagram.com/spacelander.io/" target="_blank" class="px-3"><MDBIcon fab icon="instagram" /></a>
+                    <a href="https://www.instagram.com/spacelander.io/" target="_blank" rel="noopener noreferrer" class="px-3"><MDBIcon fab icon="instagram" /></a>
                   </MDBNavItem>
                 </MDBNavbarNav>
 
