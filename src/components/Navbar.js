@@ -44,7 +44,7 @@ class Navbar extends React.Component {
                   </MDBNavItem>
                 </MDBNavbarNav>
 
-                <MDBNavbarNav right>
+                <MDBNavbarNav right >
                   <MDBNavItem>
                     <a href="https://www.facebook.com/SpaceLander.io" target="_blank" class="px-3"><MDBIcon fab icon="facebook-f" /></a>
                   </MDBNavItem>
