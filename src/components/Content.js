@@ -3,6 +3,9 @@ import {MDBContainer, MDBRow, MDBCol} from "mdbreact";
 import { MDBTypography, MDBBox } from 'mdbreact';
 import { CopyBlock, dracula, atomOneLight } from "react-code-blocks";
 import logoImage from "../assets/img/logo.svg";
+import { Link, scrollSpy, scroller } from 'react-scroll'
+
+// import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 
 
 function Content() {
@@ -47,25 +50,25 @@ function Content() {
                         <div class="sidebar-list">
                             <ul className="sidebarUI list-group flex-column w-100 h-100 font-weight-bold main-link" >
                                 <li className="endpoint py-2">
-                                    <a className="black-text darken-1" href="#introduction">Introduction</a>
+                                    <Link activeClass="active" to="introduction" className="black-text darken-1" spy={true} smooth={true} duration={500}>Introduction</Link>
                                 </li>
                                 <li className="endpoint py-2">
-                                    <a className="black-text darken-1" href="#authentication">Authentication</a>
+                                    <Link activeClass="active" to="authentication" className="black-text darken-1" spy={true} smooth={true} duration={500} className="black-text darken-1">Authentication</Link>
                                 </li>
                                 <li className="endpoint py-2">
-                                    <a className="black-text darken-1" href="#errors">Errors</a>
+                                    <Link activeClass="active" to="errors" className="black-text darken-1" spy={true} smooth={true} duration={500} className="black-text darken-1">Errors</Link>
                                 </li>
                                 <li className="endpoint py-2">
-                                    <a className="black-text darken-1" href="#brainstorm">Brainstorm</a>
+                                    <Link activeClass="active" to="brainstorm" className="black-text darken-1" spy={true} smooth={true} duration={500} className="black-text darken-1">Brainstorm</Link>
                                     <ul className="pl-2 sidebarUI list-group flex-column w-100 h-100 font-weight-bold minor-link" >
-                                        <a className="black-text darken-1" href="#priceHistory">Price History</a>
-                                        <a className="black-text darken-1" href="#rankingHistory">Ranking History</a>
-                                        <a className="black-text darken-1" href="#history">History</a>
+                                        <Link activeClass="active" to="priceHistory" className="black-text darken-1" spy={true} smooth={true} duration={500} className="black-text darken-1" >Price History</Link>
+                                        <Link activeClass="active" to="rankingHistory" className="black-text darken-1" spy={true} smooth={true} duration={500} className="black-text darken-1" >Ranking History</Link>
+                                        <Link activeClass="active" to="history" className="black-text darken-1" spy={true} smooth={true} duration={500} className="black-text darken-1" >History</Link>
                                     </ul>
                                 </li>
 
                                 <li className="endpoint py-2">
-                                    <a className="black-text darken-1" href="#amazon">Amazon</a>
+                                    <Link activeClass="active" to="amazon" className="black-text darken-1" spy={true} smooth={true} duration={500} className="black-text darken-1" >Amazon</Link>
                                     <ul className="pl-2 sidebarUI list-group flex-column w-100 h-100 font-weight-bold minor-link" >
                                         <a className="black-text darken-1" href="#AsinCategories">Get Categories</a>
                                         {/*<a className="black-text darken-1" href="#history">Ranking History</a>*/}
