@@ -16,6 +16,8 @@ body {
     sans-serif;
 }
 
+
+
 body a {
     color: #6b63ff;
     padding: 0;
@@ -176,6 +178,13 @@ ul.list-group {
 
 .sidebarUI li a:hover {
     color: #757575 !important;
+    
+}
+
+.active {
+    color: white;
+    background-color: rgba(100, 100, 100, 1);
+    border-left: thick solid rgba(0, 255, 0, 0.5);
 }
 
 .sidebarUI li {

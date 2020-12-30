@@ -1,5 +1,5 @@
 import React from 'react'
-import {MDBContainer, MDBRow, MDBCol, MDBIcon, MDBNavbarBrand} from "mdbreact";
+import {MDBContainer, MDBRow, MDBCol} from "mdbreact";
 import { MDBTypography, MDBBox } from 'mdbreact';
 import { CopyBlock, dracula, atomOneLight } from "react-code-blocks";
 import logoImage from "../assets/img/logo.svg";
@@ -30,9 +30,9 @@ function Content() {
                 <MDBCol className="hidden-md sidebar" xl="2" lg="2" md="12" sm="12">
                     <div class="fixed">
                         <div class="h-75">
-                            <div className="inline hidden-sm">
-                                <img src={logoImage} className="inverted" alt="SpaceLander logo"></img>
-                                <h1 className="my-4 ml-2">DEV</h1>
+                            <div className="inline hidden-sm pb-4">
+                                <a href="https://spacelander.io/"><img src={logoImage} className="inverted" alt="SpaceLander logo"></img></a>
+                                <h1 className="my-2 ml-2">DEV</h1>
                             </div>
                         </div>
 
@@ -46,27 +46,27 @@ function Content() {
 
                         <div class="sidebar-list">
                             <ul className="sidebarUI list-group flex-column w-100 h-100 font-weight-bold main-link" >
-                                <li className="endpoint text-center py-2">
+                                <li className="endpoint py-2">
                                     <a className="black-text darken-1" href="#introduction">Introduction</a>
                                 </li>
-                                <li className="endpoint text-center py-2">
+                                <li className="endpoint py-2">
                                     <a className="black-text darken-1" href="#authentication">Authentication</a>
                                 </li>
-                                <li className="endpoint text-center py-2">
+                                <li className="endpoint py-2">
                                     <a className="black-text darken-1" href="#errors">Errors</a>
                                 </li>
-                                <li className="endpoint text-center py-2">
+                                <li className="endpoint py-2">
                                     <a className="black-text darken-1" href="#brainstorm">Brainstorm</a>
-                                    <ul className="sidebarUI list-group flex-column w-100 h-100 font-weight-bold minor-link" >
+                                    <ul className="pl-2 sidebarUI list-group flex-column w-100 h-100 font-weight-bold minor-link" >
                                         <a className="black-text darken-1" href="#priceHistory">Price History</a>
                                         <a className="black-text darken-1" href="#rankingHistory">Ranking History</a>
                                         <a className="black-text darken-1" href="#history">History</a>
                                     </ul>
                                 </li>
 
-                                <li className="endpoint text-center py-2">
+                                <li className="endpoint py-2">
                                     <a className="black-text darken-1" href="#amazon">Amazon</a>
-                                    <ul className="sidebarUI list-group flex-column w-100 h-100 font-weight-bold minor-link" >
+                                    <ul className="pl-2 sidebarUI list-group flex-column w-100 h-100 font-weight-bold minor-link" >
                                         <a className="black-text darken-1" href="#AsinCategories">Get Categories</a>
                                         {/*<a className="black-text darken-1" href="#history">Ranking History</a>*/}
                                     </ul>
@@ -91,15 +91,15 @@ function Content() {
                             </MDBBox>
 
                             <MDBTypography >
-                                The SpaceLander API is organized around <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">REST</a>. Our API has predictable resource-oriented URLs,
-                                accepts <a href="https://en.wikipedia.org/wiki/POST_(HTTP)#Use_for_submitting_web_forms" target="_blank">form-encoded</a> request bodies, returns <a href="https://www.json.org/json-en.html" target="_blank">JSON-encoded</a> responses, and uses standard
+                                The SpaceLander API is organized around <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank" rel="noopener noreferrer">REST</a>. Our API has predictable resource-oriented URLs,
+                                accepts <a href="https://en.wikipedia.org/wiki/POST_(HTTP)#Use_for_submitting_web_forms" target="_blank" rel="noopener noreferrer">form-encoded</a> request bodies, returns <a href="https://www.json.org/json-en.html" target="_blank" rel="noopener noreferrer">JSON-encoded</a> responses, and uses standard
                                 HTTP response codes, authentication, and verbs.
                             </MDBTypography>
                         </MDBCol>
 
                         <MDBCol xs="12" md="5" lg="5">
                             <h5 className="py-1">Need an account?</h5>
-                            <p className="py-1">Register one <a href="https://spacelander.io/register" target="_blank">here</a></p>
+                            <p className="py-1">Register one <a href="https://spacelander.io/register" target="_blank" rel="noopener noreferrer">here</a></p>
 
                             <h5 className="pt-3">Base URL:</h5>
                             <CopyBlock
@@ -249,7 +249,7 @@ function Content() {
                             <hr></hr>
                             <h3 className="py-3" id="priceHistory">Get Product/Price History</h3>
                             <MDBTypography>
-                                Returns array of price history for product by <a href="https://www.amazon.com/gp/seller/asin-upc-isbn-info.html" target="_blank">ASIN</a> provided.
+                                Returns array of price history for product by <a href="https://www.amazon.com/gp/seller/asin-upc-isbn-info.html" target="_blank" rel="noopener noreferrer">ASIN</a> provided.
                             </MDBTypography>
                         </MDBCol>
 
@@ -327,7 +327,7 @@ function Content() {
                             <hr></hr>
                             <h3 className="py-3" id="rankingHistory">Get Product Ranking History</h3>
                             <MDBTypography>
-                                Returns array of price history for product ranking history by <a href="https://www.amazon.com/gp/seller/asin-upc-isbn-info.html" target="_blank">ASIN</a> provided.
+                                Returns array of price history for product ranking history by <a href="https://www.amazon.com/gp/seller/asin-upc-isbn-info.html" target="_blank" rel="noopener noreferrer">ASIN</a> provided.
                             </MDBTypography>
                         </MDBCol>
 
@@ -361,7 +361,7 @@ function Content() {
                             <hr></hr>
                             <h3 className="py-3" id="">More</h3>
                             <MDBTypography>
-                                Returns array of price history for product by <a href="https://www.amazon.com/gp/seller/asin-upc-isbn-info.html" target="_blank">ASIN</a> provided.
+                                Returns array of price history for product by <a href="https://www.amazon.com/gp/seller/asin-upc-isbn-info.html" target="_blank" rel="noopener noreferrer">ASIN</a> provided.
                             </MDBTypography>
                         </MDBCol>
 
