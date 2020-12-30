@@ -88,7 +88,6 @@ a {
     }
 }
 
-
 code {
     color: #f1f1f1;
 }
@@ -138,8 +137,7 @@ ul.list-group {
 }
 
 
-/* MEDIA */
-
+/* MEDIA FOR TABLET AND ABOVE */
 @media only screen and (min-device-width : 750px) {
     .fixed {
         position: fixed;

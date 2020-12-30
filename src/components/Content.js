@@ -1,8 +1,10 @@
 import React from 'react'
-import {MDBContainer, MDBRow, MDBCol, MDBIcon, MDBNavbarBrand} from "mdbreact";
+import {MDBContainer, MDBRow, MDBCol} from "mdbreact";
 import { MDBTypography, MDBBox } from 'mdbreact';
 import { CopyBlock, dracula, atomOneLight } from "react-code-blocks";
 import logoImage from "../assets/img/logo.svg";
+
+// import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 
 
 function Content() {
@@ -27,7 +29,7 @@ function Content() {
         <MDBContainer fluid>
             <MDBRow>
                 {/* SideBar */}
-                <MDBCol className="" md="2">
+                <MDBCol className="" md="3" lg="2">
                     <div class="fixed">
                         <div class="h-75">
                             <div className="inline hidden-sm">
@@ -56,19 +58,31 @@ function Content() {
                             <li className="endpoint text-center py-2">
                                 <a className="black-text darken-1" href="#errors">Errors</a>
                             </li>
+
                             <li className="endpoint text-center py-2">
                                 <a className="black-text darken-1" href="#introduction">Brainstorm </a>
+
+                                {/* <div className="dropdown-items">
+                                    <a className="black-text darken-1" href="#introduction">Brainstorm </a><br></br>
+                                    <a className="black-text darken-1" href="#introduction">Brainstorm </a>
+                                </div> */}
+                                
                             </li>
 
                             <li className="endpoint text-center py-2">
                                 <a className="black-text darken-1" href="#introduction">History</a>
                             </li>
                         </ul>
+
+
+
+
+                        
                     </div>
                 </MDBCol>
 
                 {/* Content */}
-                <MDBCol sm="10" className="border-left border-light" >
+                <MDBCol sm="9" md="9" lg="10" className="border-left border-light" >
                     <MDBRow className="py-5">
                         {/* Endpoint Description */}
                         <MDBCol xs="12" md="7" lg="7" >
