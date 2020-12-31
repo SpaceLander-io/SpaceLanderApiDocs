@@ -71,7 +71,28 @@ function Content() {
                                     <Link activeClass="active" to="amazon" className="black-text darken-1" spy={true} smooth={true} duration={500}>Amazon</Link>
                                     <ul className="pl-2 sidebarUI list-group flex-column w-100 h-100 font-weight-bold minor-link" >
                                         <a className="black-text darken-1" href="#AsinCategories">Get Categories</a>
+                                        <a className="black-text darken-1" href="#AmazonMatchingProducts">Get Matching Products</a>
+                                        <a className="black-text darken-1" href="#AmazonProductDetails">Get Product Details</a>
+                                        <a className="black-text darken-1" href="#AmazonLowestOfferListings">Get Lowest Offer Listings</a>
+                                        <a className="black-text darken-1" href="#AsinLowestPrice">Get Lowest Price by ASIN</a>
+                                        <a className="black-text darken-1" href="#AsinCompetitivePrice">Get Competitive Price By ASIN</a>
+                                        <a className="black-text darken-1" href="#AmazonSkuCompetitivePrice">Get Competitive Price By SKU</a>
+                                        <a className="black-text darken-1" href="#AsinMyPrice">Get My Price By ASIN</a>
+                                        <a className="black-text darken-1" href="#AmazonSkuMyPrice">Get My Price by SKU</a>
                                         {/*<a className="black-text darken-1" href="#history">Ranking History</a>*/}
+                                    </ul>
+                                </li>
+
+                                <li className="endpoint py-2">
+                                    <Link activeClass="active" to="AmazonOrders" className="black-text darken-1" spy={true} smooth={true} duration={500}>Amazon Orders</Link>
+                                    <ul className="pl-2 sidebarUI list-group flex-column w-100 h-100 font-weight-bold minor-link" >
+                                        <a className="black-text darken-1" href="#AmazonOrderServiceStatus">Get Service Status (Orders)</a>
+                                        <a className="black-text darken-1" href="#AmazonOrderList">Get Order List</a>
+                                        <a className="black-text darken-1" href="#AmazonTestOrders">Test Orders</a>
+                                        <a className="black-text darken-1" href="#AmazonOrderListByNextToken">List Orders By Next Token</a>
+                                        <a className="black-text darken-1" href="#AmazonOrder">Get Order</a>
+                                        <a className="black-text darken-1" href="#AmazonOrderItemList">Get Order Item List</a>
+                                        <a className="black-text darken-1" href="#AmazonOrderItemListByNextToken">List Order Items By Next Token</a>
                                     </ul>
                                 </li>
 
@@ -519,9 +540,12 @@ function Content() {
                         {/* Get Matching Products */}
                         <MDBCol className="my-2" sm="12" md="7" >
                             <hr class=""></hr>
-                            <h3 className="py-3" id="AsinCategories">Get Matching Products</h3>
+                            <h3 className="py-3" id="AmazonMatchingProducts">Get Matching Products</h3>
                             <MDBTypography>
-                                Returns the similar products to products provided.
+                                Returns a list of products and their attributes, ordered by relevancy,
+                                based on a search query that you specify. Your search query can be a phrase
+                                that describes the product, or it can be a product identifier such as a
+                                GCID, UPC, EAN, ISBN, or JAN.
                             </MDBTypography>
                         </MDBCol>
                         {/* Code Example */}
@@ -861,9 +885,9 @@ function Content() {
                         {/* Get Product Details */}
                         <MDBCol className="my-2" sm="12" md="7" >
                             <hr class=""></hr>
-                            <h3 className="py-3" id="AsinCategories">Get Product Details</h3>
+                            <h3 className="py-3" id="AmazonProductDetails">Get Product Details</h3>
                             <MDBTypography>
-                                Returns get product details for ASIN provided.
+                                Returns product details for between 1 and 5 ASIN values provided.
                             </MDBTypography>
                         </MDBCol>
                         {/* Code Example */}
@@ -871,7 +895,7 @@ function Content() {
                             <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
                             <CopyBlock
                                 langiage="js"
-                                text={`https://spacelander.io/api/amazon/product-details/{asin}`}
+                                text={`https://spacelander.io/api/amazon/product-details/{asin1}/{asin2?}/.../{asin5?}`}
                                 codeBlock
                                 theme={dracula}
                                 showLineNumbers={false}
@@ -893,12 +917,13 @@ function Content() {
 
 
 
-                        {/* Find Products */}
+                        {/* Get Lowest Offer Listings */}
                         <MDBCol className="my-2" sm="12" md="7" >
                             <hr class=""></hr>
-                            <h3 className="py-3" id="AsinCategories">Get Lowest Offer Listings</h3>
+                            <h3 className="py-3" id="AmazonLowestOfferListings">Get Lowest Offer Listings</h3>
                             <MDBTypography>
-                                Finds products listed on Amazon by query provided.
+                                Returns the lowest price offer listings for products in new condition,
+                                specified by between 1 and 20 ASIN values provided.
                             </MDBTypography>
                         </MDBCol>
 
@@ -907,7 +932,7 @@ function Content() {
                             <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
                             <CopyBlock
                                 langiage="js"
-                                text={`https://spacelander.io/api/amazon/lowest-offer-listings/{asin}`}
+                                text={`https://spacelander.io/api/amazon/lowest-offer-listings/{asin1}/{asin2?}/.../{asin20?}`}
                                 codeBlock
                                 theme={dracula}
                                 showLineNumbers={false}
@@ -919,7 +944,131 @@ function Content() {
 
                                     langiage="js"
                                     text=
-                                        {`[
+                                        {`{
+    "GetLowestOfferListingsForASINResult": {
+        "@attributes": {
+            "ASIN": "B00YBWOMRA",
+            "status": "Success"
+        },
+        "AllOfferListingsConsidered": "true",
+        "Product": {
+            "Identifiers": {
+                "MarketplaceASIN": {
+                    "MarketplaceId": "ATVPDKIKX0DER",
+                    "ASIN": "B00YBWOMRA"
+                }
+            },
+            "LowestOfferListings": {
+                "LowestOfferListing": {
+                    "Qualifiers": {
+                        "ItemCondition": "New",
+                        "ItemSubcondition": "New",
+                        "FulfillmentChannel": "Amazon",
+                        "ShipsDomestically": "True",
+                        "ShippingTime": {
+                            "Max": "0-2 days"
+                        },
+                        "SellerPositiveFeedbackRating": "98-100%"
+                    },
+                    "NumberOfOfferListingsConsidered": "1",
+                    "SellerFeedbackCount": "362200",
+                    "Price": {
+                        "LandedPrice": {
+                            "CurrencyCode": "USD",
+                            "Amount": "7.99"
+                        },
+                        "ListingPrice": {
+                            "CurrencyCode": "USD",
+                            "Amount": "7.99"
+                        },
+                        "Shipping": {
+                            "CurrencyCode": "USD",
+                            "Amount": "0.00"
+                        }
+                    },
+                    "MultipleOffersAtLowestPrice": "False"
+                }
+            }
+        }
+    },
+    "ResponseMetadata": {
+        "RequestId": "04185475-893a-4de9-8964-9437e5974b2e"
+    }
+}`}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                        {/* Get Lowest Price By ASIN */}
+                        <MDBCol className="my-2" sm="12" md="7" >
+                            <hr class=""></hr>
+                            <h3 className="py-3" id="AsinLowestPrice">Get Lowest Price by ASIN</h3>
+                            <MDBTypography>
+                                Returns the top 20 offers for a given ASIN and item condition that you specify.
+                                If itemCondition is specified, it must be one of the following values:
+                                all, new, used, collectible, refurbished or club.
+                                If itemCondition is not specified, it defaults to all.
+                                The top 20 offers are determined by the lowest landed price,
+                                which is the price plus shipping minus Amazon Points.
+                                If multiple sellers are charging the same landed price,
+                                the results will be returned in random order.
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/amazon/get-lowest-price-by-asin/{asin}/{itemCondition?}`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text={`Unresolved error`}
+                                codeBlock
+                                theme={atomOneLight}
+                                showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                        {/* Get Competitive Price By ASIN */}
+                        <MDBCol className="my-2" sm="12" md="7" >
+                            <hr class=""></hr>
+                            <h3 className="py-3" id="AsinCompetitivePrice">Get Competitive Price By ASIN</h3>
+                            <MDBTypography>
+                                Returns the current competitive pricing of a product,
+                                based on a list of between 1 and 20 ASIN values that you specify.
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/amazon/get-competitive-price-by-asin/{asin1}/{asin2?}/.../{asin20?}`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text={`[
    {
       "GetCompetitivePricingForASINResult":{
          "@attributes":{
@@ -1666,6 +1815,554 @@ function Content() {
       }
    }
 ]`}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                        {/* Get Competitive Price By SKU */}
+                        <MDBCol className="my-2" sm="12" md="7" >
+                            <hr class=""></hr>
+                            <h3 className="py-3" id="AmazonSkuCompetitivePrice">Get Competitive Price By SKU</h3>
+                            <MDBTypography>
+                                Returns the current competitive pricing of a product,
+                                based on a list of between 1 and 20 SellerSKU values that you specify.
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/amazon/get-competitive-price-by-sku/{sku1}/{sku2?}/.../{sku20?}`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text={`No example SKU available`}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                        {/* Get My Price By ASIN */}
+                        <MDBCol className="my-2" sm="12" md="7" >
+                            <hr class=""></hr>
+                            <h3 className="py-3" id="AsinMyPrice">Get My Price By ASIN</h3>
+                            <MDBTypography>
+                                Returns pricing information for your own active offer listings in new condition,
+                                based on the list of between 1 and 20 ASIN values that you specify.
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/amazon/get-my-price-for-asin/{asin1}/{asin2?}/.../{asin20?}`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text={`No example available`}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                        {/* Get My Price By SKU */}
+                        <MDBCol className="my-2" sm="12" md="7" >
+                            <hr class=""></hr>
+                            <h3 className="py-3" id="AmazonSkuMyPrice">Get My Price by SKU</h3>
+                            <MDBTypography>
+                                Returns pricing information for your own active offer listings,
+                                based on the ASIN values mapped to the list of
+                                between 1 and 20 SellerSKU values that you specify.
+                                itemCondition must be one of the following values:
+                                all, new, used, collectible, refurbished or club.
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/amazon/get-my-price-for-sku/{itemCondition}/{sku1}/{sku2?}/.../{sku20?}`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text={`No example available`}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                        {/* Amazon Orders */}
+                        <MDBCol sm="12" md="7"  >
+                            <h3 className="py-3" id="AmazonOrders">Amazon Orders</h3>
+                            <MDBTypography>
+                                3-7-7 format means 3 digits, followed by a dash, followed by 7 more digits,
+                                followed by another dash, followed by yet another 7 digits.
+                            </MDBTypography>
+                        </MDBCol>
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3">Base URL: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/amazon/orders/`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+                        </MDBCol>
+
+                        {/* Get Service Status (Orders) */}
+                        <MDBCol className="my-2" sm="12" md="7" >
+                            <hr class=""></hr>
+                            <h3 className="py-3" id="AmazonOrderServiceStatus">Get Service Status (Orders)</h3>
+                            <MDBTypography>
+                                Returns the operational status of the Orders API section of
+                                Amazon Marketplace Web Service. Status values are GREEN, YELLOW, and RED.
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/amazon/orders/service-status`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text={`{
+    "GetServiceStatusResult": {
+        "Status": "GREEN",
+        "Timestamp": "2020-12-30T23:08:15.602Z"
+    },
+    "ResponseMetadata": {
+        "RequestId": "c056d6dd-a2bf-4dcf-8807-d9882dbca49f"
+    }
+}`}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                        {/* Get Order List */}
+                        <MDBCol className="my-2" sm="12" md="7" >
+                            <hr class=""></hr>
+                            <h3 className="py-3" id="AmazonOrderList">Get Order List</h3>
+                            <MDBTypography>
+                                Returns a list of orders created after May 1, 2020.
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/amazon/orders/list`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text={`See Test Orders below`}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                        {/* Test Orders */}
+                        <MDBCol className="my-2" sm="12" md="7" >
+                            <hr class=""></hr>
+                            <h3 className="py-3" id="AmazonTestOrders">Test Orders</h3>
+                            <MDBTypography>
+                                Allows debuggers to see an example of what getOrderList might return,
+                                without creating fake orders or fake user accounts.
+                                Also changes the date range from created after May 1, 2020,
+                                to last updated before February 25, 2017, 6:10 PM.
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/amazon/orders/test`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text={`{
+   "ListOrdersResult": {
+      "NextToken": "2YgYW55IGNhcm5hbCBwbGVhc3VyZS4=",
+      "LastUpdatedBefore": "2017-02-25T18%3A10%3A21.687Z",
+      "Orders": {
+         "Order": [
+            {
+               "AmazonOrderId": "902-3159896-1390916",
+               "PurchaseDate": "2017-02-20T19:49:35Z",
+               "LastUpdateDate": "2017-02-20T19:49:35Z",
+               "OrderStatus": "Unshipped",
+               "FulfillmentChannel": "MFN",
+               "SalesChannel": "Amazon.com",
+               "ShippingAddress": {
+                  "Name": "Buyer name",
+                  "AddressLine1": "1234 Any St.",
+                  "City": "Seattle",
+                  "StateOrRegion": "WA",
+                  "PostalCode": "98103",
+                  "CountryCode": "US",
+                  "AddressType": "Commercial"
+               },
+               "DefaultShipFromLocationAddress": {
+                  "Name": "Seller name",
+                  "AddressLine1": "15606 NE Any street",
+                  "AddressLine2": "Suite 2",
+                  "City": "Redmond",
+                  "StateOrRegion": "WA",
+                  "PostalCode": "98052",
+                  "CountryCode": "US",
+                  "Phone": "555 555-5555",
+                  "isAddressSharingConfidential": "false"
+               },
+               "OrderTotal": {
+                  "CurrencyCode": "USD",
+                  "Amount": "25.00"
+               },
+               "NumberOfItemsShipped": "0",
+               "NumberOfItemsUnshipped": "1",
+               "PaymentMethod": "Other",
+               "PaymentMethodDetails": {
+                  "PaymentMethodDetail": "CreditCard"
+               },
+               "MarketplaceId": "ATVPDKIKX0DER",
+               "BuyerEmail": "5vlhEXAMPLEh9h5@marketplace.amazon.com",
+               "BuyerName": "Buyer name",
+               "BuyerTaxInfo": {
+                  "CompanyLegalName": "Company Name",
+                  "TaxingRegion": "US",
+                  "TaxClassifications": {
+                     "TaxClassification": {
+                        "Name": "VATNumber",
+                        "Value": "XXX123"
+                     }
+                  }
+               },
+               "OrderType": "StandardOrder",
+               "EarliestShipDate": "2017-02-20T19:51:16Z",
+               "LatestShipDate": "2017-02-25T19:49:35Z",
+               "IsBusinessOrder": "true",
+               "PurchaseOrderNumber": "PO12345678",
+               "IsPrime": "false",
+               "IsPremiumOrder": "false",
+               "IsGlobalExpressEnabled": "false"
+            },
+            {
+               "AmazonOrderId": "483-3488972-0896720",
+               "PurchaseDate": "20178-02-20T19:49:35Z",
+               "LastUpdateDate": "2017-02-20T19:49:35Z",
+               "OrderStatus": "Unshipped",
+               "FulfillmentChannel": "MFN",
+               "ShippingAddress": {
+                  "Name": "Buyer name",
+                  "AddressLine1": "1234 Avenida Qualquer",
+                  "City": "Sao Paulo",
+                  "PostalCode": "08474-130",
+                  "CountryCode": "BR",
+                  "AddressType": "Residential"
+               },
+               "OrderTotal": {
+                  "CurrencyCode": "BRL",
+                  "Amount": "100.00"
+               },
+               "NumberOfItemsShipped": "0",
+               "NumberOfItemsUnshipped": "1",
+               "PaymentMethod": "Other",
+               "PaymentMethodDetails": {
+                  "PaymentMethodDetail": "CreditCard"
+               },
+               "MarketplaceId": "A2Q3Y263D00KWC",
+               "BuyerEmail": "5vlhEXAMPLEh9h5@marketplace.amazon.com.br",
+               "BuyerName": "John Jones",
+               "BuyerCounty": "Vila Olimpia",
+               "BuyerTaxInfo": {
+                  "TaxingRegion": "BR",
+                  "TaxClassifications": {
+                     "TaxClassification": {
+                        "Name": "CSTNumber",
+                        "Value": "XXX123"
+                     }
+                  }
+               },
+               "EarliestShipDate": "2017-02-20T19:51:16Z",
+               "LatestShipDate": "2017-02-25T19:49:35Z",
+               "IsBusinessOrder": "false",
+               "IsPrime": "false",
+               "IsPremiumOrder": "false",
+               "IsGlobalExpressEnabled": "false"
+            },
+            {
+               "AmazonOrderId": "058-1233752-8214740",
+               "PurchaseDate": "2017-02-05T00%3A06%3A07.000Z",
+               "LastUpdateDate": "2017-02-07T12%3A43%3A16.000Z",
+               "OrderStatus": "Unshipped",
+               "FulfillmentChannel": "MFN",
+               "ShipServiceLevel": "Std JP Kanto8",
+               "ShippingAddress": {
+                  "Name": "Jane Smith",
+                  "AddressLine1": "1-2-10 Akasaka",
+                  "City": "Tokyo",
+                  "PostalCode": "107-0053",
+                  "CountryCode": "JP"
+               },
+               "OrderTotal": {
+                  "CurrencyCode": "JPY",
+                  "Amount": "1507.00"
+               },
+               "NumberOfItemsShipped": "0",
+               "NumberOfItemsUnshipped": "1",
+               "PaymentExecutionDetail": {
+                  "PaymentExecutionDetailItem": [
+                     {
+                        "Payment": {
+                           "Amount": "10.00",
+                           "CurrencyCode": "JPY"
+                        },
+                        "PaymentMethod": "PointsAccount"
+                     },
+                     {
+                        "Payment": {
+                           "Amount": "317.00",
+                           "CurrencyCode": "JPY"
+                        },
+                        "PaymentMethod": "GC"
+                     },
+                     {
+                        "Payment": {
+                           "Amount": "1180.00",
+                           "CurrencyCode": "JPY"
+                        },
+                        "PaymentMethod": "COD"
+                     }
+                  ]
+               },
+               "PaymentMethod": "COD",
+               "PaymentMethodDetails": {
+                  "PaymentMethodDetail": "COD"
+               },
+               "MarketplaceId": "A1VC38T7YXB528",
+               "BuyerEmail": "5vlhEXAMPLEh9h5@marketplace.amazon.co.jp",
+               "BuyerName": "Jane Smith",
+               "ShipmentServiceLevelCategory": "Standard ",
+               "OrderType": "SourcingOnDemandOrder",
+               "IsBusinessOrder": "false",
+               "IsPrime": "false",
+               "IsPremiumOrder": "false",
+               "IsGlobalExpressEnabled": "false",
+               "PromiseResponseDueDate": "2017-08-31T23:58:44Z",
+               "IsEstimatedShipDateSet": "true"
+            }
+         ]
+      }
+   },
+   "ResponseMetadata": {
+      "RequestId": "88faca76-b600-46d2-b53c-0c8c4533e43a"
+   }
+}`}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                        {/* List Orders By Next Token */}
+                        <MDBCol className="my-2" sm="12" md="7" >
+                            <hr class=""></hr>
+                            <h3 className="py-3" id="AmazonOrderListByNextToken">List Orders By Next Token</h3>
+                            <MDBTypography>
+                                Returns the next page of orders using the nextToken parameter.
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/amazon/orders/list-by-next-token/{nextToken}`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text={`No example available`}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                        {/* Get Order */}
+                        <MDBCol className="my-2" sm="12" md="7" >
+                            <hr class=""></hr>
+                            <h3 className="py-3" id="AmazonOrder">Get Order</h3>
+                            <MDBTypography>
+                                Returns an order for each AmazonOrderId that you specify, up to a maximum of 50.
+                                Each orderId must be in 3-7-7 format.
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/amazon/orders/{orderId1}/{orderId2?}/.../{orderId50?}`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text={`No example available`}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                        {/* Get Order Item List */}
+                        <MDBCol className="my-2" sm="12" md="7" >
+                            <hr class=""></hr>
+                            <h3 className="py-3" id="AmazonOrderItemList">Get Order Item List</h3>
+                            <MDBTypography>
+                                Returns order items based on the amazonOrderId that you specify.
+                                The amazonOrderId must be in 3-7-7 format.
+                                The order item information includes Title, ASIN, SellerSKU, ItemPrice,
+                                ShippingPrice, as well as tax and promotion information.
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/amazon/orders/list-items/{amazonOrderId}`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text={`No example available`}
+                                    codeBlock
+                                    theme={atomOneLight}
+                                    showLineNumbers={false}
+                                />
+                            </div>
+                        </MDBCol>
+
+                        {/* List Order Items By Next Token */}
+                        <MDBCol className="my-2" sm="12" md="7" >
+                            <hr class=""></hr>
+                            <h3 className="py-3" id="AmazonOrderItemListByNextToken">List Order Items By Next Token</h3>
+                            <MDBTypography>
+                                Returns the next page of order items using the NextToken parameter.
+                            </MDBTypography>
+                        </MDBCol>
+
+                        {/* Code Example */}
+                        <MDBCol sm="12" md="5">
+                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
+                            <CopyBlock
+                                langiage="js"
+                                text={`https://spacelander.io/api/amazon/orders/list-items-by-next-token/{nextToken}`}
+                                codeBlock
+                                theme={dracula}
+                                showLineNumbers={false}
+                            />
+
+                            <p className="mt-3">Response</p>
+                            <div className="light">
+                                <CopyBlock
+
+                                    langiage="js"
+                                    text={`No example available`}
                                     codeBlock
                                     theme={atomOneLight}
                                     showLineNumbers={false}
