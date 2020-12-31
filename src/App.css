@@ -98,6 +98,9 @@ h2, h3, h4, h5
 }
 
 /* MEDIA */
+.fixed {
+    max-width: 150px;
+}
 
 @media only screen and (min-device-width : 780px) {
     .fixed {
@@ -149,6 +152,9 @@ code {
 
 .sidebar-list
 {
+    overflow-y: scroll;
+    height: calc(90vh - 150px);
+    width: 180px;
 }
 
 .main-link a
@@ -198,12 +204,7 @@ ul.list-group {
 }
 
 .footer, .footer-copyright, header {
-    background-color: #121212 !important;
-}
-
-.fixed {
-    position: block;
-
+    background-color: #272B36 !important;
 }
 
 .navbar {
