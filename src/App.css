@@ -2,10 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+.irsCXf
+{
+    background-color: #121212 !important;
+}
+
+.irsCXf span
+{
+    background-color: #121212 !important;
+}
 
 body {
     background-color: #f1f1f1;
-    color: #272B36;
+    color: #121212;
     /* font-family: 'Source Code Pro',
     monospace; */
 
@@ -16,7 +25,14 @@ body {
     sans-serif;
 }
 
+.badge-secondary {
+    background-color: #6b63ff !important;
+}
 
+.badge-default {
+    /*color: #121212 !important;*/
+    background-color: #21ffa2 !important;
+}
 
 body a {
     color: #6b63ff;
@@ -36,12 +52,12 @@ footer a {
 footer
 {
     z-index: 2;
-    background: #272B36 !important;
+    background: #121212 !important;
 }
 
 .black-text
 {
-    color: #272B36 !important;
+    color: #121212 !important;
 }
 
 
@@ -64,8 +80,8 @@ input
     /*font-weight: 400 !important;*/
     border-radius: 3.14159265rem !important;
     color: #f1f1f1 !important;
-    background: #272B36 !important;
-    border: 1px solid #272B36 !important;
+    background: #121212 !important;
+    border: 1px solid #121212 !important;
     box-shadow: none !important;
     transition: all .4s ease 0s !important;
 
@@ -142,7 +158,7 @@ code {
 
 .light code
 {
-    color: #272B36 !important;
+    color: #121212 !important;
 }
 
 .logo {
@@ -204,11 +220,11 @@ ul.list-group {
 }
 
 .footer, .footer-copyright, header {
-    background-color: #272B36 !important;
+    background-color: #121212 !important;
 }
 
 .navbar {
-    background: #272B36 !important;
+    background: #121212 !important;
 }
 
 
