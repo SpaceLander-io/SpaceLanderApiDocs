@@ -123,6 +123,9 @@ h2, h3, h4, h5
         position: fixed;
         top: 0px;
         z-index: 0;
+        left: 0;
+        padding-left: 15px;
+        background-color: #f1f1f1;
     }
     .navbar {
         font-weight: 300;
@@ -169,7 +172,7 @@ code {
 .sidebar-list
 {
     overflow-y: scroll;
-    height: calc(90vh - 150px);
+    /* height: calc(90vh - 150px); */
     width: 180px;
 }
 
@@ -201,6 +204,7 @@ ul.list-group {
 .sidebarUI li a:hover {
     color: #757575 !important;
     
+    
 }
 
 .active {
@@ -211,6 +215,7 @@ ul.list-group {
 }
 
 .sidebarUI li {
+    background-color: #f1f1f1;
     list-style: none;
     border-bottom: solid#d8d8d8 1px
 }

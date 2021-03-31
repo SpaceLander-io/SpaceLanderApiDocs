@@ -3,7 +3,7 @@ import {MDBContainer, MDBRow, MDBCol} from "mdbreact";
 import { MDBTypography, MDBBox } from 'mdbreact';
 import { CopyBlock, dracula, atomOneLight } from "react-code-blocks";
 import logoImage from "../assets/img/logo.svg";
-import { Link, scrollSpy, scroller } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 // import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 
