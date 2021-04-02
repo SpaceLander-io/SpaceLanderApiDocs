@@ -172,8 +172,9 @@ code {
 .sidebar-list
 {
     overflow-y: scroll;
-    /* height: calc(90vh - 150px); */
+    height: calc(90vh);
     width: 180px;
+    background-color: #f1f1f1;
 }
 
 .main-link a
