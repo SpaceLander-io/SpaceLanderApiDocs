@@ -83,30 +83,30 @@ function Content() {
                                     </ul>
                                 </li>
 
-                                <li className="endpoint py-2">
-                                    <Link activeClass="active" to="AmazonOrders" className="black-text darken-1" spy={true} smooth={true} duration={500}>Amazon Orders</Link>
-                                    <ul className="pl-2 sidebarUI list-group flex-column w-100 h-100 font-weight-bold minor-link" >
-                                        <a className="black-text darken-1" href="#AmazonOrderServiceStatus">Get Service Status (Orders)</a>
-                                        <a className="black-text darken-1" href="#AmazonOrderList">Get Order List</a>
-                                        <a className="black-text darken-1" href="#AmazonTestOrders">Test Orders</a>
-                                        <a className="black-text darken-1" href="#AmazonOrderListByNextToken">List Orders By Next Token</a>
-                                        <a className="black-text darken-1" href="#AmazonOrder">Get Order</a>
-                                        <a className="black-text darken-1" href="#AmazonOrderItemList">Get Order Item List</a>
-                                        <a className="black-text darken-1" href="#AmazonOrderItemListByNextToken">List Order Items By Next Token</a>
-                                    </ul>
-                                </li>
+                                {/*<li className="endpoint py-2">*/}
+                                {/*    <Link activeClass="active" to="AmazonOrders" className="black-text darken-1" spy={true} smooth={true} duration={500}>Amazon Orders</Link>*/}
+                                {/*    <ul className="pl-2 sidebarUI list-group flex-column w-100 h-100 font-weight-bold minor-link" >*/}
+                                {/*        <a className="black-text darken-1" href="#AmazonOrderServiceStatus">Get Service Status (Orders)</a>*/}
+                                {/*        <a className="black-text darken-1" href="#AmazonOrderList">Get Order List</a>*/}
+                                {/*        <a className="black-text darken-1" href="#AmazonTestOrders">Test Orders</a>*/}
+                                {/*        <a className="black-text darken-1" href="#AmazonOrderListByNextToken">List Orders By Next Token</a>*/}
+                                {/*        <a className="black-text darken-1" href="#AmazonOrder">Get Order</a>*/}
+                                {/*        <a className="black-text darken-1" href="#AmazonOrderItemList">Get Order Item List</a>*/}
+                                {/*        <a className="black-text darken-1" href="#AmazonOrderItemListByNextToken">List Order Items By Next Token</a>*/}
+                                {/*    </ul>*/}
+                                {/*</li>*/}
 
-                                <li className="endpoint py-2">
-                                    <Link activeClass="active" to="AmazonFulfillment" className="black-text darken-1" spy={true} smooth={true} duration={500}>Amazon Fulfillment</Link>
-                                    <ul className="pl-2 sidebarUI list-group flex-column w-100 h-100 font-weight-bold minor-link" >
-                                        <a className="black-text darken-1" href="#AmazonMerchantServiceStatus">Get Merchant Service Status</a>
-                                        <a className="black-text darken-1" href="#AmazonEligibleShippingServices">Get Eligible Shipping Services</a>
-                                        <a className="black-text darken-1" href="#AmazonAdditionalSellerInputs">Get Additional Seller Inputs</a>
-                                        <a className="black-text darken-1" href="#AmazonCreateShipment">Create Shipment</a>
-                                        <a className="black-text darken-1" href="#AmazonShipment">Get Shipment</a>
-                                        <a className="black-text darken-1" href="#AmazonCancelShipment">Cancel Shipment</a>
-                                    </ul>
-                                </li>
+                                {/*<li className="endpoint py-2">*/}
+                                {/*    <Link activeClass="active" to="AmazonFulfillment" className="black-text darken-1" spy={true} smooth={true} duration={500}>Amazon Fulfillment</Link>*/}
+                                {/*    <ul className="pl-2 sidebarUI list-group flex-column w-100 h-100 font-weight-bold minor-link" >*/}
+                                {/*        <a className="black-text darken-1" href="#AmazonMerchantServiceStatus">Get Merchant Service Status</a>*/}
+                                {/*        <a className="black-text darken-1" href="#AmazonEligibleShippingServices">Get Eligible Shipping Services</a>*/}
+                                {/*        <a className="black-text darken-1" href="#AmazonAdditionalSellerInputs">Get Additional Seller Inputs</a>*/}
+                                {/*        <a className="black-text darken-1" href="#AmazonCreateShipment">Create Shipment</a>*/}
+                                {/*        <a className="black-text darken-1" href="#AmazonShipment">Get Shipment</a>*/}
+                                {/*        <a className="black-text darken-1" href="#AmazonCancelShipment">Cancel Shipment</a>*/}
+                                {/*    </ul>*/}
+                                {/*</li>*/}
 
                             </ul>
                         </div>
@@ -2498,1535 +2498,1535 @@ function Content() {
                             </div>
                         </MDBCol>
 
-                        {/* Amazon Orders */}
-                        <MDBCol sm="12" md="7"  >
-                            <h3 className="py-3" id="AmazonOrders">Amazon Orders</h3>
-                            <MDBTypography>
-                                3-7-7 format means 3 digits, followed by a dash, followed by 7 more digits,
-                                followed by another dash, followed by yet another 7 digits.
-                            </MDBTypography>
-                        </MDBCol>
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="pt-3">Base URL: </h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`https://spacelander.io/api/amazon/orders/`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
-                        </MDBCol>
+{/*                        /!* Amazon Orders *!/*/}
+{/*                        <MDBCol sm="12" md="7"  >*/}
+{/*                            <h3 className="py-3" id="AmazonOrders">Amazon Orders</h3>*/}
+{/*                            <MDBTypography>*/}
+{/*                                3-7-7 format means 3 digits, followed by a dash, followed by 7 more digits,*/}
+{/*                                followed by another dash, followed by yet another 7 digits.*/}
+{/*                            </MDBTypography>*/}
+{/*                        </MDBCol>*/}
+{/*                        /!* Code Example *!/*/}
+{/*                        <MDBCol sm="12" md="5">*/}
+{/*                            <h5 className="pt-3">Base URL: </h5>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text={`https://spacelander.io/api/amazon/orders/`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Get Service Status (Orders) */}
-                        <MDBCol className="my-2" sm="12" md="7" >
-                            <hr class=""></hr>
-                            <h3 className="py-3" id="AmazonOrderServiceStatus">Get Service Status (Orders)</h3>
-                            <MDBTypography>
-                                Returns the operational status of the Orders API section of
-                                Amazon Marketplace Web Service. Status values are GREEN, YELLOW, and RED.
-                            </MDBTypography>
-                        </MDBCol>
+{/*                        /!* Get Service Status (Orders) *!/*/}
+{/*                        <MDBCol className="my-2" sm="12" md="7" >*/}
+{/*                            <hr class=""></hr>*/}
+{/*                            <h3 className="py-3" id="AmazonOrderServiceStatus">Get Service Status (Orders)</h3>*/}
+{/*                            <MDBTypography>*/}
+{/*                                Returns the operational status of the Orders API section of*/}
+{/*                                Amazon Marketplace Web Service. Status values are GREEN, YELLOW, and RED.*/}
+{/*                            </MDBTypography>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`https://spacelander.io/api/amazon/orders/service-status`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
+{/*                        /!* Code Example *!/*/}
+{/*                        <MDBCol sm="12" md="5">*/}
+{/*                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text={`https://spacelander.io/api/amazon/orders/service-status`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
 
-                            <p className="mt-3">Response</p>
-                            <div className="light">
-                                <CopyBlock
+{/*                            <p className="mt-3">Response</p>*/}
+{/*                            <div className="light">*/}
+{/*                                <CopyBlock*/}
 
-                                    langiage="js"
-                                    text={`{
-    "GetServiceStatusResult": {
-        "Status": "GREEN",
-        "Timestamp": "2020-12-30T23:08:15.602Z"
-    },
-    "ResponseMetadata": {
-        "RequestId": "c056d6dd-a2bf-4dcf-8807-d9882dbca49f"
-    }
-}`}
-                                    codeBlock
-                                    theme={atomOneLight}
-                                    showLineNumbers={false}
-                                />
-                            </div>
-                        </MDBCol>
+{/*                                    langiage="js"*/}
+{/*                                    text={`{*/}
+{/*    "GetServiceStatusResult": {*/}
+{/*        "Status": "GREEN",*/}
+{/*        "Timestamp": "2020-12-30T23:08:15.602Z"*/}
+{/*    },*/}
+{/*    "ResponseMetadata": {*/}
+{/*        "RequestId": "c056d6dd-a2bf-4dcf-8807-d9882dbca49f"*/}
+{/*    }*/}
+{/*}`}*/}
+{/*                                    codeBlock*/}
+{/*                                    theme={atomOneLight}*/}
+{/*                                    showLineNumbers={false}*/}
+{/*                                />*/}
+{/*                            </div>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Get Order List */}
-                        <MDBCol className="my-2" sm="12" md="7" >
-                            <hr class=""></hr>
-                            <h3 className="py-3" id="AmazonOrderList">Get Order List</h3>
-                            <MDBTypography>
-                                Returns a list of orders created after May 1, 2020.
-                            </MDBTypography>
-                        </MDBCol>
+{/*                        /!* Get Order List *!/*/}
+{/*                        <MDBCol className="my-2" sm="12" md="7" >*/}
+{/*                            <hr class=""></hr>*/}
+{/*                            <h3 className="py-3" id="AmazonOrderList">Get Order List</h3>*/}
+{/*                            <MDBTypography>*/}
+{/*                                Returns a list of orders created after May 1, 2020.*/}
+{/*                            </MDBTypography>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`https://spacelander.io/api/amazon/orders/list`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
+{/*                        /!* Code Example *!/*/}
+{/*                        <MDBCol sm="12" md="5">*/}
+{/*                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text={`https://spacelander.io/api/amazon/orders/list`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
 
-                            <p className="mt-3">Response</p>
-                            <div className="light">
-                                <CopyBlock
+{/*                            <p className="mt-3">Response</p>*/}
+{/*                            <div className="light">*/}
+{/*                                <CopyBlock*/}
 
-                                    langiage="js"
-                                    text={`See Test Orders below`}
-                                    codeBlock
-                                    theme={atomOneLight}
-                                    showLineNumbers={false}
-                                />
-                            </div>
-                        </MDBCol>
+{/*                                    langiage="js"*/}
+{/*                                    text={`See Test Orders below`}*/}
+{/*                                    codeBlock*/}
+{/*                                    theme={atomOneLight}*/}
+{/*                                    showLineNumbers={false}*/}
+{/*                                />*/}
+{/*                            </div>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Test Orders */}
-                        <MDBCol className="my-2" sm="12" md="7" >
-                            <hr class=""></hr>
-                            <h3 className="py-3" id="AmazonTestOrders">Test Orders</h3>
-                            <MDBTypography>
-                                Allows debuggers to see an example of what getOrderList might return,
-                                without creating fake orders or fake user accounts.
-                                Also changes the date range from created after May 1, 2020,
-                                to last updated before February 25, 2017, 6:10 PM.
-                            </MDBTypography>
-                        </MDBCol>
+{/*                        /!* Test Orders *!/*/}
+{/*                        <MDBCol className="my-2" sm="12" md="7" >*/}
+{/*                            <hr class=""></hr>*/}
+{/*                            <h3 className="py-3" id="AmazonTestOrders">Test Orders</h3>*/}
+{/*                            <MDBTypography>*/}
+{/*                                Allows debuggers to see an example of what getOrderList might return,*/}
+{/*                                without creating fake orders or fake user accounts.*/}
+{/*                                Also changes the date range from created after May 1, 2020,*/}
+{/*                                to last updated before February 25, 2017, 6:10 PM.*/}
+{/*                            </MDBTypography>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`https://spacelander.io/api/amazon/orders/test`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
+{/*                        /!* Code Example *!/*/}
+{/*                        <MDBCol sm="12" md="5">*/}
+{/*                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text={`https://spacelander.io/api/amazon/orders/test`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
 
-                            <p className="mt-3">Response</p>
-                            <div className="light">
-                                <CopyBlock
+{/*                            <p className="mt-3">Response</p>*/}
+{/*                            <div className="light">*/}
+{/*                                <CopyBlock*/}
 
-                                    langiage="js"
-                                    text={`{
-   "ListOrdersResult": {
-      "NextToken": "2YgYW55IGNhcm5hbCBwbGVhc3VyZS4=",
-      "LastUpdatedBefore": "2017-02-25T18%3A10%3A21.687Z",
-      "Orders": {
-         "Order": [
-            {
-               "AmazonOrderId": "902-3159896-1390916",
-               "PurchaseDate": "2017-02-20T19:49:35Z",
-               "LastUpdateDate": "2017-02-20T19:49:35Z",
-               "OrderStatus": "Unshipped",
-               "FulfillmentChannel": "MFN",
-               "SalesChannel": "Amazon.com",
-               "ShippingAddress": {
-                  "Name": "Buyer name",
-                  "AddressLine1": "1234 Any St.",
-                  "City": "Seattle",
-                  "StateOrRegion": "WA",
-                  "PostalCode": "98103",
-                  "CountryCode": "US",
-                  "AddressType": "Commercial"
-               },
-               "DefaultShipFromLocationAddress": {
-                  "Name": "Seller name",
-                  "AddressLine1": "15606 NE Any street",
-                  "AddressLine2": "Suite 2",
-                  "City": "Redmond",
-                  "StateOrRegion": "WA",
-                  "PostalCode": "98052",
-                  "CountryCode": "US",
-                  "Phone": "555 555-5555",
-                  "isAddressSharingConfidential": "false"
-               },
-               "OrderTotal": {
-                  "CurrencyCode": "USD",
-                  "Amount": "25.00"
-               },
-               "NumberOfItemsShipped": "0",
-               "NumberOfItemsUnshipped": "1",
-               "PaymentMethod": "Other",
-               "PaymentMethodDetails": {
-                  "PaymentMethodDetail": "CreditCard"
-               },
-               "MarketplaceId": "ATVPDKIKX0DER",
-               "BuyerEmail": "5vlhEXAMPLEh9h5@marketplace.amazon.com",
-               "BuyerName": "Buyer name",
-               "BuyerTaxInfo": {
-                  "CompanyLegalName": "Company Name",
-                  "TaxingRegion": "US",
-                  "TaxClassifications": {
-                     "TaxClassification": {
-                        "Name": "VATNumber",
-                        "Value": "XXX123"
-                     }
-                  }
-               },
-               "OrderType": "StandardOrder",
-               "EarliestShipDate": "2017-02-20T19:51:16Z",
-               "LatestShipDate": "2017-02-25T19:49:35Z",
-               "IsBusinessOrder": "true",
-               "PurchaseOrderNumber": "PO12345678",
-               "IsPrime": "false",
-               "IsPremiumOrder": "false",
-               "IsGlobalExpressEnabled": "false"
-            },
-            {
-               "AmazonOrderId": "483-3488972-0896720",
-               "PurchaseDate": "20178-02-20T19:49:35Z",
-               "LastUpdateDate": "2017-02-20T19:49:35Z",
-               "OrderStatus": "Unshipped",
-               "FulfillmentChannel": "MFN",
-               "ShippingAddress": {
-                  "Name": "Buyer name",
-                  "AddressLine1": "1234 Avenida Qualquer",
-                  "City": "Sao Paulo",
-                  "PostalCode": "08474-130",
-                  "CountryCode": "BR",
-                  "AddressType": "Residential"
-               },
-               "OrderTotal": {
-                  "CurrencyCode": "BRL",
-                  "Amount": "100.00"
-               },
-               "NumberOfItemsShipped": "0",
-               "NumberOfItemsUnshipped": "1",
-               "PaymentMethod": "Other",
-               "PaymentMethodDetails": {
-                  "PaymentMethodDetail": "CreditCard"
-               },
-               "MarketplaceId": "A2Q3Y263D00KWC",
-               "BuyerEmail": "5vlhEXAMPLEh9h5@marketplace.amazon.com.br",
-               "BuyerName": "John Jones",
-               "BuyerCounty": "Vila Olimpia",
-               "BuyerTaxInfo": {
-                  "TaxingRegion": "BR",
-                  "TaxClassifications": {
-                     "TaxClassification": {
-                        "Name": "CSTNumber",
-                        "Value": "XXX123"
-                     }
-                  }
-               },
-               "EarliestShipDate": "2017-02-20T19:51:16Z",
-               "LatestShipDate": "2017-02-25T19:49:35Z",
-               "IsBusinessOrder": "false",
-               "IsPrime": "false",
-               "IsPremiumOrder": "false",
-               "IsGlobalExpressEnabled": "false"
-            },
-            {
-               "AmazonOrderId": "058-1233752-8214740",
-               "PurchaseDate": "2017-02-05T00%3A06%3A07.000Z",
-               "LastUpdateDate": "2017-02-07T12%3A43%3A16.000Z",
-               "OrderStatus": "Unshipped",
-               "FulfillmentChannel": "MFN",
-               "ShipServiceLevel": "Std JP Kanto8",
-               "ShippingAddress": {
-                  "Name": "Jane Smith",
-                  "AddressLine1": "1-2-10 Akasaka",
-                  "City": "Tokyo",
-                  "PostalCode": "107-0053",
-                  "CountryCode": "JP"
-               },
-               "OrderTotal": {
-                  "CurrencyCode": "JPY",
-                  "Amount": "1507.00"
-               },
-               "NumberOfItemsShipped": "0",
-               "NumberOfItemsUnshipped": "1",
-               "PaymentExecutionDetail": {
-                  "PaymentExecutionDetailItem": [
-                     {
-                        "Payment": {
-                           "Amount": "10.00",
-                           "CurrencyCode": "JPY"
-                        },
-                        "PaymentMethod": "PointsAccount"
-                     },
-                     {
-                        "Payment": {
-                           "Amount": "317.00",
-                           "CurrencyCode": "JPY"
-                        },
-                        "PaymentMethod": "GC"
-                     },
-                     {
-                        "Payment": {
-                           "Amount": "1180.00",
-                           "CurrencyCode": "JPY"
-                        },
-                        "PaymentMethod": "COD"
-                     }
-                  ]
-               },
-               "PaymentMethod": "COD",
-               "PaymentMethodDetails": {
-                  "PaymentMethodDetail": "COD"
-               },
-               "MarketplaceId": "A1VC38T7YXB528",
-               "BuyerEmail": "5vlhEXAMPLEh9h5@marketplace.amazon.co.jp",
-               "BuyerName": "Jane Smith",
-               "ShipmentServiceLevelCategory": "Standard ",
-               "OrderType": "SourcingOnDemandOrder",
-               "IsBusinessOrder": "false",
-               "IsPrime": "false",
-               "IsPremiumOrder": "false",
-               "IsGlobalExpressEnabled": "false",
-               "PromiseResponseDueDate": "2017-08-31T23:58:44Z",
-               "IsEstimatedShipDateSet": "true"
-            }
-         ]
-      }
-   },
-   "ResponseMetadata": {
-      "RequestId": "88faca76-b600-46d2-b53c-0c8c4533e43a"
-   }
-}`}
-                                    codeBlock
-                                    theme={atomOneLight}
-                                    showLineNumbers={false}
-                                />
-                            </div>
-                        </MDBCol>
+{/*                                    langiage="js"*/}
+{/*                                    text={`{*/}
+{/*   "ListOrdersResult": {*/}
+{/*      "NextToken": "2YgYW55IGNhcm5hbCBwbGVhc3VyZS4=",*/}
+{/*      "LastUpdatedBefore": "2017-02-25T18%3A10%3A21.687Z",*/}
+{/*      "Orders": {*/}
+{/*         "Order": [*/}
+{/*            {*/}
+{/*               "AmazonOrderId": "902-3159896-1390916",*/}
+{/*               "PurchaseDate": "2017-02-20T19:49:35Z",*/}
+{/*               "LastUpdateDate": "2017-02-20T19:49:35Z",*/}
+{/*               "OrderStatus": "Unshipped",*/}
+{/*               "FulfillmentChannel": "MFN",*/}
+{/*               "SalesChannel": "Amazon.com",*/}
+{/*               "ShippingAddress": {*/}
+{/*                  "Name": "Buyer name",*/}
+{/*                  "AddressLine1": "1234 Any St.",*/}
+{/*                  "City": "Seattle",*/}
+{/*                  "StateOrRegion": "WA",*/}
+{/*                  "PostalCode": "98103",*/}
+{/*                  "CountryCode": "US",*/}
+{/*                  "AddressType": "Commercial"*/}
+{/*               },*/}
+{/*               "DefaultShipFromLocationAddress": {*/}
+{/*                  "Name": "Seller name",*/}
+{/*                  "AddressLine1": "15606 NE Any street",*/}
+{/*                  "AddressLine2": "Suite 2",*/}
+{/*                  "City": "Redmond",*/}
+{/*                  "StateOrRegion": "WA",*/}
+{/*                  "PostalCode": "98052",*/}
+{/*                  "CountryCode": "US",*/}
+{/*                  "Phone": "555 555-5555",*/}
+{/*                  "isAddressSharingConfidential": "false"*/}
+{/*               },*/}
+{/*               "OrderTotal": {*/}
+{/*                  "CurrencyCode": "USD",*/}
+{/*                  "Amount": "25.00"*/}
+{/*               },*/}
+{/*               "NumberOfItemsShipped": "0",*/}
+{/*               "NumberOfItemsUnshipped": "1",*/}
+{/*               "PaymentMethod": "Other",*/}
+{/*               "PaymentMethodDetails": {*/}
+{/*                  "PaymentMethodDetail": "CreditCard"*/}
+{/*               },*/}
+{/*               "MarketplaceId": "ATVPDKIKX0DER",*/}
+{/*               "BuyerEmail": "5vlhEXAMPLEh9h5@marketplace.amazon.com",*/}
+{/*               "BuyerName": "Buyer name",*/}
+{/*               "BuyerTaxInfo": {*/}
+{/*                  "CompanyLegalName": "Company Name",*/}
+{/*                  "TaxingRegion": "US",*/}
+{/*                  "TaxClassifications": {*/}
+{/*                     "TaxClassification": {*/}
+{/*                        "Name": "VATNumber",*/}
+{/*                        "Value": "XXX123"*/}
+{/*                     }*/}
+{/*                  }*/}
+{/*               },*/}
+{/*               "OrderType": "StandardOrder",*/}
+{/*               "EarliestShipDate": "2017-02-20T19:51:16Z",*/}
+{/*               "LatestShipDate": "2017-02-25T19:49:35Z",*/}
+{/*               "IsBusinessOrder": "true",*/}
+{/*               "PurchaseOrderNumber": "PO12345678",*/}
+{/*               "IsPrime": "false",*/}
+{/*               "IsPremiumOrder": "false",*/}
+{/*               "IsGlobalExpressEnabled": "false"*/}
+{/*            },*/}
+{/*            {*/}
+{/*               "AmazonOrderId": "483-3488972-0896720",*/}
+{/*               "PurchaseDate": "20178-02-20T19:49:35Z",*/}
+{/*               "LastUpdateDate": "2017-02-20T19:49:35Z",*/}
+{/*               "OrderStatus": "Unshipped",*/}
+{/*               "FulfillmentChannel": "MFN",*/}
+{/*               "ShippingAddress": {*/}
+{/*                  "Name": "Buyer name",*/}
+{/*                  "AddressLine1": "1234 Avenida Qualquer",*/}
+{/*                  "City": "Sao Paulo",*/}
+{/*                  "PostalCode": "08474-130",*/}
+{/*                  "CountryCode": "BR",*/}
+{/*                  "AddressType": "Residential"*/}
+{/*               },*/}
+{/*               "OrderTotal": {*/}
+{/*                  "CurrencyCode": "BRL",*/}
+{/*                  "Amount": "100.00"*/}
+{/*               },*/}
+{/*               "NumberOfItemsShipped": "0",*/}
+{/*               "NumberOfItemsUnshipped": "1",*/}
+{/*               "PaymentMethod": "Other",*/}
+{/*               "PaymentMethodDetails": {*/}
+{/*                  "PaymentMethodDetail": "CreditCard"*/}
+{/*               },*/}
+{/*               "MarketplaceId": "A2Q3Y263D00KWC",*/}
+{/*               "BuyerEmail": "5vlhEXAMPLEh9h5@marketplace.amazon.com.br",*/}
+{/*               "BuyerName": "John Jones",*/}
+{/*               "BuyerCounty": "Vila Olimpia",*/}
+{/*               "BuyerTaxInfo": {*/}
+{/*                  "TaxingRegion": "BR",*/}
+{/*                  "TaxClassifications": {*/}
+{/*                     "TaxClassification": {*/}
+{/*                        "Name": "CSTNumber",*/}
+{/*                        "Value": "XXX123"*/}
+{/*                     }*/}
+{/*                  }*/}
+{/*               },*/}
+{/*               "EarliestShipDate": "2017-02-20T19:51:16Z",*/}
+{/*               "LatestShipDate": "2017-02-25T19:49:35Z",*/}
+{/*               "IsBusinessOrder": "false",*/}
+{/*               "IsPrime": "false",*/}
+{/*               "IsPremiumOrder": "false",*/}
+{/*               "IsGlobalExpressEnabled": "false"*/}
+{/*            },*/}
+{/*            {*/}
+{/*               "AmazonOrderId": "058-1233752-8214740",*/}
+{/*               "PurchaseDate": "2017-02-05T00%3A06%3A07.000Z",*/}
+{/*               "LastUpdateDate": "2017-02-07T12%3A43%3A16.000Z",*/}
+{/*               "OrderStatus": "Unshipped",*/}
+{/*               "FulfillmentChannel": "MFN",*/}
+{/*               "ShipServiceLevel": "Std JP Kanto8",*/}
+{/*               "ShippingAddress": {*/}
+{/*                  "Name": "Jane Smith",*/}
+{/*                  "AddressLine1": "1-2-10 Akasaka",*/}
+{/*                  "City": "Tokyo",*/}
+{/*                  "PostalCode": "107-0053",*/}
+{/*                  "CountryCode": "JP"*/}
+{/*               },*/}
+{/*               "OrderTotal": {*/}
+{/*                  "CurrencyCode": "JPY",*/}
+{/*                  "Amount": "1507.00"*/}
+{/*               },*/}
+{/*               "NumberOfItemsShipped": "0",*/}
+{/*               "NumberOfItemsUnshipped": "1",*/}
+{/*               "PaymentExecutionDetail": {*/}
+{/*                  "PaymentExecutionDetailItem": [*/}
+{/*                     {*/}
+{/*                        "Payment": {*/}
+{/*                           "Amount": "10.00",*/}
+{/*                           "CurrencyCode": "JPY"*/}
+{/*                        },*/}
+{/*                        "PaymentMethod": "PointsAccount"*/}
+{/*                     },*/}
+{/*                     {*/}
+{/*                        "Payment": {*/}
+{/*                           "Amount": "317.00",*/}
+{/*                           "CurrencyCode": "JPY"*/}
+{/*                        },*/}
+{/*                        "PaymentMethod": "GC"*/}
+{/*                     },*/}
+{/*                     {*/}
+{/*                        "Payment": {*/}
+{/*                           "Amount": "1180.00",*/}
+{/*                           "CurrencyCode": "JPY"*/}
+{/*                        },*/}
+{/*                        "PaymentMethod": "COD"*/}
+{/*                     }*/}
+{/*                  ]*/}
+{/*               },*/}
+{/*               "PaymentMethod": "COD",*/}
+{/*               "PaymentMethodDetails": {*/}
+{/*                  "PaymentMethodDetail": "COD"*/}
+{/*               },*/}
+{/*               "MarketplaceId": "A1VC38T7YXB528",*/}
+{/*               "BuyerEmail": "5vlhEXAMPLEh9h5@marketplace.amazon.co.jp",*/}
+{/*               "BuyerName": "Jane Smith",*/}
+{/*               "ShipmentServiceLevelCategory": "Standard ",*/}
+{/*               "OrderType": "SourcingOnDemandOrder",*/}
+{/*               "IsBusinessOrder": "false",*/}
+{/*               "IsPrime": "false",*/}
+{/*               "IsPremiumOrder": "false",*/}
+{/*               "IsGlobalExpressEnabled": "false",*/}
+{/*               "PromiseResponseDueDate": "2017-08-31T23:58:44Z",*/}
+{/*               "IsEstimatedShipDateSet": "true"*/}
+{/*            }*/}
+{/*         ]*/}
+{/*      }*/}
+{/*   },*/}
+{/*   "ResponseMetadata": {*/}
+{/*      "RequestId": "88faca76-b600-46d2-b53c-0c8c4533e43a"*/}
+{/*   }*/}
+{/*}`}*/}
+{/*                                    codeBlock*/}
+{/*                                    theme={atomOneLight}*/}
+{/*                                    showLineNumbers={false}*/}
+{/*                                />*/}
+{/*                            </div>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* List Orders By Next Token */}
-                        <MDBCol className="my-2" sm="12" md="7" >
-                            <hr class=""></hr>
-                            <h3 className="py-3" id="AmazonOrderListByNextToken">List Orders By Next Token</h3>
-                            <MDBTypography>
-                                Returns the next page of orders using the nextToken parameter.
-                            </MDBTypography>
-                        </MDBCol>
+{/*                        /!* List Orders By Next Token *!/*/}
+{/*                        <MDBCol className="my-2" sm="12" md="7" >*/}
+{/*                            <hr class=""></hr>*/}
+{/*                            <h3 className="py-3" id="AmazonOrderListByNextToken">List Orders By Next Token</h3>*/}
+{/*                            <MDBTypography>*/}
+{/*                                Returns the next page of orders using the nextToken parameter.*/}
+{/*                            </MDBTypography>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`https://spacelander.io/api/amazon/orders/list-by-next-token/{nextToken}`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
+{/*                        /!* Code Example *!/*/}
+{/*                        <MDBCol sm="12" md="5">*/}
+{/*                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text={`https://spacelander.io/api/amazon/orders/list-by-next-token/{nextToken}`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
 
-                            <p className="mt-3">Response</p>
-                            <div className="light">
-                                <CopyBlock
+{/*                            <p className="mt-3">Response</p>*/}
+{/*                            <div className="light">*/}
+{/*                                <CopyBlock*/}
 
-                                    langiage="js"
-                                    text={`{
-   "ListOrdersByNextTokenResult": {
-      "Orders": {
-         "Order": {
-            "AmazonOrderId": "902-3159896-1390916",
-            "PurchaseDate": "2017-01-20T19:49:35Z",
-            "LastUpdateDate": "2017-01-20T19:49:35Z",
-            "OrderStatus": "Pending",
-            "FulfillmentChannel": "MFN",
-            "NumberOfItemsShipped": "0",
-            "NumberOfItemsUnshipped": "0",
-            "PaymentMethod": "Other",
-            "PaymentMethodDetails": {
-               "PaymentMethodDetail": [
-                  "CreditCard",
-                  "GiftCerificate"
-               ]
-            },
-            "MarketplaceId": "A21TJRUUN4KGV",
-            "ShipmentServiceLevelCategory": "Standard\\n            ",
-            "OrderType": "StandardOrder",
-            "EarliestShipDate": "2017-01-20T19:51:16Z",
-            "LatestShipDate": "2017-01-25T19:49:35Z",
-            "IsBusinessOrder": "false",
-            "IsPrime": "false",
-            "IsPremiumOrder": "false"
-         }
-      }
-   },
-   "ResponseMetadata": {
-      "RequestId": "88faca76-b600-46d2-b53c-0c8c4533e43a"
-   }
-}`}
-                                    codeBlock
-                                    theme={atomOneLight}
-                                    showLineNumbers={false}
-                                />
-                            </div>
-                        </MDBCol>
+{/*                                    langiage="js"*/}
+{/*                                    text={`{*/}
+{/*   "ListOrdersByNextTokenResult": {*/}
+{/*      "Orders": {*/}
+{/*         "Order": {*/}
+{/*            "AmazonOrderId": "902-3159896-1390916",*/}
+{/*            "PurchaseDate": "2017-01-20T19:49:35Z",*/}
+{/*            "LastUpdateDate": "2017-01-20T19:49:35Z",*/}
+{/*            "OrderStatus": "Pending",*/}
+{/*            "FulfillmentChannel": "MFN",*/}
+{/*            "NumberOfItemsShipped": "0",*/}
+{/*            "NumberOfItemsUnshipped": "0",*/}
+{/*            "PaymentMethod": "Other",*/}
+{/*            "PaymentMethodDetails": {*/}
+{/*               "PaymentMethodDetail": [*/}
+{/*                  "CreditCard",*/}
+{/*                  "GiftCerificate"*/}
+{/*               ]*/}
+{/*            },*/}
+{/*            "MarketplaceId": "A21TJRUUN4KGV",*/}
+{/*            "ShipmentServiceLevelCategory": "Standard\\n            ",*/}
+{/*            "OrderType": "StandardOrder",*/}
+{/*            "EarliestShipDate": "2017-01-20T19:51:16Z",*/}
+{/*            "LatestShipDate": "2017-01-25T19:49:35Z",*/}
+{/*            "IsBusinessOrder": "false",*/}
+{/*            "IsPrime": "false",*/}
+{/*            "IsPremiumOrder": "false"*/}
+{/*         }*/}
+{/*      }*/}
+{/*   },*/}
+{/*   "ResponseMetadata": {*/}
+{/*      "RequestId": "88faca76-b600-46d2-b53c-0c8c4533e43a"*/}
+{/*   }*/}
+{/*}`}*/}
+{/*                                    codeBlock*/}
+{/*                                    theme={atomOneLight}*/}
+{/*                                    showLineNumbers={false}*/}
+{/*                                />*/}
+{/*                            </div>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Get Order */}
-                        <MDBCol className="my-2" sm="12" md="7" >
-                            <hr class=""></hr>
-                            <h3 className="py-3" id="AmazonOrder">Get Order</h3>
-                            <MDBTypography>
-                                Returns an order for each AmazonOrderId that you specify, up to a maximum of 50.
-                                Each orderId must be in 3-7-7 format.
-                            </MDBTypography>
-                        </MDBCol>
+{/*                        /!* Get Order *!/*/}
+{/*                        <MDBCol className="my-2" sm="12" md="7" >*/}
+{/*                            <hr class=""></hr>*/}
+{/*                            <h3 className="py-3" id="AmazonOrder">Get Order</h3>*/}
+{/*                            <MDBTypography>*/}
+{/*                                Returns an order for each AmazonOrderId that you specify, up to a maximum of 50.*/}
+{/*                                Each orderId must be in 3-7-7 format.*/}
+{/*                            </MDBTypography>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`https://spacelander.io/api/amazon/orders/{orderId1}/{orderId2?}/.../{orderId50?}`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
+{/*                        /!* Code Example *!/*/}
+{/*                        <MDBCol sm="12" md="5">*/}
+{/*                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text={`https://spacelander.io/api/amazon/orders/{orderId1}/{orderId2?}/.../{orderId50?}`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
 
-                            <p className="mt-3">Response</p>
-                            <div className="light">
-                                <CopyBlock
+{/*                            <p className="mt-3">Response</p>*/}
+{/*                            <div className="light">*/}
+{/*                                <CopyBlock*/}
 
-                                    langiage="js"
-                                    text={`{
-   "GetOrderResult": {
-      "Orders": {
-         "Order": {
-            "AmazonOrderId": "902-3159896-1390916",
-            "PurchaseDate": "2017-01-20T19:49:35Z",
-            "LastUpdateDate": "2017-01-20T19:49:35Z",
-            "OrderStatus": "Pending",
-            "FulfillmentChannel": "MFN",
-            "NumberOfItemsShipped": "0",
-            "NumberOfItemsUnshipped": "0",
-            "PaymentMethod": "Other",
-            "PaymentMethodDetails": {
-               "PaymentMethodDetail": [
-                  "CreditCard",
-                  "GiftCerificate"
-               ]
-            },
-            "MarketplaceId": "ATVPDKIKX0DER",
-            "ShipmentServiceLevelCategory": "Standard\\n            ",
-            "OrderType": "StandardOrder",
-            "EarliestShipDate": "2017-01-20T19:51:16Z",
-            "LatestShipDate": "2017-01-25T19:49:35Z",
-            "IsBusinessOrder": "false",
-            "IsPrime": "false",
-            "IsPremiumOrder": "false",
-            "IsGlobalExpressEnabled": "false"
-         }
-      }
-   },
-   "ResponseMetadata": {
-      "RequestId": "88faca76-b600-46d2-b53c-0c8c4533e43a"
-   }
-}`}
-                                    codeBlock
-                                    theme={atomOneLight}
-                                    showLineNumbers={false}
-                                />
-                            </div>
-                        </MDBCol>
+{/*                                    langiage="js"*/}
+{/*                                    text={`{*/}
+{/*   "GetOrderResult": {*/}
+{/*      "Orders": {*/}
+{/*         "Order": {*/}
+{/*            "AmazonOrderId": "902-3159896-1390916",*/}
+{/*            "PurchaseDate": "2017-01-20T19:49:35Z",*/}
+{/*            "LastUpdateDate": "2017-01-20T19:49:35Z",*/}
+{/*            "OrderStatus": "Pending",*/}
+{/*            "FulfillmentChannel": "MFN",*/}
+{/*            "NumberOfItemsShipped": "0",*/}
+{/*            "NumberOfItemsUnshipped": "0",*/}
+{/*            "PaymentMethod": "Other",*/}
+{/*            "PaymentMethodDetails": {*/}
+{/*               "PaymentMethodDetail": [*/}
+{/*                  "CreditCard",*/}
+{/*                  "GiftCerificate"*/}
+{/*               ]*/}
+{/*            },*/}
+{/*            "MarketplaceId": "ATVPDKIKX0DER",*/}
+{/*            "ShipmentServiceLevelCategory": "Standard\\n            ",*/}
+{/*            "OrderType": "StandardOrder",*/}
+{/*            "EarliestShipDate": "2017-01-20T19:51:16Z",*/}
+{/*            "LatestShipDate": "2017-01-25T19:49:35Z",*/}
+{/*            "IsBusinessOrder": "false",*/}
+{/*            "IsPrime": "false",*/}
+{/*            "IsPremiumOrder": "false",*/}
+{/*            "IsGlobalExpressEnabled": "false"*/}
+{/*         }*/}
+{/*      }*/}
+{/*   },*/}
+{/*   "ResponseMetadata": {*/}
+{/*      "RequestId": "88faca76-b600-46d2-b53c-0c8c4533e43a"*/}
+{/*   }*/}
+{/*}`}*/}
+{/*                                    codeBlock*/}
+{/*                                    theme={atomOneLight}*/}
+{/*                                    showLineNumbers={false}*/}
+{/*                                />*/}
+{/*                            </div>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Get Order Item List */}
-                        <MDBCol className="my-2" sm="12" md="7" >
-                            <hr class=""></hr>
-                            <h3 className="py-3" id="AmazonOrderItemList">Get Order Item List</h3>
-                            <MDBTypography>
-                                Returns order items based on the amazonOrderId that you specify.
-                                The amazonOrderId must be in 3-7-7 format.
-                                The order item information includes Title, ASIN, SellerSKU, ItemPrice,
-                                ShippingPrice, as well as tax and promotion information.
-                            </MDBTypography>
-                        </MDBCol>
+{/*                        /!* Get Order Item List *!/*/}
+{/*                        <MDBCol className="my-2" sm="12" md="7" >*/}
+{/*                            <hr class=""></hr>*/}
+{/*                            <h3 className="py-3" id="AmazonOrderItemList">Get Order Item List</h3>*/}
+{/*                            <MDBTypography>*/}
+{/*                                Returns order items based on the amazonOrderId that you specify.*/}
+{/*                                The amazonOrderId must be in 3-7-7 format.*/}
+{/*                                The order item information includes Title, ASIN, SellerSKU, ItemPrice,*/}
+{/*                                ShippingPrice, as well as tax and promotion information.*/}
+{/*                            </MDBTypography>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`https://spacelander.io/api/amazon/orders/list-items/{amazonOrderId}`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
+{/*                        /!* Code Example *!/*/}
+{/*                        <MDBCol sm="12" md="5">*/}
+{/*                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text={`https://spacelander.io/api/amazon/orders/list-items/{amazonOrderId}`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
 
-                            <p className="mt-3">Response</p>
-                            <div className="light">
-                                <CopyBlock
+{/*                            <p className="mt-3">Response</p>*/}
+{/*                            <div className="light">*/}
+{/*                                <CopyBlock*/}
 
-                                    langiage="js"
-                                    text={`{
-   "ListOrderItemsResult": {
-      "NextToken": "MRgZW55IGNhcm5hbCBwbGVhc3VyZS6=",
-      "AmazonOrderId": "058-1233752-8214740",
-      "OrderItems": {
-         "OrderItem": [
-            {
-               "ASIN": "BT0093TELA",
-               "OrderItemId": "68828574383266",
-               "BuyerCustomizedInfo": {
-                  "CustomizedURL": "https:\\/\\/zme-caps.amazon.com\\/t\\/bR6qHkzSOxuB\\/J8nbWhze0Bd3DkajkOdY-XQbWkFralegp2sr_QZiKEE\\/1"
-               },
-               "SellerSKU": "CBA_OTF_1",
-               "Title": "Example item name",
-               "QuantityOrdered": "1",
-               "QuantityShipped": "1",
-               "ProductInfo": {
-                  "NumberOfItems": "12"
-               },
-               "PointsGranted": {
-                  "PointsNumber": "10",
-                  "PointsMonetaryValue": {
-                     "CurrencyCode": "JPY",
-                     "Amount": "10.00"
-                  }
-               },
-               "ItemPrice": {
-                  "CurrencyCode": "JPY",
-                  "Amount": "25.99"
-               },
-               "ShippingPrice": {
-                  "CurrencyCode": "JPY",
-                  "Amount": "1.26"
-               },
-               "ScheduledDeliveryEndDate": "2013-09-09T01:30:00.000-06:00",
-               "ScheduledDeliveryStartDate": "2013-09-071T02:00:00.000-06:00",
-               "CODFee": {
-                  "CurrencyCode": "JPY",
-                  "Amount": "10.00"
-               },
-               "CODFeeDiscount": {
-                  "CurrencyCode": "JPY",
-                  "Amount": "1.00"
-               },
-               "IsGift": "false",
-               "IsTransparency": "true",
-               "GiftMessageText": "For you!",
-               "GiftWrapPrice": {
-                  "CurrencyCode": "JPY",
-                  "Amount": "1.99"
-               },
-               "GiftWrapLevel": "Classic",
-               "PriceDesignation": "BusinessPrice"
-            },
-            {
-               "ASIN": "BCTU1104UEFB",
-               "OrderItemId": "79039765272157",
-               "SellerSKU": "CBA_OTF_5",
-               "Title": "Example item name",
-               "QuantityOrdered": "2",
-               "ItemPrice": {
-                  "CurrencyCode": "JPY",
-                  "Amount": "17.95"
-               },
-               "PromotionIds": {
-                  "PromotionId": "FREESHIP"
-               },
-               "ConditionId": "Used",
-               "ConditionSubtypeId": "Mint",
-               "ConditionNote": "Example ConditionNote",
-               "IsGift": "false",
-               "IsTransparency": "false",
-               "PriceDesignation": "BusinessPrice",
-               "TaxCollection": {
-                  "Model": "MarketplaceFacilitator",
-                  "ResponsibleParty": "Amazon Services, Inc."
-               }
-            }
-         ]
-      }
-   },
-   "ResponseMetadata": {
-      "RequestId": "88faca76-b600-46d2-b53c-0c8c4533e43a"
-   }
-}`}
-                                    codeBlock
-                                    theme={atomOneLight}
-                                    showLineNumbers={false}
-                                />
-                            </div>
-                        </MDBCol>
+{/*                                    langiage="js"*/}
+{/*                                    text={`{*/}
+{/*   "ListOrderItemsResult": {*/}
+{/*      "NextToken": "MRgZW55IGNhcm5hbCBwbGVhc3VyZS6=",*/}
+{/*      "AmazonOrderId": "058-1233752-8214740",*/}
+{/*      "OrderItems": {*/}
+{/*         "OrderItem": [*/}
+{/*            {*/}
+{/*               "ASIN": "BT0093TELA",*/}
+{/*               "OrderItemId": "68828574383266",*/}
+{/*               "BuyerCustomizedInfo": {*/}
+{/*                  "CustomizedURL": "https:\\/\\/zme-caps.amazon.com\\/t\\/bR6qHkzSOxuB\\/J8nbWhze0Bd3DkajkOdY-XQbWkFralegp2sr_QZiKEE\\/1"*/}
+{/*               },*/}
+{/*               "SellerSKU": "CBA_OTF_1",*/}
+{/*               "Title": "Example item name",*/}
+{/*               "QuantityOrdered": "1",*/}
+{/*               "QuantityShipped": "1",*/}
+{/*               "ProductInfo": {*/}
+{/*                  "NumberOfItems": "12"*/}
+{/*               },*/}
+{/*               "PointsGranted": {*/}
+{/*                  "PointsNumber": "10",*/}
+{/*                  "PointsMonetaryValue": {*/}
+{/*                     "CurrencyCode": "JPY",*/}
+{/*                     "Amount": "10.00"*/}
+{/*                  }*/}
+{/*               },*/}
+{/*               "ItemPrice": {*/}
+{/*                  "CurrencyCode": "JPY",*/}
+{/*                  "Amount": "25.99"*/}
+{/*               },*/}
+{/*               "ShippingPrice": {*/}
+{/*                  "CurrencyCode": "JPY",*/}
+{/*                  "Amount": "1.26"*/}
+{/*               },*/}
+{/*               "ScheduledDeliveryEndDate": "2013-09-09T01:30:00.000-06:00",*/}
+{/*               "ScheduledDeliveryStartDate": "2013-09-071T02:00:00.000-06:00",*/}
+{/*               "CODFee": {*/}
+{/*                  "CurrencyCode": "JPY",*/}
+{/*                  "Amount": "10.00"*/}
+{/*               },*/}
+{/*               "CODFeeDiscount": {*/}
+{/*                  "CurrencyCode": "JPY",*/}
+{/*                  "Amount": "1.00"*/}
+{/*               },*/}
+{/*               "IsGift": "false",*/}
+{/*               "IsTransparency": "true",*/}
+{/*               "GiftMessageText": "For you!",*/}
+{/*               "GiftWrapPrice": {*/}
+{/*                  "CurrencyCode": "JPY",*/}
+{/*                  "Amount": "1.99"*/}
+{/*               },*/}
+{/*               "GiftWrapLevel": "Classic",*/}
+{/*               "PriceDesignation": "BusinessPrice"*/}
+{/*            },*/}
+{/*            {*/}
+{/*               "ASIN": "BCTU1104UEFB",*/}
+{/*               "OrderItemId": "79039765272157",*/}
+{/*               "SellerSKU": "CBA_OTF_5",*/}
+{/*               "Title": "Example item name",*/}
+{/*               "QuantityOrdered": "2",*/}
+{/*               "ItemPrice": {*/}
+{/*                  "CurrencyCode": "JPY",*/}
+{/*                  "Amount": "17.95"*/}
+{/*               },*/}
+{/*               "PromotionIds": {*/}
+{/*                  "PromotionId": "FREESHIP"*/}
+{/*               },*/}
+{/*               "ConditionId": "Used",*/}
+{/*               "ConditionSubtypeId": "Mint",*/}
+{/*               "ConditionNote": "Example ConditionNote",*/}
+{/*               "IsGift": "false",*/}
+{/*               "IsTransparency": "false",*/}
+{/*               "PriceDesignation": "BusinessPrice",*/}
+{/*               "TaxCollection": {*/}
+{/*                  "Model": "MarketplaceFacilitator",*/}
+{/*                  "ResponsibleParty": "Amazon Services, Inc."*/}
+{/*               }*/}
+{/*            }*/}
+{/*         ]*/}
+{/*      }*/}
+{/*   },*/}
+{/*   "ResponseMetadata": {*/}
+{/*      "RequestId": "88faca76-b600-46d2-b53c-0c8c4533e43a"*/}
+{/*   }*/}
+{/*}`}*/}
+{/*                                    codeBlock*/}
+{/*                                    theme={atomOneLight}*/}
+{/*                                    showLineNumbers={false}*/}
+{/*                                />*/}
+{/*                            </div>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* List Order Items By Next Token */}
-                        <MDBCol className="my-2" sm="12" md="7" >
-                            <hr class=""></hr>
-                            <h3 className="py-3" id="AmazonOrderItemListByNextToken">List Order Items By Next Token</h3>
-                            <MDBTypography>
-                                Returns the next page of order items using the NextToken parameter.
-                            </MDBTypography>
-                        </MDBCol>
+{/*                        /!* List Order Items By Next Token *!/*/}
+{/*                        <MDBCol className="my-2" sm="12" md="7" >*/}
+{/*                            <hr class=""></hr>*/}
+{/*                            <h3 className="py-3" id="AmazonOrderItemListByNextToken">List Order Items By Next Token</h3>*/}
+{/*                            <MDBTypography>*/}
+{/*                                Returns the next page of order items using the NextToken parameter.*/}
+{/*                            </MDBTypography>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`https://spacelander.io/api/amazon/orders/list-items-by-next-token/{nextToken}`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
+{/*                        /!* Code Example *!/*/}
+{/*                        <MDBCol sm="12" md="5">*/}
+{/*                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text={`https://spacelander.io/api/amazon/orders/list-items-by-next-token/{nextToken}`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
 
-                            <p className="mt-3">Response</p>
-                            <div className="light">
-                                <CopyBlock
+{/*                            <p className="mt-3">Response</p>*/}
+{/*                            <div className="light">*/}
+{/*                                <CopyBlock*/}
 
-                                    langiage="js"
-                                    text={`{
-   "ListOrderItemsByNextTokenResult": {
-      "NextToken": "MRgZW55IGNhcm5hbCBwbGVhc3VyZS6=",
-      "AmazonOrderId": "058-1233752-8214740",
-      "OrderItems": {
-         "OrderItem": [
-            {
-               "ASIN": "BT0093TELA",
-               "OrderItemId": "68828574383266",
-               "SellerSKU": "CBA_OTF_1",
-               "Title": "Example item name",
-               "QuantityOrdered": "1",
-               "QuantityShipped": "1",
-               "ItemPrice": {
-                  "CurrencyCode": "USD",
-                  "Amount": "25.99"
-               },
-               "ShippingPrice": {
-                  "CurrencyCode": "USD",
-                  "Amount": "1.26"
-               },
-               "ScheduledDeliveryEndDate": "2013-09-091T01:30:00.000-06:00",
-               "ScheduledDeliveryStartDate": "2013-09-06T02:00:00.000-06:00",
-               "CODFee": {
-                  "CurrencyCode": "USD",
-                  "Amount": "10.00"
-               },
-               "CODFeeDiscount": {
-                  "CurrencyCode": "USD",
-                  "Amount": "1.00"
-               },
-               "IsGift": "false",
-               "GiftMessageText": "For you!",
-               "GiftWrapPrice": {
-                  "CurrencyCode": "USD",
-                  "Amount": "1.99"
-               },
-               "GiftWrapLevel": "Classic",
-               "PriceDesignation": "BusinessPrice"
-            },
-            {
-               "ASIN": "BCTU1104UEFB",
-               "OrderItemId": "79039765272157",
-               "SellerSKU": "CBA_OTF_5",
-               "Title": "Example item name",
-               "QuantityOrdered": "2",
-               "ItemPrice": {
-                  "CurrencyCode": "USD",
-                  "Amount": "17.95"
-               },
-               "PromotionIds": {
-                  "PromotionId": "FREESHIP"
-               },
-               "ConditionId": "Used",
-               "ConditionSubtypeId": "Mint",
-               "ConditionNote": "Example ConditionNote",
-               "IsGift": "false",
-               "IsTransparency": "true",
-               "PriceDesignation": "BusinessPrice"
-            }
-         ]
-      }
-   },
-   "ResponseMetadata": {
-      "RequestId": "88faca76-b600-46d2-b53c-0c8c4533e43a"
-   }
-}`}
-                                    codeBlock
-                                    theme={atomOneLight}
-                                    showLineNumbers={false}
-                                />
-                            </div>
-                        </MDBCol>
+{/*                                    langiage="js"*/}
+{/*                                    text={`{*/}
+{/*   "ListOrderItemsByNextTokenResult": {*/}
+{/*      "NextToken": "MRgZW55IGNhcm5hbCBwbGVhc3VyZS6=",*/}
+{/*      "AmazonOrderId": "058-1233752-8214740",*/}
+{/*      "OrderItems": {*/}
+{/*         "OrderItem": [*/}
+{/*            {*/}
+{/*               "ASIN": "BT0093TELA",*/}
+{/*               "OrderItemId": "68828574383266",*/}
+{/*               "SellerSKU": "CBA_OTF_1",*/}
+{/*               "Title": "Example item name",*/}
+{/*               "QuantityOrdered": "1",*/}
+{/*               "QuantityShipped": "1",*/}
+{/*               "ItemPrice": {*/}
+{/*                  "CurrencyCode": "USD",*/}
+{/*                  "Amount": "25.99"*/}
+{/*               },*/}
+{/*               "ShippingPrice": {*/}
+{/*                  "CurrencyCode": "USD",*/}
+{/*                  "Amount": "1.26"*/}
+{/*               },*/}
+{/*               "ScheduledDeliveryEndDate": "2013-09-091T01:30:00.000-06:00",*/}
+{/*               "ScheduledDeliveryStartDate": "2013-09-06T02:00:00.000-06:00",*/}
+{/*               "CODFee": {*/}
+{/*                  "CurrencyCode": "USD",*/}
+{/*                  "Amount": "10.00"*/}
+{/*               },*/}
+{/*               "CODFeeDiscount": {*/}
+{/*                  "CurrencyCode": "USD",*/}
+{/*                  "Amount": "1.00"*/}
+{/*               },*/}
+{/*               "IsGift": "false",*/}
+{/*               "GiftMessageText": "For you!",*/}
+{/*               "GiftWrapPrice": {*/}
+{/*                  "CurrencyCode": "USD",*/}
+{/*                  "Amount": "1.99"*/}
+{/*               },*/}
+{/*               "GiftWrapLevel": "Classic",*/}
+{/*               "PriceDesignation": "BusinessPrice"*/}
+{/*            },*/}
+{/*            {*/}
+{/*               "ASIN": "BCTU1104UEFB",*/}
+{/*               "OrderItemId": "79039765272157",*/}
+{/*               "SellerSKU": "CBA_OTF_5",*/}
+{/*               "Title": "Example item name",*/}
+{/*               "QuantityOrdered": "2",*/}
+{/*               "ItemPrice": {*/}
+{/*                  "CurrencyCode": "USD",*/}
+{/*                  "Amount": "17.95"*/}
+{/*               },*/}
+{/*               "PromotionIds": {*/}
+{/*                  "PromotionId": "FREESHIP"*/}
+{/*               },*/}
+{/*               "ConditionId": "Used",*/}
+{/*               "ConditionSubtypeId": "Mint",*/}
+{/*               "ConditionNote": "Example ConditionNote",*/}
+{/*               "IsGift": "false",*/}
+{/*               "IsTransparency": "true",*/}
+{/*               "PriceDesignation": "BusinessPrice"*/}
+{/*            }*/}
+{/*         ]*/}
+{/*      }*/}
+{/*   },*/}
+{/*   "ResponseMetadata": {*/}
+{/*      "RequestId": "88faca76-b600-46d2-b53c-0c8c4533e43a"*/}
+{/*   }*/}
+{/*}`}*/}
+{/*                                    codeBlock*/}
+{/*                                    theme={atomOneLight}*/}
+{/*                                    showLineNumbers={false}*/}
+{/*                                />*/}
+{/*                            </div>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Amazon Fulfillment */}
-                        <MDBCol sm="12" md="7"  >
-                            <h3 className="py-3" id="AmazonFulfillment">Amazon Fulfillment</h3>
-                            <MDBTypography>
-                                The Amazon Fulfillment API is a bit more complicated than the above endpoints.
-                            </MDBTypography>
-                        </MDBCol>
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="pt-3">Base URL: </h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`https://spacelander.io/api/amazon/fulfillment/`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
-                        </MDBCol>
+{/*                        /!* Amazon Fulfillment *!/*/}
+{/*                        <MDBCol sm="12" md="7"  >*/}
+{/*                            <h3 className="py-3" id="AmazonFulfillment">Amazon Fulfillment</h3>*/}
+{/*                            <MDBTypography>*/}
+{/*                                The Amazon Fulfillment API is a bit more complicated than the above endpoints.*/}
+{/*                            </MDBTypography>*/}
+{/*                        </MDBCol>*/}
+{/*                        /!* Code Example *!/*/}
+{/*                        <MDBCol sm="12" md="5">*/}
+{/*                            <h5 className="pt-3">Base URL: </h5>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text={`https://spacelander.io/api/amazon/fulfillment/`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Get Merchant Service Status */}
-                        <MDBCol className="my-2" sm="12" md="7" >
-                            <hr class=""></hr>
-                            <h3 className="py-3" id="AmazonMerchantServiceStatus">Get Merchant Service Status</h3>
-                            <MDBTypography>
-                                Returns the operational status of the Orders API section of
-                                Amazon Marketplace Web Service. Status values are GREEN, YELLOW, and RED.
-                            </MDBTypography>
-                        </MDBCol>
+{/*                        /!* Get Merchant Service Status *!/*/}
+{/*                        <MDBCol className="my-2" sm="12" md="7" >*/}
+{/*                            <hr class=""></hr>*/}
+{/*                            <h3 className="py-3" id="AmazonMerchantServiceStatus">Get Merchant Service Status</h3>*/}
+{/*                            <MDBTypography>*/}
+{/*                                Returns the operational status of the Orders API section of*/}
+{/*                                Amazon Marketplace Web Service. Status values are GREEN, YELLOW, and RED.*/}
+{/*                            </MDBTypography>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`https://spacelander.io/api/amazon/fulfillment/merchant-service-status`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
+{/*                        /!* Code Example *!/*/}
+{/*                        <MDBCol sm="12" md="5">*/}
+{/*                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text={`https://spacelander.io/api/amazon/fulfillment/merchant-service-status`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
 
-                            <p className="mt-3">Response</p>
-                            <div className="light">
-                                <CopyBlock
+{/*                            <p className="mt-3">Response</p>*/}
+{/*                            <div className="light">*/}
+{/*                                <CopyBlock*/}
 
-                                    langiage="js"
-                                    text={`{
-    "GetServiceStatusResult": {
-        "Status": "GREEN",
-        "Timestamp": "2020-12-30T23:08:15.602Z"
-    },
-    "ResponseMetadata": {
-        "RequestId": "c056d6dd-a2bf-4dcf-8807-d9882dbca49f"
-    }
-}`}
-                                    codeBlock
-                                    theme={atomOneLight}
-                                    showLineNumbers={false}
-                                />
-                            </div>
-                        </MDBCol>
+{/*                                    langiage="js"*/}
+{/*                                    text={`{*/}
+{/*    "GetServiceStatusResult": {*/}
+{/*        "Status": "GREEN",*/}
+{/*        "Timestamp": "2020-12-30T23:08:15.602Z"*/}
+{/*    },*/}
+{/*    "ResponseMetadata": {*/}
+{/*        "RequestId": "c056d6dd-a2bf-4dcf-8807-d9882dbca49f"*/}
+{/*    }*/}
+{/*}`}*/}
+{/*                                    codeBlock*/}
+{/*                                    theme={atomOneLight}*/}
+{/*                                    showLineNumbers={false}*/}
+{/*                                />*/}
+{/*                            </div>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Get Eligible Shipping Services */}
-                        <MDBCol sm="12" md="7"  >
+{/*                        /!* Get Eligible Shipping Services *!/*/}
+{/*                        <MDBCol sm="12" md="7"  >*/}
 
-                            <h3 className="py-3" id="AmazonEligibleShippingServices">Get Eligible Shipping Services</h3>
-                            <MDBTypography>
-                                Returns a list of shipping service offers that satisfy the
-                                shipment request details that you specify.
-                            </MDBTypography>
-                        </MDBCol>
+{/*                            <h3 className="py-3" id="AmazonEligibleShippingServices">Get Eligible Shipping Services</h3>*/}
+{/*                            <MDBTypography>*/}
+{/*                                Returns a list of shipping service offers that satisfy the*/}
+{/*                                shipment request details that you specify.*/}
+{/*                            </MDBTypography>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="pt-3"><span className="badge badge-secondary">POST</span> | Route: </h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`https://spacelander.io/api/amazon/fulfillment/get-eligible-shipping-services`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
+{/*                        /!* Code Example *!/*/}
+{/*                        <MDBCol sm="12" md="5">*/}
+{/*                            <h5 className="pt-3"><span className="badge badge-secondary">POST</span> | Route: </h5>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text={`https://spacelander.io/api/amazon/fulfillment/get-eligible-shipping-services`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
 
-                            <p className="mt-3">Request: </p>
-                            <CopyBlock
-                                langiage="js"
-                                text=
-                                    {`{
-  "ShipmentRequestDetails": {
-    "AmazonOrderId": "903-9939455-1336669",
-    "MustArriveByDate": "2015-09-28T07:00:00Z",
-    "PackageDimensions": {
-      "Length": 5,
-      "Width": 5,
-      "Height": 5,
-      "Unit": "inches"
-    },
-    "Weight": {
-      "Value": 10,
-      "Unit": "ounces"
-    },
-    "ShipDate": "2015-09-23T19:32:08.727Z",
-    "ShipFromAddress": {
-      "Name": "John Doe",
-      "AddressLine1": "1234 Westlake Ave N",
-      "City": "Seattle",
-      "StateOrProvinceCode": "WA",
-      "PostalCode": "98121",
-      "CountryCode": "US",
-      "Email": "example@example.com",
-      "Phone": "2061234567"
-    },
-    "ShippingServiceOptions": {
-      "DeliveryExperience": "DeliveryConfirmationWithoutSignature",
-      "CarrierWillPickUp": false,
-      "DeclaredValue": {
-        "CurrencyCode": "USD",
-        "Amount": 10.00
-      }
-    },
-    "ItemList": [
-      {
-        "OrderItemId": "28207139993814",
-        "Quantity": 1
-      }
-    ]
-  },
-  "ShippingOfferingFilter": {
-    "IncludeComplexShippingOptions": false
-  }
-}`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
+{/*                            <p className="mt-3">Request: </p>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text=*/}
+{/*                                    {`{*/}
+{/*  "ShipmentRequestDetails": {*/}
+{/*    "AmazonOrderId": "903-9939455-1336669",*/}
+{/*    "MustArriveByDate": "2015-09-28T07:00:00Z",*/}
+{/*    "PackageDimensions": {*/}
+{/*      "Length": 5,*/}
+{/*      "Width": 5,*/}
+{/*      "Height": 5,*/}
+{/*      "Unit": "inches"*/}
+{/*    },*/}
+{/*    "Weight": {*/}
+{/*      "Value": 10,*/}
+{/*      "Unit": "ounces"*/}
+{/*    },*/}
+{/*    "ShipDate": "2015-09-23T19:32:08.727Z",*/}
+{/*    "ShipFromAddress": {*/}
+{/*      "Name": "John Doe",*/}
+{/*      "AddressLine1": "1234 Westlake Ave N",*/}
+{/*      "City": "Seattle",*/}
+{/*      "StateOrProvinceCode": "WA",*/}
+{/*      "PostalCode": "98121",*/}
+{/*      "CountryCode": "US",*/}
+{/*      "Email": "example@example.com",*/}
+{/*      "Phone": "2061234567"*/}
+{/*    },*/}
+{/*    "ShippingServiceOptions": {*/}
+{/*      "DeliveryExperience": "DeliveryConfirmationWithoutSignature",*/}
+{/*      "CarrierWillPickUp": false,*/}
+{/*      "DeclaredValue": {*/}
+{/*        "CurrencyCode": "USD",*/}
+{/*        "Amount": 10.00*/}
+{/*      }*/}
+{/*    },*/}
+{/*    "ItemList": [*/}
+{/*      {*/}
+{/*        "OrderItemId": "28207139993814",*/}
+{/*        "Quantity": 1*/}
+{/*      }*/}
+{/*    ]*/}
+{/*  },*/}
+{/*  "ShippingOfferingFilter": {*/}
+{/*    "IncludeComplexShippingOptions": false*/}
+{/*  }*/}
+{/*}`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
 
-                            <p className="mt-3">Response</p>
-                            <div className="light">
-                                <CopyBlock
+{/*                            <p className="mt-3">Response</p>*/}
+{/*                            <div className="light">*/}
+{/*                                <CopyBlock*/}
 
-                                    langiage="js"
-                                    text=
-                                        {`{
-  "GetEligibleShippingServicesResult": {
-    "ShippingServiceList": {
-      "ShippingService": {
-        "ShippingServiceName": "UPS Ground",
-        "CarrierName": "UPS",
-        "ShippingServiceId": "UPS_PTP_GND",
-        "ShippingServiceOfferId": "ly51yzA1nAXlJzmYlKaH+7WbKOWz2BTujIOPx5PU8luilmZYK\\/JFhbx177aKey8MdZcG90uABbT5q8WAgPI+uxcxx\\/XDtIbI7c161j5spbfsiPTwIJg4Bk66bnP6Ip+JJtuSU5++rAdv4mzXvKpisLGYGrc+FuJvBAjTersJhq4=",
-        "ShipDate": "10\\/16\\/2018 07:41:12",
-        "EarliestEstimatedDeliveryDate": "10\\/18\\/2018 02:00:00",
-        "LatestEstimatedDeliveryDate": "10\\/18\\/2018 02:00:00",
-        "Rate": {
-          "CurrencyCode": "USD",
-          "Amount": "16.83"
-        },
-        "ShippingServiceOptions": {
-          "DeliveryExperience": "DeliveryConfirmationWithoutSignature",
-          "CarrierWillPickUp": "False"
-        },
-        "AvailableLabelFormats": {
-          "LabelFormat": [
-            "ZPL203",
-            "ShippingServiceDefault",
-            "PDF",
-            "PNG"
-          ]
-        },
-        "RequiresAdditionalSellerInputs": "False"
-      }
-    },
-    "RejectedShippingServiceList": {
-      "RejectedShippingService": {
-        "CarrierName": "UPS",
-        "ShippingServiceId": "UPS_PTP_3DS",
-        "RejectionReasonCode": "INELIGIBLE",
-        "RejectionReasonMessage": "This ship method is not eligible for this order.",
-        "ShippingServiceName": "UPS Three Day Saver"
-      }
-    },
-    "TemporarilyUnavailableCarrierList": {
-      "TemporarilyUnavailableCarrier": [
-        {
-          "CarrierName": "DYNAMEX"
-        },
-        {
-          "CarrierName": "USPS"
-        },
-        {
-          "CarrierName": "DHLECOMMERCE"
-        },
-        {
-          "CarrierName": "SELF_DELIVERY"
-        },
-        {
-          "CarrierName": "ONTRAC"
-        },
-        {
-          "CarrierName": "DHLMX"
-        },
-        {
-          "CarrierName": "DHLM"
-        },
-        {
-          "CarrierName": "FEDEX"
-        }
-      ]
-    },
-    "TermsAndConditionsNotAcceptedCarrierList": {
-      "TermsAndConditionsNotAcceptedCarrier": [
-        {
-          "CarrierName": "AMZN_US"
-        },
-        {
-          "CarrierName": "ONTRAC"
-        }
-      ]
-    }
-  },
-  "ResponseMetadata": {
-    "RequestId": "5b7997fb-efd1-495b-b7db-03ecfa691038"
-  }
-}`}
-                                    codeBlock
-                                    theme={atomOneLight}
-                                    showLineNumbers={false}
-                                />
-                            </div>
-                        </MDBCol>
+{/*                                    langiage="js"*/}
+{/*                                    text=*/}
+{/*                                        {`{*/}
+{/*  "GetEligibleShippingServicesResult": {*/}
+{/*    "ShippingServiceList": {*/}
+{/*      "ShippingService": {*/}
+{/*        "ShippingServiceName": "UPS Ground",*/}
+{/*        "CarrierName": "UPS",*/}
+{/*        "ShippingServiceId": "UPS_PTP_GND",*/}
+{/*        "ShippingServiceOfferId": "ly51yzA1nAXlJzmYlKaH+7WbKOWz2BTujIOPx5PU8luilmZYK\\/JFhbx177aKey8MdZcG90uABbT5q8WAgPI+uxcxx\\/XDtIbI7c161j5spbfsiPTwIJg4Bk66bnP6Ip+JJtuSU5++rAdv4mzXvKpisLGYGrc+FuJvBAjTersJhq4=",*/}
+{/*        "ShipDate": "10\\/16\\/2018 07:41:12",*/}
+{/*        "EarliestEstimatedDeliveryDate": "10\\/18\\/2018 02:00:00",*/}
+{/*        "LatestEstimatedDeliveryDate": "10\\/18\\/2018 02:00:00",*/}
+{/*        "Rate": {*/}
+{/*          "CurrencyCode": "USD",*/}
+{/*          "Amount": "16.83"*/}
+{/*        },*/}
+{/*        "ShippingServiceOptions": {*/}
+{/*          "DeliveryExperience": "DeliveryConfirmationWithoutSignature",*/}
+{/*          "CarrierWillPickUp": "False"*/}
+{/*        },*/}
+{/*        "AvailableLabelFormats": {*/}
+{/*          "LabelFormat": [*/}
+{/*            "ZPL203",*/}
+{/*            "ShippingServiceDefault",*/}
+{/*            "PDF",*/}
+{/*            "PNG"*/}
+{/*          ]*/}
+{/*        },*/}
+{/*        "RequiresAdditionalSellerInputs": "False"*/}
+{/*      }*/}
+{/*    },*/}
+{/*    "RejectedShippingServiceList": {*/}
+{/*      "RejectedShippingService": {*/}
+{/*        "CarrierName": "UPS",*/}
+{/*        "ShippingServiceId": "UPS_PTP_3DS",*/}
+{/*        "RejectionReasonCode": "INELIGIBLE",*/}
+{/*        "RejectionReasonMessage": "This ship method is not eligible for this order.",*/}
+{/*        "ShippingServiceName": "UPS Three Day Saver"*/}
+{/*      }*/}
+{/*    },*/}
+{/*    "TemporarilyUnavailableCarrierList": {*/}
+{/*      "TemporarilyUnavailableCarrier": [*/}
+{/*        {*/}
+{/*          "CarrierName": "DYNAMEX"*/}
+{/*        },*/}
+{/*        {*/}
+{/*          "CarrierName": "USPS"*/}
+{/*        },*/}
+{/*        {*/}
+{/*          "CarrierName": "DHLECOMMERCE"*/}
+{/*        },*/}
+{/*        {*/}
+{/*          "CarrierName": "SELF_DELIVERY"*/}
+{/*        },*/}
+{/*        {*/}
+{/*          "CarrierName": "ONTRAC"*/}
+{/*        },*/}
+{/*        {*/}
+{/*          "CarrierName": "DHLMX"*/}
+{/*        },*/}
+{/*        {*/}
+{/*          "CarrierName": "DHLM"*/}
+{/*        },*/}
+{/*        {*/}
+{/*          "CarrierName": "FEDEX"*/}
+{/*        }*/}
+{/*      ]*/}
+{/*    },*/}
+{/*    "TermsAndConditionsNotAcceptedCarrierList": {*/}
+{/*      "TermsAndConditionsNotAcceptedCarrier": [*/}
+{/*        {*/}
+{/*          "CarrierName": "AMZN_US"*/}
+{/*        },*/}
+{/*        {*/}
+{/*          "CarrierName": "ONTRAC"*/}
+{/*        }*/}
+{/*      ]*/}
+{/*    }*/}
+{/*  },*/}
+{/*  "ResponseMetadata": {*/}
+{/*    "RequestId": "5b7997fb-efd1-495b-b7db-03ecfa691038"*/}
+{/*  }*/}
+{/*}`}*/}
+{/*                                    codeBlock*/}
+{/*                                    theme={atomOneLight}*/}
+{/*                                    showLineNumbers={false}*/}
+{/*                                />*/}
+{/*                            </div>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Get Additional Seller Inputs */}
-                        <MDBCol className="my-2" sm="12" md="7" >
-                            <hr class=""></hr>
-                            <h3 className="py-3" id="AmazonAdditionalSellerInputs">Get Additional Seller Inputs</h3>
-                            <MDBTypography>
-                                Returns a list of additional inputs that are required from the seller for
-                                purchasing shipping for some shipping services.
-                            </MDBTypography>
-                        </MDBCol>
+{/*                        /!* Get Additional Seller Inputs *!/*/}
+{/*                        <MDBCol className="my-2" sm="12" md="7" >*/}
+{/*                            <hr class=""></hr>*/}
+{/*                            <h3 className="py-3" id="AmazonAdditionalSellerInputs">Get Additional Seller Inputs</h3>*/}
+{/*                            <MDBTypography>*/}
+{/*                                Returns a list of additional inputs that are required from the seller for*/}
+{/*                                purchasing shipping for some shipping services.*/}
+{/*                            </MDBTypography>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`https://spacelander.io/api/amazon/fulfillment/get-additional-seller-inputs/{orderId}/{shippingServiceId}?Name=Shenzhen%20Address&AddressLine1=test%20address&City=Shenzhen&StateOrProvinceCode=Guangdong&PostalCode=510810&CountryCode=CN&Email=example%40email.com&Phone=555-555-5555`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
+{/*                        /!* Code Example *!/*/}
+{/*                        <MDBCol sm="12" md="5">*/}
+{/*                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text={`https://spacelander.io/api/amazon/fulfillment/get-additional-seller-inputs/{orderId}/{shippingServiceId}?Name=Shenzhen%20Address&AddressLine1=test%20address&City=Shenzhen&StateOrProvinceCode=Guangdong&PostalCode=510810&CountryCode=CN&Email=example%40email.com&Phone=555-555-5555`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
 
-                            <p className="mt-3">Response</p>
-                            <div className="light">
-                                <CopyBlock
+{/*                            <p className="mt-3">Response</p>*/}
+{/*                            <div className="light">*/}
+{/*                                <CopyBlock*/}
 
-                                    langiage="js"
-                                    text={`{
-   "GetAdditionalSellerInputsResult": {
-      "ShipmentLevelFields": {
-         "member": [
-            {
-               "SellerInputDefinition": {
-                  "IsRequired": "true",
-                  "RestrictedSetValues": {
-                     "member": [
-                        "Abandon",
-                        "Return"
-                     ]
-                  },
-                  "DataType": "String",
-                  "InputTarget": "SHIPMENT_LEVEL",
-                  "StoredValue": {
-                     "ValueAsString": "ABANDON",
-                     "DataType": "STRING",
-                     "ValueAsBoolean": "false",
-                     "ValueAsInteger": "0"
-                  },
-                  "InputDisplayText": "Non-Deliverable Instructions",
-                  "Constraints": {}
-               },
-               "AdditionalInputFieldName": "NON_DELIVERABLE_INSTRUCTIONS"
-            },
-            {
-               "SellerInputDefinition": {
-                  "IsRequired": "true",
-                  "RestrictedSetValues": {},
-                  "DataType": "Address",
-                  "InputTarget": "SHIPMENT_LEVEL",
-                  "InputDisplayText": "Ship From Address(Chinese)",
-                  "Constraints": {
-                     "member": {
-                        "ValidationRegEx": "putjust5digitRegex",
-                        "ValidationString": "Please enter Ship From Address in Chinese"
-                     }
-                  }
-               },
-               "AdditionalInputFieldName": "SENDER_ADDRESS_TRANSLATED"
-            }
-         ]
-      },
-      "ItemLevelFieldsList": {
-         "member": {
-            "Asin": "B004U9TL66",
-            "AdditionalInputs": {
-               "member": [
-                  {
-                     "SellerInputDefinition": {
-                        "IsRequired": "true",
-                        "RestrictedSetValues": {},
-                        "DataType": "Weight",
-                        "InputTarget": "ITEM_LEVEL",
-                        "StoredValue": {
-                           "ValueAsWeight": {
-                              "Value": "600",
-                              "Unit": "G"
-                           },
-                           "DataType": "WEIGHT",
-                           "ValueAsBoolean": "false",
-                           "ValueAsInteger": "0"
-                        },
-                        "InputDisplayText": "Item weight",
-                        "Constraints": {
-                           "member": {
-                              "ValidationRegEx": "^[0-9]{1,3}(.[0-9]{1,2})?$",
-                              "ValidationString": "Please enter item weight (max 6 digits)"
-                           }
-                        }
-                     },
-                     "AdditionalInputFieldName": "ITEM_WEIGHT"
-                  },
-                  {
-                     "SellerInputDefinition": {
-                        "IsRequired": "true",
-                        "RestrictedSetValues": {},
-                        "DataType": "String",
-                        "InputTarget": "ITEM_LEVEL",
-                        "StoredValue": {
-                           "ValueAsString": "CN",
-                           "DataType": "STRING",
-                           "ValueAsBoolean": "false",
-                           "ValueAsInteger": "0"
-                        },
-                        "InputDisplayText": "Country of Origin",
-                        "Constraints": {
-                           "member": {
-                              "ValidationRegEx": "^[a-zA-Z]{2}$",
-                              "ValidationString": "Please enter country code of the country of manufacture (e.g. CN)"
-                           }
-                        }
-                     },
-                     "AdditionalInputFieldName": "COUNTRY_OF_ORIGIN"
-                  },
-                  {
-                     "SellerInputDefinition": {
-                        "IsRequired": "true",
-                        "RestrictedSetValues": {},
-                        "DataType": "String",
-                        "InputTarget": "ITEM_LEVEL",
-                        "StoredValue": {
-                           "ValueAsString": "\u00e8\u00a1\u00a3\u00e6\u0153\ufffd",
-                           "DataType": "STRING",
-                           "ValueAsBoolean": "false",
-                           "ValueAsInteger": "0"
-                        },
-                        "InputDisplayText": "Item Description(Chinese)",
-                        "Constraints": {
-                           "member": {
-                              "ValidationRegEx": "^[^a-zA-Z]{1,10}$",
-                              "ValidationString": "Please enter item description in Chinese up to 10 characters "
-                           }
-                        }
-                     },
-                     "AdditionalInputFieldName": "ITEM_DESCRIPTION_TRANSLATED"
-                  },
-                  {
-                     "SellerInputDefinition": {
-                        "IsRequired": "true",
-                        "RestrictedSetValues": {},
-                        "DataType": "String",
-                        "InputTarget": "ITEM_LEVEL",
-                        "StoredValue": {
-                           "ValueAsString": "200",
-                           "DataType": "CURRENCY",
-                           "ValueAsBoolean": "false",
-                           "ValueAsInteger": "0"
-                        },
-                        "InputDisplayText": "Item Value(USD)",
-                        "Constraints": {
-                           "member": {
-                              "ValidationRegEx": "^[0-9]{1,3}(.[0-9]{1,2})?$",
-                              "ValidationString": "Please enter item value in USD (max 6 digits)"
-                           }
-                        }
-                     },
-                     "AdditionalInputFieldName": "ITEM_VALUE"
-                  },
-                  {
-                     "SellerInputDefinition": {
-                        "IsRequired": "false",
-                        "RestrictedSetValues": {},
-                        "DataType": "String",
-                        "InputTarget": "ITEM_LEVEL",
-                        "InputDisplayText": "HS Code",
-                        "Constraints": {
-                           "member": {
-                              "ValidationRegEx": "^[0-9a-zA-Z -]{1,10}?$",
-                              "ValidationString": "Please enter HS Code containing letters and numbers only up to 10 characters"
-                           }
-                        }
-                     },
-                     "AdditionalInputFieldName": "HS_CODE"
-                  },
-                  {
-                     "SellerInputDefinition": {
-                        "IsRequired": "true",
-                        "RestrictedSetValues": {},
-                        "DataType": "String",
-                        "InputTarget": "ITEM_LEVEL",
-                        "StoredValue": {
-                           "ValueAsString": "Diapers",
-                           "DataType": "STRING",
-                           "ValueAsBoolean": "false",
-                           "ValueAsInteger": "0"
-                        },
-                        "InputDisplayText": "Item Description",
-                        "Constraints": {
-                           "member": {
-                              "ValidationRegEx": "^[a-zA-Z0-9-._& ]{3,25}$",
-                              "ValidationString": "Please enter item description using alphanumeric characters (max 25 characters)"
-                           }
-                        }
-                     },
-                     "AdditionalInputFieldName": "ITEM_DESCRIPTION"
-                  }
-               ]
-            }
-         }
-      }
-   },
-   "ResponseMetadata": {
-      "RequestId": "c16c3c89-6dcd-11e9-b318-db190c5bb6ad"
-   }
-}`}
-                                    codeBlock
-                                    theme={atomOneLight}
-                                    showLineNumbers={false}
-                                />
-                            </div>
-                        </MDBCol>
+{/*                                    langiage="js"*/}
+{/*                                    text={`{*/}
+{/*   "GetAdditionalSellerInputsResult": {*/}
+{/*      "ShipmentLevelFields": {*/}
+{/*         "member": [*/}
+{/*            {*/}
+{/*               "SellerInputDefinition": {*/}
+{/*                  "IsRequired": "true",*/}
+{/*                  "RestrictedSetValues": {*/}
+{/*                     "member": [*/}
+{/*                        "Abandon",*/}
+{/*                        "Return"*/}
+{/*                     ]*/}
+{/*                  },*/}
+{/*                  "DataType": "String",*/}
+{/*                  "InputTarget": "SHIPMENT_LEVEL",*/}
+{/*                  "StoredValue": {*/}
+{/*                     "ValueAsString": "ABANDON",*/}
+{/*                     "DataType": "STRING",*/}
+{/*                     "ValueAsBoolean": "false",*/}
+{/*                     "ValueAsInteger": "0"*/}
+{/*                  },*/}
+{/*                  "InputDisplayText": "Non-Deliverable Instructions",*/}
+{/*                  "Constraints": {}*/}
+{/*               },*/}
+{/*               "AdditionalInputFieldName": "NON_DELIVERABLE_INSTRUCTIONS"*/}
+{/*            },*/}
+{/*            {*/}
+{/*               "SellerInputDefinition": {*/}
+{/*                  "IsRequired": "true",*/}
+{/*                  "RestrictedSetValues": {},*/}
+{/*                  "DataType": "Address",*/}
+{/*                  "InputTarget": "SHIPMENT_LEVEL",*/}
+{/*                  "InputDisplayText": "Ship From Address(Chinese)",*/}
+{/*                  "Constraints": {*/}
+{/*                     "member": {*/}
+{/*                        "ValidationRegEx": "putjust5digitRegex",*/}
+{/*                        "ValidationString": "Please enter Ship From Address in Chinese"*/}
+{/*                     }*/}
+{/*                  }*/}
+{/*               },*/}
+{/*               "AdditionalInputFieldName": "SENDER_ADDRESS_TRANSLATED"*/}
+{/*            }*/}
+{/*         ]*/}
+{/*      },*/}
+{/*      "ItemLevelFieldsList": {*/}
+{/*         "member": {*/}
+{/*            "Asin": "B004U9TL66",*/}
+{/*            "AdditionalInputs": {*/}
+{/*               "member": [*/}
+{/*                  {*/}
+{/*                     "SellerInputDefinition": {*/}
+{/*                        "IsRequired": "true",*/}
+{/*                        "RestrictedSetValues": {},*/}
+{/*                        "DataType": "Weight",*/}
+{/*                        "InputTarget": "ITEM_LEVEL",*/}
+{/*                        "StoredValue": {*/}
+{/*                           "ValueAsWeight": {*/}
+{/*                              "Value": "600",*/}
+{/*                              "Unit": "G"*/}
+{/*                           },*/}
+{/*                           "DataType": "WEIGHT",*/}
+{/*                           "ValueAsBoolean": "false",*/}
+{/*                           "ValueAsInteger": "0"*/}
+{/*                        },*/}
+{/*                        "InputDisplayText": "Item weight",*/}
+{/*                        "Constraints": {*/}
+{/*                           "member": {*/}
+{/*                              "ValidationRegEx": "^[0-9]{1,3}(.[0-9]{1,2})?$",*/}
+{/*                              "ValidationString": "Please enter item weight (max 6 digits)"*/}
+{/*                           }*/}
+{/*                        }*/}
+{/*                     },*/}
+{/*                     "AdditionalInputFieldName": "ITEM_WEIGHT"*/}
+{/*                  },*/}
+{/*                  {*/}
+{/*                     "SellerInputDefinition": {*/}
+{/*                        "IsRequired": "true",*/}
+{/*                        "RestrictedSetValues": {},*/}
+{/*                        "DataType": "String",*/}
+{/*                        "InputTarget": "ITEM_LEVEL",*/}
+{/*                        "StoredValue": {*/}
+{/*                           "ValueAsString": "CN",*/}
+{/*                           "DataType": "STRING",*/}
+{/*                           "ValueAsBoolean": "false",*/}
+{/*                           "ValueAsInteger": "0"*/}
+{/*                        },*/}
+{/*                        "InputDisplayText": "Country of Origin",*/}
+{/*                        "Constraints": {*/}
+{/*                           "member": {*/}
+{/*                              "ValidationRegEx": "^[a-zA-Z]{2}$",*/}
+{/*                              "ValidationString": "Please enter country code of the country of manufacture (e.g. CN)"*/}
+{/*                           }*/}
+{/*                        }*/}
+{/*                     },*/}
+{/*                     "AdditionalInputFieldName": "COUNTRY_OF_ORIGIN"*/}
+{/*                  },*/}
+{/*                  {*/}
+{/*                     "SellerInputDefinition": {*/}
+{/*                        "IsRequired": "true",*/}
+{/*                        "RestrictedSetValues": {},*/}
+{/*                        "DataType": "String",*/}
+{/*                        "InputTarget": "ITEM_LEVEL",*/}
+{/*                        "StoredValue": {*/}
+{/*                           "ValueAsString": "\u00e8\u00a1\u00a3\u00e6\u0153\ufffd",*/}
+{/*                           "DataType": "STRING",*/}
+{/*                           "ValueAsBoolean": "false",*/}
+{/*                           "ValueAsInteger": "0"*/}
+{/*                        },*/}
+{/*                        "InputDisplayText": "Item Description(Chinese)",*/}
+{/*                        "Constraints": {*/}
+{/*                           "member": {*/}
+{/*                              "ValidationRegEx": "^[^a-zA-Z]{1,10}$",*/}
+{/*                              "ValidationString": "Please enter item description in Chinese up to 10 characters "*/}
+{/*                           }*/}
+{/*                        }*/}
+{/*                     },*/}
+{/*                     "AdditionalInputFieldName": "ITEM_DESCRIPTION_TRANSLATED"*/}
+{/*                  },*/}
+{/*                  {*/}
+{/*                     "SellerInputDefinition": {*/}
+{/*                        "IsRequired": "true",*/}
+{/*                        "RestrictedSetValues": {},*/}
+{/*                        "DataType": "String",*/}
+{/*                        "InputTarget": "ITEM_LEVEL",*/}
+{/*                        "StoredValue": {*/}
+{/*                           "ValueAsString": "200",*/}
+{/*                           "DataType": "CURRENCY",*/}
+{/*                           "ValueAsBoolean": "false",*/}
+{/*                           "ValueAsInteger": "0"*/}
+{/*                        },*/}
+{/*                        "InputDisplayText": "Item Value(USD)",*/}
+{/*                        "Constraints": {*/}
+{/*                           "member": {*/}
+{/*                              "ValidationRegEx": "^[0-9]{1,3}(.[0-9]{1,2})?$",*/}
+{/*                              "ValidationString": "Please enter item value in USD (max 6 digits)"*/}
+{/*                           }*/}
+{/*                        }*/}
+{/*                     },*/}
+{/*                     "AdditionalInputFieldName": "ITEM_VALUE"*/}
+{/*                  },*/}
+{/*                  {*/}
+{/*                     "SellerInputDefinition": {*/}
+{/*                        "IsRequired": "false",*/}
+{/*                        "RestrictedSetValues": {},*/}
+{/*                        "DataType": "String",*/}
+{/*                        "InputTarget": "ITEM_LEVEL",*/}
+{/*                        "InputDisplayText": "HS Code",*/}
+{/*                        "Constraints": {*/}
+{/*                           "member": {*/}
+{/*                              "ValidationRegEx": "^[0-9a-zA-Z -]{1,10}?$",*/}
+{/*                              "ValidationString": "Please enter HS Code containing letters and numbers only up to 10 characters"*/}
+{/*                           }*/}
+{/*                        }*/}
+{/*                     },*/}
+{/*                     "AdditionalInputFieldName": "HS_CODE"*/}
+{/*                  },*/}
+{/*                  {*/}
+{/*                     "SellerInputDefinition": {*/}
+{/*                        "IsRequired": "true",*/}
+{/*                        "RestrictedSetValues": {},*/}
+{/*                        "DataType": "String",*/}
+{/*                        "InputTarget": "ITEM_LEVEL",*/}
+{/*                        "StoredValue": {*/}
+{/*                           "ValueAsString": "Diapers",*/}
+{/*                           "DataType": "STRING",*/}
+{/*                           "ValueAsBoolean": "false",*/}
+{/*                           "ValueAsInteger": "0"*/}
+{/*                        },*/}
+{/*                        "InputDisplayText": "Item Description",*/}
+{/*                        "Constraints": {*/}
+{/*                           "member": {*/}
+{/*                              "ValidationRegEx": "^[a-zA-Z0-9-._& ]{3,25}$",*/}
+{/*                              "ValidationString": "Please enter item description using alphanumeric characters (max 25 characters)"*/}
+{/*                           }*/}
+{/*                        }*/}
+{/*                     },*/}
+{/*                     "AdditionalInputFieldName": "ITEM_DESCRIPTION"*/}
+{/*                  }*/}
+{/*               ]*/}
+{/*            }*/}
+{/*         }*/}
+{/*      }*/}
+{/*   },*/}
+{/*   "ResponseMetadata": {*/}
+{/*      "RequestId": "c16c3c89-6dcd-11e9-b318-db190c5bb6ad"*/}
+{/*   }*/}
+{/*}`}*/}
+{/*                                    codeBlock*/}
+{/*                                    theme={atomOneLight}*/}
+{/*                                    showLineNumbers={false}*/}
+{/*                                />*/}
+{/*                            </div>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Create Shipment */}
-                        <MDBCol sm="12" md="7"  >
+{/*                        /!* Create Shipment *!/*/}
+{/*                        <MDBCol sm="12" md="7"  >*/}
 
-                            <h3 className="py-3" id="AmazonCreateShipment">Create Shipment</h3>
-                            <MDBTypography>
-                                Returns a list of shipping service offers that satisfy the
-                                shipment request details that you specify.
-                            </MDBTypography>
-                        </MDBCol>
+{/*                            <h3 className="py-3" id="AmazonCreateShipment">Create Shipment</h3>*/}
+{/*                            <MDBTypography>*/}
+{/*                                Returns a list of shipping service offers that satisfy the*/}
+{/*                                shipment request details that you specify.*/}
+{/*                            </MDBTypography>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="pt-3"><span className="badge badge-secondary">PUT</span> | Route: </h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`https://spacelander.io/api/amazon/fulfillment/shipment`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
+{/*                        /!* Code Example *!/*/}
+{/*                        <MDBCol sm="12" md="5">*/}
+{/*                            <h5 className="pt-3"><span className="badge badge-secondary">PUT</span> | Route: </h5>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text={`https://spacelander.io/api/amazon/fulfillment/shipment`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
 
-                            <p className="mt-3">Request: </p>
-                            <CopyBlock
-                                langiage="js"
-                                text=
-                                    {`{
-  "HazmatType": "None",
-  "ShippingServiceId": "FEDEX_PTP_PRIORITY_OVERNIGHT",
-  "ShipmentRequestDetails": {
-    "AmazonOrderId": "903-1713775-3598252",
-    "LabelCustomization": {
-      "CustomTextForLabel": "ABC123",
-      "StandardIdForLabel": "AmazonOrderId"
-    },
-    "MustArriveByDate": "2015-09-25T07:00:00Z",
-    "PackageDimensions": {
-      "Length": 5,
-      "Width": 5,
-      "Height": 5,
-      "Unit": "inches"
-    },
-    "Weight": {
-      "Value": 10,
-      "Unit": "ounces"
-    },
-    "ShipDate": "2015-09-23T20:10:56.829Z",
-    "ShipFromAddress": {
-      "Name": "John Doe",
-      "AddressLine1": "1234 Westlake Ave",
-      "City": "Seattle",
-      "StateOrProvinceCode": "WA",
-      "PostalCode": "98121",
-      "CountryCode": "US",
-      "Email": "example@example.com",
-      "Phone": "2061234567"
-    },
-    "ShippingServiceOptions": {
-      "DeliveryExperience": "DeliveryConfirmationWithoutSignature",
-      "CarrierWillPickUp": "false",
-      "DeclaredValue.CurrencyCode": "USD",
-      "DeclaredValue.Amount": "10.00",
-      "LabelFormat": "ZPL203"
-    },
-    "ItemList": [
-      {
-        "OrderItemId": "40525960574974",
-        "Quantity": "2",
-        "TransparencyCodeList.TransparencyCode.1": "AZ:QFUL6MXBXE3A2EBC0",
-        "TransparencyCodeList.TransparencyCode.2": "ZA:QFUL6MXBXE3A2EBC0"
-      }
-    ]
-  }
-}`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
+{/*                            <p className="mt-3">Request: </p>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text=*/}
+{/*                                    {`{*/}
+{/*  "HazmatType": "None",*/}
+{/*  "ShippingServiceId": "FEDEX_PTP_PRIORITY_OVERNIGHT",*/}
+{/*  "ShipmentRequestDetails": {*/}
+{/*    "AmazonOrderId": "903-1713775-3598252",*/}
+{/*    "LabelCustomization": {*/}
+{/*      "CustomTextForLabel": "ABC123",*/}
+{/*      "StandardIdForLabel": "AmazonOrderId"*/}
+{/*    },*/}
+{/*    "MustArriveByDate": "2015-09-25T07:00:00Z",*/}
+{/*    "PackageDimensions": {*/}
+{/*      "Length": 5,*/}
+{/*      "Width": 5,*/}
+{/*      "Height": 5,*/}
+{/*      "Unit": "inches"*/}
+{/*    },*/}
+{/*    "Weight": {*/}
+{/*      "Value": 10,*/}
+{/*      "Unit": "ounces"*/}
+{/*    },*/}
+{/*    "ShipDate": "2015-09-23T20:10:56.829Z",*/}
+{/*    "ShipFromAddress": {*/}
+{/*      "Name": "John Doe",*/}
+{/*      "AddressLine1": "1234 Westlake Ave",*/}
+{/*      "City": "Seattle",*/}
+{/*      "StateOrProvinceCode": "WA",*/}
+{/*      "PostalCode": "98121",*/}
+{/*      "CountryCode": "US",*/}
+{/*      "Email": "example@example.com",*/}
+{/*      "Phone": "2061234567"*/}
+{/*    },*/}
+{/*    "ShippingServiceOptions": {*/}
+{/*      "DeliveryExperience": "DeliveryConfirmationWithoutSignature",*/}
+{/*      "CarrierWillPickUp": "false",*/}
+{/*      "DeclaredValue.CurrencyCode": "USD",*/}
+{/*      "DeclaredValue.Amount": "10.00",*/}
+{/*      "LabelFormat": "ZPL203"*/}
+{/*    },*/}
+{/*    "ItemList": [*/}
+{/*      {*/}
+{/*        "OrderItemId": "40525960574974",*/}
+{/*        "Quantity": "2",*/}
+{/*        "TransparencyCodeList.TransparencyCode.1": "AZ:QFUL6MXBXE3A2EBC0",*/}
+{/*        "TransparencyCodeList.TransparencyCode.2": "ZA:QFUL6MXBXE3A2EBC0"*/}
+{/*      }*/}
+{/*    ]*/}
+{/*  }*/}
+{/*}`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
 
-                            <p className="mt-3">Response</p>
-                            <div className="light">
-                                <CopyBlock
-                                    langiage="js"
-                                    text=
-                                        {`{
-   "CreateShipmentResult": {
-      "Shipment": {
-         "Insurance": {
-            "CurrencyCode": "USD",
-            "Amount": "10.00"
-         },
-         "ShipToAddress": {
-            "City": "Seattle",
-            "Phone": "5555555555",
-            "CountryCode": "US",
-            "PostalCode": "98121-2778",
-            "Name": "Jane Smith",
-            "AddressLine1": "321 Main St",
-            "StateOrProvinceCode": "WA",
-            "Email": "example@example.com"
-         },
-         "AmazonOrderId": "903-1713775-3598252",
-         "Weight": {
-            "Value": "10",
-            "Unit": "oz"
-         },
-         "Label": {
-            "CustomTextForLabel": "ABC123",
-            "LabelFormat": "ZPL203",
-            "FileContents": {
-               "Checksum": "DmsWbJpdMPALN3jV4wHOrg==",
-               "Contents": "H4sIAAAAAAAAAK16WbeqyrLmO2Pc\\/zBVRLG...kI0Ycv76w378UfL6O6ev7UsAwmkWBfL6nycD\\/Bd+Zx3S8LwAA",
-               "FileType": "application\\/zpl",
-               "LabelFormat": "ZPL203"
-            },
-            "Dimensions": {
-               "Width": "8.50000",
-               "Length": "11.00000",
-               "Unit": "inches"
-            },
-            "StandardIdForLabel": "AmazonOrderId"
-         },
-         "ShippingService": {
-            "CarrierName": "FEDEX",
-            "ShippingServiceOptions": {
-               "CarrierWillPickUp": "false",
-               "DeclaredValue": {
-                  "CurrencyCode": "USD",
-                  "Amount": "10.00"
-               },
-               "DeliveryExperience": "DELIVERY_CONFIRMATION"
-            },
-            "ShippingServiceId": "FEDEX_PTP_PRIORITY_OVERNIGHT",
-            "Rate": {
-               "CurrencyCode": "USD",
-               "Amount": "27.81"
-            },
-            "LatestEstimatedDeliveryDate": "2015-09-24T10:30:00Z",
-            "EarliestEstimatedDeliveryDate": "2015-09-24T10:30:00Z",
-            "ShippingServiceOfferId": "HDDUKqtQVFetpBZAqx5c1yaCZ9vuFfND0kudyw3lLWCa3mN2+zUOsRCAZS2oYt0ey6fXKdOAucmYVXR9LAkU9O9eys9V3FJCgvQ+vAqm4bSAzHVH04vD8oLyoUPKqxa8Otbek97Z85LFUSsfcUf8frNRMEfNLP8t5RyLXa4ZOjc=",
-            "ShipDate": "2015-09-23T20:10:56.829Z",
-            "ShippingServiceName": "FedEx Priority Overnight"
-         },
-         "PackageDimensions": {
-            "Width": "5",
-            "Length": "5",
-            "Unit": "inches",
-            "Height": "5"
-         },
-         "CreatedDate": "2015-09-23T20:11:12.908Z",
-         "ShipFromAddress": {
-            "City": "Seattle",
-            "Phone": "2061234567",
-            "CountryCode": "US",
-            "PostalCode": "98121",
-            "Name": "John Doe",
-            "AddressLine1": "1234 Westlake Ave",
-            "StateOrProvinceCode": "WA"
-         },
-         "ShipmentId": "6f77095e-9f75-47eb-aaab-a42d5428fa1a",
-         "ItemList": {
-            "Item": {
-               "OrderItemId": "40525960574974",
-               "Quantity": "1",
-               "ItemWeight": "200",
-               "ItemDescription": "Poster"
-            }
-         },
-         "Status": "Purchased",
-         "TrackingId": "794657111237"
-      }
-   },
-   "ResponseMetadata": {
-      "RequestId": "adb18f0d-2076-48d4-99ef-fb4b9f892a4e"
-   }
-}`}
-                                    codeBlock
-                                    theme={atomOneLight}
-                                    showLineNumbers={false}
-                                />
-                            </div>
-                        </MDBCol>
+{/*                            <p className="mt-3">Response</p>*/}
+{/*                            <div className="light">*/}
+{/*                                <CopyBlock*/}
+{/*                                    langiage="js"*/}
+{/*                                    text=*/}
+{/*                                        {`{*/}
+{/*   "CreateShipmentResult": {*/}
+{/*      "Shipment": {*/}
+{/*         "Insurance": {*/}
+{/*            "CurrencyCode": "USD",*/}
+{/*            "Amount": "10.00"*/}
+{/*         },*/}
+{/*         "ShipToAddress": {*/}
+{/*            "City": "Seattle",*/}
+{/*            "Phone": "5555555555",*/}
+{/*            "CountryCode": "US",*/}
+{/*            "PostalCode": "98121-2778",*/}
+{/*            "Name": "Jane Smith",*/}
+{/*            "AddressLine1": "321 Main St",*/}
+{/*            "StateOrProvinceCode": "WA",*/}
+{/*            "Email": "example@example.com"*/}
+{/*         },*/}
+{/*         "AmazonOrderId": "903-1713775-3598252",*/}
+{/*         "Weight": {*/}
+{/*            "Value": "10",*/}
+{/*            "Unit": "oz"*/}
+{/*         },*/}
+{/*         "Label": {*/}
+{/*            "CustomTextForLabel": "ABC123",*/}
+{/*            "LabelFormat": "ZPL203",*/}
+{/*            "FileContents": {*/}
+{/*               "Checksum": "DmsWbJpdMPALN3jV4wHOrg==",*/}
+{/*               "Contents": "H4sIAAAAAAAAAK16WbeqyrLmO2Pc\\/zBVRLG...kI0Ycv76w378UfL6O6ev7UsAwmkWBfL6nycD\\/Bd+Zx3S8LwAA",*/}
+{/*               "FileType": "application\\/zpl",*/}
+{/*               "LabelFormat": "ZPL203"*/}
+{/*            },*/}
+{/*            "Dimensions": {*/}
+{/*               "Width": "8.50000",*/}
+{/*               "Length": "11.00000",*/}
+{/*               "Unit": "inches"*/}
+{/*            },*/}
+{/*            "StandardIdForLabel": "AmazonOrderId"*/}
+{/*         },*/}
+{/*         "ShippingService": {*/}
+{/*            "CarrierName": "FEDEX",*/}
+{/*            "ShippingServiceOptions": {*/}
+{/*               "CarrierWillPickUp": "false",*/}
+{/*               "DeclaredValue": {*/}
+{/*                  "CurrencyCode": "USD",*/}
+{/*                  "Amount": "10.00"*/}
+{/*               },*/}
+{/*               "DeliveryExperience": "DELIVERY_CONFIRMATION"*/}
+{/*            },*/}
+{/*            "ShippingServiceId": "FEDEX_PTP_PRIORITY_OVERNIGHT",*/}
+{/*            "Rate": {*/}
+{/*               "CurrencyCode": "USD",*/}
+{/*               "Amount": "27.81"*/}
+{/*            },*/}
+{/*            "LatestEstimatedDeliveryDate": "2015-09-24T10:30:00Z",*/}
+{/*            "EarliestEstimatedDeliveryDate": "2015-09-24T10:30:00Z",*/}
+{/*            "ShippingServiceOfferId": "HDDUKqtQVFetpBZAqx5c1yaCZ9vuFfND0kudyw3lLWCa3mN2+zUOsRCAZS2oYt0ey6fXKdOAucmYVXR9LAkU9O9eys9V3FJCgvQ+vAqm4bSAzHVH04vD8oLyoUPKqxa8Otbek97Z85LFUSsfcUf8frNRMEfNLP8t5RyLXa4ZOjc=",*/}
+{/*            "ShipDate": "2015-09-23T20:10:56.829Z",*/}
+{/*            "ShippingServiceName": "FedEx Priority Overnight"*/}
+{/*         },*/}
+{/*         "PackageDimensions": {*/}
+{/*            "Width": "5",*/}
+{/*            "Length": "5",*/}
+{/*            "Unit": "inches",*/}
+{/*            "Height": "5"*/}
+{/*         },*/}
+{/*         "CreatedDate": "2015-09-23T20:11:12.908Z",*/}
+{/*         "ShipFromAddress": {*/}
+{/*            "City": "Seattle",*/}
+{/*            "Phone": "2061234567",*/}
+{/*            "CountryCode": "US",*/}
+{/*            "PostalCode": "98121",*/}
+{/*            "Name": "John Doe",*/}
+{/*            "AddressLine1": "1234 Westlake Ave",*/}
+{/*            "StateOrProvinceCode": "WA"*/}
+{/*         },*/}
+{/*         "ShipmentId": "6f77095e-9f75-47eb-aaab-a42d5428fa1a",*/}
+{/*         "ItemList": {*/}
+{/*            "Item": {*/}
+{/*               "OrderItemId": "40525960574974",*/}
+{/*               "Quantity": "1",*/}
+{/*               "ItemWeight": "200",*/}
+{/*               "ItemDescription": "Poster"*/}
+{/*            }*/}
+{/*         },*/}
+{/*         "Status": "Purchased",*/}
+{/*         "TrackingId": "794657111237"*/}
+{/*      }*/}
+{/*   },*/}
+{/*   "ResponseMetadata": {*/}
+{/*      "RequestId": "adb18f0d-2076-48d4-99ef-fb4b9f892a4e"*/}
+{/*   }*/}
+{/*}`}*/}
+{/*                                    codeBlock*/}
+{/*                                    theme={atomOneLight}*/}
+{/*                                    showLineNumbers={false}*/}
+{/*                                />*/}
+{/*                            </div>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Get Shipment */}
-                        <MDBCol className="my-2" sm="12" md="7" >
-                            <hr class=""></hr>
-                            <h3 className="py-3" id="AmazonShipment">Get Shipment</h3>
-                            <MDBTypography>
-                                Returns an existing shipment for the ShipmentId value that you specify.
-                            </MDBTypography>
-                        </MDBCol>
+{/*                        /!* Get Shipment *!/*/}
+{/*                        <MDBCol className="my-2" sm="12" md="7" >*/}
+{/*                            <hr class=""></hr>*/}
+{/*                            <h3 className="py-3" id="AmazonShipment">Get Shipment</h3>*/}
+{/*                            <MDBTypography>*/}
+{/*                                Returns an existing shipment for the ShipmentId value that you specify.*/}
+{/*                            </MDBTypography>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`https://spacelander.io/api/amazon/fulfillment/shipment/{shipmentId}`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
+{/*                        /!* Code Example *!/*/}
+{/*                        <MDBCol sm="12" md="5">*/}
+{/*                            <h5 className="pt-3"><span className="badge badge-default">GET</span> | Route: </h5>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text={`https://spacelander.io/api/amazon/fulfillment/shipment/{shipmentId}`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
 
-                            <p className="mt-3">Response</p>
-                            <div className="light">
-                                <CopyBlock
+{/*                            <p className="mt-3">Response</p>*/}
+{/*                            <div className="light">*/}
+{/*                                <CopyBlock*/}
 
-                                    langiage="js"
-                                    text={`{
-   "GetShipmentResult": {
-      "Shipment": {
-         "Insurance": {
-            "CurrencyCode": "USD",
-            "Amount": "10.00"
-         },
-         "ShipToAddress": {
-            "City": "Seattle",
-            "Phone": "5555555555",
-            "CountryCode": "US",
-            "PostalCode": "98121-2778",
-            "Name": "Jane Smith",
-            "AddressLine1": "321 Main St",
-            "StateOrProvinceCode": "WA",
-            "Email": "example@example.com"
-         },
-         "AmazonOrderId": "903-1713775-3598252",
-         "Weight": {
-            "Value": "10",
-            "Unit": "oz"
-         },
-         "Label": {
-            "CustomTextForLabel": "ABC123",
-            "LabelFormat": "ZPL203",
-            "FileContents": {
-               "Checksum": "DmsWbJpdMPALN3jV4wHOrg==",
-               "Contents": "H4sIAAAAAAAAAK16WbeqyrLmO2Pc\\/zBVRLG...kI0Ycv76w378UfL6O6ev7UsAwmkWBfL6nycD\\/Bd+Zx3S8LwAA",
-               "FileType": "application\\/zpl"
-            },
-            "Dimensions": {
-               "Width": "8.50000",
-               "Length": "11.00000",
-               "Unit": "inches"
-            },
-            "StandardIdForLabel": "AmazonOrderId"
-         },
-         "ShippingService": {
-            "CarrierName": "FEDEX",
-            "ShippingServiceOptions": {
-               "CarrierWillPickUp": "false",
-               "DeclaredValue": {
-                  "CurrencyCode": "USD",
-                  "Amount": "10.00"
-               },
-               "DeliveryExperience": "DELIVERY_CONFIRMATION"
-            },
-            "ShippingServiceId": "FEDEX_PTP_PRIORITY_OVERNIGHT",
-            "Rate": {
-               "CurrencyCode": "USD",
-               "Amount": "27.81"
-            },
-            "LatestEstimatedDeliveryDate": "2015-09-24T10:30:00Z",
-            "EarliestEstimatedDeliveryDate": "2015-09-24T10:30:00Z",
-            "ShippingServiceOfferId": "HDDUKqtQVFetpBZAqx5c1yaCZ9vuFfND0kudyw3lLWCa3mN2+zUOsRCAZS2oYt0ey6fXKdOAucmYVXR9LAkU9O9eys9V3FJCgvQ+vAqm4bSAzHVH04vD8oLyoUPKqxa8Otbek97Z85LFUSsfcUf8frNRMEfNLP8t5RyLXa4ZOjc=",
-            "ShipDate": "2015-09-23T20:10:56.829Z",
-            "ShippingServiceName": "FedEx Priority Overnight\u00c2\u00ae"
-         },
-         "PackageDimensions": {
-            "Width": "5",
-            "Length": "5",
-            "Unit": "inches",
-            "Height": "5"
-         },
-         "CreatedDate": "2015-09-23T20:11:12.908Z",
-         "ShipFromAddress": {
-            "City": "Seattle",
-            "Phone": "2061234567",
-            "CountryCode": "US",
-            "PostalCode": "98121",
-            "Name": "John Doe",
-            "AddressLine1": "1234 Westlake Ave",
-            "StateOrProvinceCode": "WA"
-         },
-         "ShipmentId": "6f77095e-9f75-47eb-aaab-a42d5428fa1a",
-         "ItemList": {
-            "Item": {
-               "OrderItemId": "40525960574974",
-               "Quantity": "1"
-            }
-         },
-         "Status": "Purchased",
-         "TrackingId": "794657111237"
-      }
-   },
-   "ResponseMetadata": {
-      "RequestId": "f44b6af6-74f8-43d3-b928-1c4e0123b26c"
-   }
-}`}
-                                    codeBlock
-                                    theme={atomOneLight}
-                                    showLineNumbers={false}
-                                />
-                            </div>
-                        </MDBCol>
+{/*                                    langiage="js"*/}
+{/*                                    text={`{*/}
+{/*   "GetShipmentResult": {*/}
+{/*      "Shipment": {*/}
+{/*         "Insurance": {*/}
+{/*            "CurrencyCode": "USD",*/}
+{/*            "Amount": "10.00"*/}
+{/*         },*/}
+{/*         "ShipToAddress": {*/}
+{/*            "City": "Seattle",*/}
+{/*            "Phone": "5555555555",*/}
+{/*            "CountryCode": "US",*/}
+{/*            "PostalCode": "98121-2778",*/}
+{/*            "Name": "Jane Smith",*/}
+{/*            "AddressLine1": "321 Main St",*/}
+{/*            "StateOrProvinceCode": "WA",*/}
+{/*            "Email": "example@example.com"*/}
+{/*         },*/}
+{/*         "AmazonOrderId": "903-1713775-3598252",*/}
+{/*         "Weight": {*/}
+{/*            "Value": "10",*/}
+{/*            "Unit": "oz"*/}
+{/*         },*/}
+{/*         "Label": {*/}
+{/*            "CustomTextForLabel": "ABC123",*/}
+{/*            "LabelFormat": "ZPL203",*/}
+{/*            "FileContents": {*/}
+{/*               "Checksum": "DmsWbJpdMPALN3jV4wHOrg==",*/}
+{/*               "Contents": "H4sIAAAAAAAAAK16WbeqyrLmO2Pc\\/zBVRLG...kI0Ycv76w378UfL6O6ev7UsAwmkWBfL6nycD\\/Bd+Zx3S8LwAA",*/}
+{/*               "FileType": "application\\/zpl"*/}
+{/*            },*/}
+{/*            "Dimensions": {*/}
+{/*               "Width": "8.50000",*/}
+{/*               "Length": "11.00000",*/}
+{/*               "Unit": "inches"*/}
+{/*            },*/}
+{/*            "StandardIdForLabel": "AmazonOrderId"*/}
+{/*         },*/}
+{/*         "ShippingService": {*/}
+{/*            "CarrierName": "FEDEX",*/}
+{/*            "ShippingServiceOptions": {*/}
+{/*               "CarrierWillPickUp": "false",*/}
+{/*               "DeclaredValue": {*/}
+{/*                  "CurrencyCode": "USD",*/}
+{/*                  "Amount": "10.00"*/}
+{/*               },*/}
+{/*               "DeliveryExperience": "DELIVERY_CONFIRMATION"*/}
+{/*            },*/}
+{/*            "ShippingServiceId": "FEDEX_PTP_PRIORITY_OVERNIGHT",*/}
+{/*            "Rate": {*/}
+{/*               "CurrencyCode": "USD",*/}
+{/*               "Amount": "27.81"*/}
+{/*            },*/}
+{/*            "LatestEstimatedDeliveryDate": "2015-09-24T10:30:00Z",*/}
+{/*            "EarliestEstimatedDeliveryDate": "2015-09-24T10:30:00Z",*/}
+{/*            "ShippingServiceOfferId": "HDDUKqtQVFetpBZAqx5c1yaCZ9vuFfND0kudyw3lLWCa3mN2+zUOsRCAZS2oYt0ey6fXKdOAucmYVXR9LAkU9O9eys9V3FJCgvQ+vAqm4bSAzHVH04vD8oLyoUPKqxa8Otbek97Z85LFUSsfcUf8frNRMEfNLP8t5RyLXa4ZOjc=",*/}
+{/*            "ShipDate": "2015-09-23T20:10:56.829Z",*/}
+{/*            "ShippingServiceName": "FedEx Priority Overnight\u00c2\u00ae"*/}
+{/*         },*/}
+{/*         "PackageDimensions": {*/}
+{/*            "Width": "5",*/}
+{/*            "Length": "5",*/}
+{/*            "Unit": "inches",*/}
+{/*            "Height": "5"*/}
+{/*         },*/}
+{/*         "CreatedDate": "2015-09-23T20:11:12.908Z",*/}
+{/*         "ShipFromAddress": {*/}
+{/*            "City": "Seattle",*/}
+{/*            "Phone": "2061234567",*/}
+{/*            "CountryCode": "US",*/}
+{/*            "PostalCode": "98121",*/}
+{/*            "Name": "John Doe",*/}
+{/*            "AddressLine1": "1234 Westlake Ave",*/}
+{/*            "StateOrProvinceCode": "WA"*/}
+{/*         },*/}
+{/*         "ShipmentId": "6f77095e-9f75-47eb-aaab-a42d5428fa1a",*/}
+{/*         "ItemList": {*/}
+{/*            "Item": {*/}
+{/*               "OrderItemId": "40525960574974",*/}
+{/*               "Quantity": "1"*/}
+{/*            }*/}
+{/*         },*/}
+{/*         "Status": "Purchased",*/}
+{/*         "TrackingId": "794657111237"*/}
+{/*      }*/}
+{/*   },*/}
+{/*   "ResponseMetadata": {*/}
+{/*      "RequestId": "f44b6af6-74f8-43d3-b928-1c4e0123b26c"*/}
+{/*   }*/}
+{/*}`}*/}
+{/*                                    codeBlock*/}
+{/*                                    theme={atomOneLight}*/}
+{/*                                    showLineNumbers={false}*/}
+{/*                                />*/}
+{/*                            </div>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Cancel Shipment */}
-                        <MDBCol className="my-2" sm="12" md="7" >
-                            <hr class=""></hr>
-                            <h3 className="py-3" id="AmazonCancelShipment">Cancel Shipment</h3>
-                            <MDBTypography>
-                                Cancels an existing shipment and requests a refund
-                                for the ShipmentId value that you specify.
-                            </MDBTypography>
-                        </MDBCol>
+{/*                        /!* Cancel Shipment *!/*/}
+{/*                        <MDBCol className="my-2" sm="12" md="7" >*/}
+{/*                            <hr class=""></hr>*/}
+{/*                            <h3 className="py-3" id="AmazonCancelShipment">Cancel Shipment</h3>*/}
+{/*                            <MDBTypography>*/}
+{/*                                Cancels an existing shipment and requests a refund*/}
+{/*                                for the ShipmentId value that you specify.*/}
+{/*                            </MDBTypography>*/}
+{/*                        </MDBCol>*/}
 
-                        {/* Code Example */}
-                        <MDBCol sm="12" md="5">
-                            <h5 className="pt-3"><span className="badge badge-secondary">DELETE</span> | Route: </h5>
-                            <CopyBlock
-                                langiage="js"
-                                text={`https://spacelander.io/api/amazon/fulfillment/shipment/{shipmentId}`}
-                                codeBlock
-                                theme={dracula}
-                                showLineNumbers={false}
-                            />
+{/*                        /!* Code Example *!/*/}
+{/*                        <MDBCol sm="12" md="5">*/}
+{/*                            <h5 className="pt-3"><span className="badge badge-secondary">DELETE</span> | Route: </h5>*/}
+{/*                            <CopyBlock*/}
+{/*                                langiage="js"*/}
+{/*                                text={`https://spacelander.io/api/amazon/fulfillment/shipment/{shipmentId}`}*/}
+{/*                                codeBlock*/}
+{/*                                theme={dracula}*/}
+{/*                                showLineNumbers={false}*/}
+{/*                            />*/}
 
-                            <p className="mt-3">Response</p>
-                            <div className="light">
-                                <CopyBlock
+{/*                            <p className="mt-3">Response</p>*/}
+{/*                            <div className="light">*/}
+{/*                                <CopyBlock*/}
 
-                                    langiage="js"
-                                    text={`{
-   "CancelShipmentResult": {
-      "Shipment": {
-         "Insurance": {
-            "CurrencyCode": "USD",
-            "Amount": "10.00"
-         },
-         "ShipToAddress": {
-            "City": "Seattle",
-            "Phone": "5555555555",
-            "CountryCode": "US",
-            "PostalCode": "98121-2778",
-            "Name": "Jane Smith",
-            "AddressLine1": "321 Main St",
-            "StateOrProvinceCode": "WA",
-            "Email": "example@example.com"
-         },
-         "AmazonOrderId": "903-1713775-3598252",
-         "Weight": {
-            "Value": "10",
-            "Unit": "oz"
-         },
-         "Label": {
-            "FileContents": {
-               "Checksum": "DmsWbJpdMPALN3jV4wHOrg==",
-               "Contents": "H4sIAAAAAAAAAK16WbeqyrLmO2Pc\\/zBVRLG...kI0Ycv76w378UfL6O6ev7UsAwmkWBfL6nycD\\/Bd+Zx3S8LwAA",
-               "FileType": "application\\/pdf"
-            },
-            "Dimensions": {
-               "Width": "8.50000",
-               "Length": "11.00000",
-               "Unit": "inches"
-            }
-         },
-         "ShippingService": {
-            "CarrierName": "FEDEX",
-            "ShippingServiceOptions": {
-               "CarrierWillPickUp": "false",
-               "DeclaredValue": {
-                  "CurrencyCode": "USD",
-                  "Amount": "10.00"
-               },
-               "DeliveryExperience": "DELIVERY_CONFIRMATION\\n        "
-            },
-            "ShippingServiceId": "FEDEX_PTP_PRIORITY_OVERNIGHT\\n      ",
-            "Rate": {
-               "CurrencyCode": "USD",
-               "Amount": "27.81"
-            },
-            "LatestEstimatedDeliveryDate": "2015-09-24T10:30:00Z",
-            "EarliestEstimatedDeliveryDate": "2015-09-24T10:30:00Z",
-            "ShippingServiceOfferId": "HDDUKqtQVFetpBZAqx5c1yaCZ9vuFfND0kudyw3lLWCa3mN2+zUOsRCAZS2oYt0ey6fXKdOAucmYVXR9LAkU9O9eys9V3FJCgvQ+vAqm4bSAzHVH04vD8oLyoUPKqxa8Otbek97Z85LFUSsfcUf8frNRMEfNLP8t5RyLXa4ZOjc=",
-            "ShipDate": "2015-09-23T20:10:56.829Z",
-            "ShippingServiceName": "FedEx Priority Overnight\u00c2\u00ae"
-         },
-         "PackageDimensions": {
-            "Width": "5",
-            "Length": "5",
-            "Unit": "inches",
-            "Height": "5"
-         },
-         "CreatedDate": "2015-09-23T20:11:12.908Z",
-         "ShipFromAddress": {
-            "City": "Seattle",
-            "Phone": "2061234567",
-            "CountryCode": "US",
-            "PostalCode": "98121",
-            "Name": "John Doe",
-            "AddressLine1": "1234 Westlake Ave",
-            "StateOrProvinceCode": "WA"
-         },
-         "ShipmentId": "6f77095e-9f75-47eb-aaab-a42d5428fa1a",
-         "ItemList": {
-            "Item": {
-               "OrderItemId": "40525960574974",
-               "Quantity": "1"
-            }
-         },
-         "Status": "Purchased",
-         "TrackingId": "794657111237"
-      }
-   },
-   "ResponseMetadata": {
-      "RequestId": "adb18f0d-2076-48d4-99ef-fb4b9f892a4e"
-   }
-}`}
-                                    codeBlock
-                                    theme={atomOneLight}
-                                    showLineNumbers={false}
-                                />
-                            </div>
-                        </MDBCol>
+{/*                                    langiage="js"*/}
+{/*                                    text={`{*/}
+{/*   "CancelShipmentResult": {*/}
+{/*      "Shipment": {*/}
+{/*         "Insurance": {*/}
+{/*            "CurrencyCode": "USD",*/}
+{/*            "Amount": "10.00"*/}
+{/*         },*/}
+{/*         "ShipToAddress": {*/}
+{/*            "City": "Seattle",*/}
+{/*            "Phone": "5555555555",*/}
+{/*            "CountryCode": "US",*/}
+{/*            "PostalCode": "98121-2778",*/}
+{/*            "Name": "Jane Smith",*/}
+{/*            "AddressLine1": "321 Main St",*/}
+{/*            "StateOrProvinceCode": "WA",*/}
+{/*            "Email": "example@example.com"*/}
+{/*         },*/}
+{/*         "AmazonOrderId": "903-1713775-3598252",*/}
+{/*         "Weight": {*/}
+{/*            "Value": "10",*/}
+{/*            "Unit": "oz"*/}
+{/*         },*/}
+{/*         "Label": {*/}
+{/*            "FileContents": {*/}
+{/*               "Checksum": "DmsWbJpdMPALN3jV4wHOrg==",*/}
+{/*               "Contents": "H4sIAAAAAAAAAK16WbeqyrLmO2Pc\\/zBVRLG...kI0Ycv76w378UfL6O6ev7UsAwmkWBfL6nycD\\/Bd+Zx3S8LwAA",*/}
+{/*               "FileType": "application\\/pdf"*/}
+{/*            },*/}
+{/*            "Dimensions": {*/}
+{/*               "Width": "8.50000",*/}
+{/*               "Length": "11.00000",*/}
+{/*               "Unit": "inches"*/}
+{/*            }*/}
+{/*         },*/}
+{/*         "ShippingService": {*/}
+{/*            "CarrierName": "FEDEX",*/}
+{/*            "ShippingServiceOptions": {*/}
+{/*               "CarrierWillPickUp": "false",*/}
+{/*               "DeclaredValue": {*/}
+{/*                  "CurrencyCode": "USD",*/}
+{/*                  "Amount": "10.00"*/}
+{/*               },*/}
+{/*               "DeliveryExperience": "DELIVERY_CONFIRMATION\\n        "*/}
+{/*            },*/}
+{/*            "ShippingServiceId": "FEDEX_PTP_PRIORITY_OVERNIGHT\\n      ",*/}
+{/*            "Rate": {*/}
+{/*               "CurrencyCode": "USD",*/}
+{/*               "Amount": "27.81"*/}
+{/*            },*/}
+{/*            "LatestEstimatedDeliveryDate": "2015-09-24T10:30:00Z",*/}
+{/*            "EarliestEstimatedDeliveryDate": "2015-09-24T10:30:00Z",*/}
+{/*            "ShippingServiceOfferId": "HDDUKqtQVFetpBZAqx5c1yaCZ9vuFfND0kudyw3lLWCa3mN2+zUOsRCAZS2oYt0ey6fXKdOAucmYVXR9LAkU9O9eys9V3FJCgvQ+vAqm4bSAzHVH04vD8oLyoUPKqxa8Otbek97Z85LFUSsfcUf8frNRMEfNLP8t5RyLXa4ZOjc=",*/}
+{/*            "ShipDate": "2015-09-23T20:10:56.829Z",*/}
+{/*            "ShippingServiceName": "FedEx Priority Overnight\u00c2\u00ae"*/}
+{/*         },*/}
+{/*         "PackageDimensions": {*/}
+{/*            "Width": "5",*/}
+{/*            "Length": "5",*/}
+{/*            "Unit": "inches",*/}
+{/*            "Height": "5"*/}
+{/*         },*/}
+{/*         "CreatedDate": "2015-09-23T20:11:12.908Z",*/}
+{/*         "ShipFromAddress": {*/}
+{/*            "City": "Seattle",*/}
+{/*            "Phone": "2061234567",*/}
+{/*            "CountryCode": "US",*/}
+{/*            "PostalCode": "98121",*/}
+{/*            "Name": "John Doe",*/}
+{/*            "AddressLine1": "1234 Westlake Ave",*/}
+{/*            "StateOrProvinceCode": "WA"*/}
+{/*         },*/}
+{/*         "ShipmentId": "6f77095e-9f75-47eb-aaab-a42d5428fa1a",*/}
+{/*         "ItemList": {*/}
+{/*            "Item": {*/}
+{/*               "OrderItemId": "40525960574974",*/}
+{/*               "Quantity": "1"*/}
+{/*            }*/}
+{/*         },*/}
+{/*         "Status": "Purchased",*/}
+{/*         "TrackingId": "794657111237"*/}
+{/*      }*/}
+{/*   },*/}
+{/*   "ResponseMetadata": {*/}
+{/*      "RequestId": "adb18f0d-2076-48d4-99ef-fb4b9f892a4e"*/}
+{/*   }*/}
+{/*}`}*/}
+{/*                                    codeBlock*/}
+{/*                                    theme={atomOneLight}*/}
+{/*                                    showLineNumbers={false}*/}
+{/*                                />*/}
+{/*                            </div>*/}
+{/*                        </MDBCol>*/}
 
                     </MDBRow>
                 </MDBCol>

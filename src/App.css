@@ -136,6 +136,12 @@ h2, h3, h4, h5
 
 }
 
+footer.page-footer {
+    bottom: 0;
+    color: #f1f1f1;
+    padding-left: 160px;
+}
+
 @media only screen and (max-width: 780px) {
     .fixed {
         position: static;
@@ -147,6 +153,12 @@ h2, h3, h4, h5
     {
         display: none;
     }
+
+
+    footer.page-footer {
+        padding-left: 0px !important;
+    }
+
 }
 
 @media only screen and (max-width: 1100px) {
@@ -172,7 +184,8 @@ code {
 .sidebar-list
 {
     overflow-y: scroll;
-    height: calc(90vh);
+    /*height: calc(90vh);*/
+    height: calc(100vh - 200px);
     width: 180px;
     background-color: #f1f1f1;
 }
@@ -204,8 +217,8 @@ ul.list-group {
 
 .sidebarUI li a:hover {
     color: #757575 !important;
-    
-    
+
+
 }
 
 .active {
@@ -232,6 +245,5 @@ ul.list-group {
 .navbar {
     background: #121212 !important;
 }
-
 
 
